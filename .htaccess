@@ -1,0 +1,78 @@
+# ══════════════════════════════════════════════════════════
+# Auris Nexus Business Solutions — .htaccess
+# ══════════════════════════════════════════════════════════
+
+Options -Indexes +FollowSymLinks -MultiViews
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# RewriteBase intentionally omitted so rules work at the domain root
+# (live) and inside a subfolder like /auris_nexus_business_solutions/ (WAMP).
+
+# Force HTTPS and canonical host on live in one redirect
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\.aurisnexus\.co\.za$ [NC]
+RewriteRule ^ https://www.aurisnexus.co.za%{REQUEST_URI} [L,R=301]
+
+# Remove trailing slash (except real directories)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [R=301,L]
+
+</IfModule>
+
+# ── Block offline browsers / site rippers & scrapers ──
+<IfModule mod_rewrite.c>
+  RewriteCond %{HTTP_USER_AGENT} (HTTrack|htmlparser|larbin|Wget|Curl|libwww|WebCopier|WebReaper|Teleport|TeleportPro|GrabNet|SiteSnagger|ProWebWalker|WebZIP|Offline\ Explorer|Xaldon|WebStripper|WebWhacker|WebEnhancer|WebFetch|WebLeacher|Zeus|EmailCollector|EmailSiphon|EmailWolf|ExtractorPro|WebAuto|WebBandit|BackDoorBot|BlackWidow|ChinaClaw|Custo|DISCo|Download\ Demon|eCatch|EirGrabber|FlashGet|GetRight|GetWeb!|Go!Zilla|Grafula|HMView|JetCar|JOC\ Web\ Spider|LeechFTP|MIIxpc|Ninja|Octopus|PageGrabber|pavuk|pcBrowser|RealDownload|ReGet|SiteSucker|SmartDownload|SuperBot|SuperHTTP|Surfbot|tAkeOut|VoidEYE|WebSauger|WWWOFFLE) [NC]
+  RewriteRule .* - [F,L]
+
+  # Block requests with an empty User-Agent
+  RewriteCond %{HTTP_USER_AGENT} ^-?$
+  RewriteRule .* - [F,L]
+</IfModule>
+
+# ── Security headers ──
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>
+
+# ── Block access to sensitive files ──
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|sql|bak|config|env|zip|tar|gz|7z|rar)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+</FilesMatch>
+
+# Block direct access to internals
+<IfModule mod_rewrite.c>
+  RewriteRule ^includes/ - [F,L]
+  RewriteRule ^templates/ - [F,L]
+  RewriteRule ^scripts/ - [F,L]
+  RewriteRule ^_backup_html/ - [F,L]
+</IfModule>
+
+# ── Caching ──
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/gif "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# ── Compression ──
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>

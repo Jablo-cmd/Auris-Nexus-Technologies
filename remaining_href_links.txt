@@ -1,0 +1,87 @@
+
+Path                                                                                       LineNumber Line                                                                                        
+----                                                                                       ---------- ----                                                                                        
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\about.html                                  201                                 <a href="/insights/index.html" class="nav-link">Insights</a>
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\about.html                                  237           <a href="/insights/index.html" class="drawer-link">Insights</a>                   
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\about.html                                  453           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\ai-integration.html                         223                                 <a href="/insights/index.html" class="nav-link">Insights</a>
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\ai-integration.html                         259           <a href="/insights/index.html" class="drawer-link">Insights</a>                   
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\ai-integration.html                         414           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\cloud-hosting-migration.html                223                                 <a href="/insights/index.html" class="nav-link">Insights</a>
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\cloud-hosting-migration.html                259           <a href="/insights/index.html" class="drawer-link">Insights</a>                   
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\cloud-hosting-migration.html                415           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\contact.html                                201                                 <a href="/insights/index.html" class="nav-link">Insights</a>
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\contact.html                                237           <a href="/insights/index.html" class="drawer-link">Insights</a>                   
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\contact.html                                447           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\crm-business-management-systems.html        223                                 <a href="/insights/index.html" class="nav-link">Insights</a>
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\crm-business-management-systems.html        259           <a href="/insights/index.html" class="drawer-link">Insights</a>                   
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\crm-business-management-systems.html        415           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\cyber-security.html                         223                                 <a href="/insights/index.html" class="nav-link">Insights</a>
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\cyber-security.html                         259           <a href="/insights/index.html" class="drawer-link">Insights</a>                   
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\cyber-security.html                         414           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\data-analytics-business-intellige...        223                                 <a href="/insights/index.html" class="nav-link">Insights</a>
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\data-analytics-business-intellige...        259           <a href="/insights/index.html" class="drawer-link">Insights</a>                   
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\data-analytics-business-intellige...        415           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\data-architecture.html                      223                                 <a href="/insights/index.html" class="nav-link">Insights</a>
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\data-architecture.html                      259           <a href="/insights/index.html" class="drawer-link">Insights</a>                   
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\data-architecture.html                      415           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\faq.html                                    227                                 <a href="/insights/index.html" class="nav-link">Insights</a>
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\faq.html                                    263           <a href="/insights/index.html" class="drawer-link">Insights</a>                   
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\faq.html                                    442           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\index.html                                  201                                 <a href="/insights/index.html" class="nav-link">Insights</a>
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\index.html                                  237           <a href="/insights/index.html" class="drawer-link">Insights</a>                   
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\index.html                                  536           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\index_test.html                             201                                 <a href="/insights/index.html" class="nav-link">Insights</a>
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\index_test.html                             237           <a href="/insights/index.html" class="drawer-link">Insights</a>                   
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\index_test.html                             536           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\industries.html                             201                                 <a href="/insights/index.html" class="nav-link">Insights</a>
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\industries.html                             237           <a href="/insights/index.html" class="drawer-link">Insights</a>                   
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\industries.html                             414           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\mobile-app-development.html                 223                                 <a href="/insights/index.html" class="nav-link">Insights</a>
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\mobile-app-development.html                 259           <a href="/insights/index.html" class="drawer-link">Insights</a>                   
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\mobile-app-development.html                 415           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\networking-infrastructure-setup.html        223                                 <a href="/insights/index.html" class="nav-link">Insights</a>
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\networking-infrastructure-setup.html        259           <a href="/insights/index.html" class="drawer-link">Insights</a>                   
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\networking-infrastructure-setup.html        415           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\portfolio.html                              201                                 <a href="/insights/index.html" class="nav-link">Insights</a>
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\portfolio.html                              237           <a href="/insights/index.html" class="drawer-link">Insights</a>                   
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\portfolio.html                              403           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\pricing.html                                201                                 <a href="/insights/index.html" class="nav-link">Insights</a>
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\pricing.html                                237           <a href="/insights/index.html" class="drawer-link">Insights</a>                   
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\pricing.html                                431           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\privacy.html                                201                                 <a href="/insights/index.html" class="nav-link">Insights</a>
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\privacy.html                                237           <a href="/insights/index.html" class="drawer-link">Insights</a>                   
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\privacy.html                                356           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\services.html                               201                                 <a href="/insights/index.html" class="nav-link">Insights</a>
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\services.html                               237           <a href="/insights/index.html" class="drawer-link">Insights</a>                   
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\services.html                               415           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\terms.html                                  201                                 <a href="/insights/index.html" class="nav-link">Insights</a>
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\terms.html                                  237           <a href="/insights/index.html" class="drawer-link">Insights</a>                   
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\terms.html                                  353           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\web-design.html                             222                                 <a href="/insights/index.html" class="nav-link">Insights</a>
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\web-design.html                             258           <a href="/insights/index.html" class="drawer-link">Insights</a>                   
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\web-design.html                             413           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\web-development.html                        223                                 <a href="/insights/index.html" class="nav-link">Insights</a>
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\web-development.html                        259           <a href="/insights/index.html" class="drawer-link">Insights</a>                   
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\web-development.html                        414           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\insights\ai-business-outcomes.html          318     <div class="crumbs reveal"><a href="/">Home</a><span class="sep">/</span><a href="/in...
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\insights\ai-business-outcomes.html          423           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\insights\business-automation.html           318     <div class="crumbs reveal"><a href="/">Home</a><span class="sep">/</span><a href="/in...
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\insights\business-automation.html           418           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\insights\case-study-service-deliv...        318     <div class="crumbs reveal"><a href="/">Home</a><span class="sep">/</span><a href="/in...
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\insights\case-study-service-deliv...        418           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\insights\cloud-migration-guide.html         318     <div class="crumbs reveal"><a href="/">Home</a><span class="sep">/</span><a href="/in...
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\insights\cloud-migration-guide.html         418           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\insights\cyber-resilience.html              318     <div class="crumbs reveal"><a href="/">Home</a><span class="sep">/</span><a href="/in...
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\insights\cyber-resilience.html              420           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\insights\digital-transformation-r...        318     <div class="crumbs reveal"><a href="/">Home</a><span class="sep">/</span><a href="/in...
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\insights\digital-transformation-r...        418           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\insights\index.html                         427           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\insights\index_test.html                    427           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\insights\modern-web-development.html        318     <div class="crumbs reveal"><a href="/">Home</a><span class="sep">/</span><a href="/in...
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\insights\modern-web-development.html        416           <li><a href="/insights/index.html">Insights</a></li>                              
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\insights\software-that-scales.html          318     <div class="crumbs reveal"><a href="/">Home</a><span class="sep">/</span><a href="/in...
+C:\Users\admin\OneDrive\Desktop\auris-nexus-site-main\insights\software-that-scales.html          418           <li><a href="/insights/index.html">Insights</a></li>                              
+
+
+

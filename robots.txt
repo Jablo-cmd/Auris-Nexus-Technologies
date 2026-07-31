@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /includes/
+Disallow: /templates/
+Disallow: /extracted/
+
+Sitemap: https://www.aurisnexus.co.za/sitemap.xml

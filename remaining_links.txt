@@ -1,0 +1,100 @@
+          <li><a href="/insights/index.html">Insights</a></li>
+          <li><a href="/insights/index.html">Insights</a></li>
+          <li><a href="/insights/index.html">Insights</a></li>
+          <li><a href="/insights/index.html">Insights</a></li>
+          <li><a href="/insights/index.html">Insights</a></li>
+          <li><a href="/insights/index.html">Insights</a></li>
+          <li><a href="/insights/index.html">Insights</a></li>
+          <li><a href="/insights/index.html">Insights</a></li>
+          <li><a href="/insights/index.html">Insights</a></li>
+          <li><a href="/insights/index.html">Insights</a></li>
+          <li><a href="/insights/index.html">Insights</a></li>
+          <li><a href="/insights/index.html">Insights</a></li>
+          <li><a href="/insights/index.html">Insights</a></li>
+          <li><a href="/insights/index.html">Insights</a></li>
+          <li><a href="/insights/index.html">Insights</a></li>
+          <li><a href="/insights/index.html">Insights</a></li>
+          <li><a href="/insights/index.html">Insights</a></li>
+          <li><a href="/insights/index.html">Insights</a></li>
+          <li><a href="/insights/index.html">Insights</a></li>
+          <li><a href="/insights/index.html">Insights</a></li>
+          <li><a href="/insights/index.html">Insights</a></li>
+    <div class="crumbs reveal"><a href="/">Home</a><span class="sep">/</span><a href="/insights/index.html">Insights</a><span class="sep">/</span>Artificial Intelligence</div>
+          <a href="/insights/cyber-resilience" class="ins-media"><img src="../images/services/cybersecurity-operations.jpg" alt="Practical cyber resilience steps every growing business should take" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/cyber-resilience" class="linkarrow" aria-label="Read the article: Practical cyber resilience steps every growing business should take">Read article</a>
+          <a href="/insights/cloud-migration-guide" class="ins-media"><img src="../images/services/cloud-infrastructure.jpg" alt="Modern cloud migration planning for resilient growth" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/cloud-migration-guide" class="linkarrow" aria-label="Read the article: Modern cloud migration planning for resilient growth">Read article</a>
+          <a href="/insights/business-automation" class="ins-media"><img src="../images/services/business-automation.jpg" alt="Automating the repetitive work that slows teams down" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/business-automation" class="linkarrow" aria-label="Read the article: Automating the repetitive work that slows teams down">Read article</a>
+          <li><a href="/insights/index.html">Insights</a></li>
+    <div class="crumbs reveal"><a href="/">Home</a><span class="sep">/</span><a href="/insights/index.html">Insights</a><span class="sep">/</span>Business Automation</div>
+          <a href="/insights/ai-business-outcomes" class="ins-media"><img src="../images/services/ai-analytics-dashboard.jpg" alt="Why AI adoption should start with business outcomes" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/ai-business-outcomes" class="linkarrow" aria-label="Read the article: Why AI adoption should start with business outcomes">Read article</a>
+          <a href="/insights/cyber-resilience" class="ins-media"><img src="../images/services/cybersecurity-operations.jpg" alt="Practical cyber resilience steps every growing business should take" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/cyber-resilience" class="linkarrow" aria-label="Read the article: Practical cyber resilience steps every growing business should take">Read article</a>
+          <a href="/insights/cloud-migration-guide" class="ins-media"><img src="../images/services/cloud-infrastructure.jpg" alt="Modern cloud migration planning for resilient growth" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/cloud-migration-guide" class="linkarrow" aria-label="Read the article: Modern cloud migration planning for resilient growth">Read article</a>
+          <li><a href="/insights/index.html">Insights</a></li>
+    <div class="crumbs reveal"><a href="/">Home</a><span class="sep">/</span><a href="/insights/index.html">Insights</a><span class="sep">/</span>Case Studies</div>
+          <a href="/insights/ai-business-outcomes" class="ins-media"><img src="../images/services/ai-analytics-dashboard.jpg" alt="Why AI adoption should start with business outcomes" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/ai-business-outcomes" class="linkarrow" aria-label="Read the article: Why AI adoption should start with business outcomes">Read article</a>
+          <a href="/insights/cyber-resilience" class="ins-media"><img src="../images/services/cybersecurity-operations.jpg" alt="Practical cyber resilience steps every growing business should take" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/cyber-resilience" class="linkarrow" aria-label="Read the article: Practical cyber resilience steps every growing business should take">Read article</a>
+          <a href="/insights/cloud-migration-guide" class="ins-media"><img src="../images/services/cloud-infrastructure.jpg" alt="Modern cloud migration planning for resilient growth" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/cloud-migration-guide" class="linkarrow" aria-label="Read the article: Modern cloud migration planning for resilient growth">Read article</a>
+          <li><a href="/insights/index.html">Insights</a></li>
+    <div class="crumbs reveal"><a href="/">Home</a><span class="sep">/</span><a href="/insights/index.html">Insights</a><span class="sep">/</span>Cloud Computing</div>
+          <a href="/insights/ai-business-outcomes" class="ins-media"><img src="../images/services/ai-analytics-dashboard.jpg" alt="Why AI adoption should start with business outcomes" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/ai-business-outcomes" class="linkarrow" aria-label="Read the article: Why AI adoption should start with business outcomes">Read article</a>
+          <a href="/insights/cyber-resilience" class="ins-media"><img src="../images/services/cybersecurity-operations.jpg" alt="Practical cyber resilience steps every growing business should take" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/cyber-resilience" class="linkarrow" aria-label="Read the article: Practical cyber resilience steps every growing business should take">Read article</a>
+          <a href="/insights/business-automation" class="ins-media"><img src="../images/services/business-automation.jpg" alt="Automating the repetitive work that slows teams down" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/business-automation" class="linkarrow" aria-label="Read the article: Automating the repetitive work that slows teams down">Read article</a>
+          <li><a href="/insights/index.html">Insights</a></li>
+    <div class="crumbs reveal"><a href="/">Home</a><span class="sep">/</span><a href="/insights/index.html">Insights</a><span class="sep">/</span>Cyber Security</div>
+          <a href="/insights/ai-business-outcomes" class="ins-media"><img src="../images/services/ai-analytics-dashboard.jpg" alt="Why AI adoption should start with business outcomes" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/ai-business-outcomes" class="linkarrow" aria-label="Read the article: Why AI adoption should start with business outcomes">Read article</a>
+          <a href="/insights/cloud-migration-guide" class="ins-media"><img src="../images/services/cloud-infrastructure.jpg" alt="Modern cloud migration planning for resilient growth" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/cloud-migration-guide" class="linkarrow" aria-label="Read the article: Modern cloud migration planning for resilient growth">Read article</a>
+          <a href="/insights/business-automation" class="ins-media"><img src="../images/services/business-automation.jpg" alt="Automating the repetitive work that slows teams down" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/business-automation" class="linkarrow" aria-label="Read the article: Automating the repetitive work that slows teams down">Read article</a>
+          <li><a href="/insights/index.html">Insights</a></li>
+    <div class="crumbs reveal"><a href="/">Home</a><span class="sep">/</span><a href="/insights/index.html">Insights</a><span class="sep">/</span>Digital Transformation</div>
+          <a href="/insights/ai-business-outcomes" class="ins-media"><img src="../images/services/ai-analytics-dashboard.jpg" alt="Why AI adoption should start with business outcomes" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/ai-business-outcomes" class="linkarrow" aria-label="Read the article: Why AI adoption should start with business outcomes">Read article</a>
+          <a href="/insights/cyber-resilience" class="ins-media"><img src="../images/services/cybersecurity-operations.jpg" alt="Practical cyber resilience steps every growing business should take" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/cyber-resilience" class="linkarrow" aria-label="Read the article: Practical cyber resilience steps every growing business should take">Read article</a>
+          <a href="/insights/cloud-migration-guide" class="ins-media"><img src="../images/services/cloud-infrastructure.jpg" alt="Modern cloud migration planning for resilient growth" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/cloud-migration-guide" class="linkarrow" aria-label="Read the article: Modern cloud migration planning for resilient growth">Read article</a>
+          <li><a href="/insights/index.html">Insights</a></li>
+          <a href="/insights/ai-business-outcomes" class="ins-media"><img src="../images/services/ai-analytics-dashboard.jpg" alt="Why AI adoption should start with business outcomes" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/ai-business-outcomes" class="linkarrow" aria-label="Read the article: Why AI adoption should start with business outcomes">Read article</a>
+          <a href="/insights/cyber-resilience" class="ins-media"><img src="../images/services/cybersecurity-operations.jpg" alt="Practical cyber resilience steps every growing business should take" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/cyber-resilience" class="linkarrow" aria-label="Read the article: Practical cyber resilience steps every growing business should take">Read article</a>
+          <a href="/insights/cloud-migration-guide" class="ins-media"><img src="../images/services/cloud-infrastructure.jpg" alt="Modern cloud migration planning for resilient growth" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/cloud-migration-guide" class="linkarrow" aria-label="Read the article: Modern cloud migration planning for resilient growth">Read article</a>
+          <a href="/insights/business-automation" class="ins-media"><img src="../images/services/business-automation.jpg" alt="Automating the repetitive work that slows teams down" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/business-automation" class="linkarrow" aria-label="Read the article: Automating the repetitive work that slows teams down">Read article</a>
+          <a href="/insights/software-that-scales" class="ins-media"><img src="../images/services/software-development-team.jpg" alt="Build software that scales with the business rather than against it" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/software-that-scales" class="linkarrow" aria-label="Read the article: Build software that scales with the business rather than against it">Read article</a>
+          <a href="/insights/digital-transformation-roadmap" class="ins-media"><img src="../images/services/data-architecture.jpg" alt="Turning digital transformation into a practical growth program" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/digital-transformation-roadmap" class="linkarrow" aria-label="Read the article: Turning digital transformation into a practical growth program">Read article</a>
+          <a href="/insights/modern-web-development" class="ins-media"><img src="../images/services/digital-experience-design.jpg" alt="High-performing websites combine design, content and technical clarity" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/modern-web-development" class="linkarrow" aria-label="Read the article: High-performing websites combine design, content and technical clarity">Read article</a>
+          <a href="/insights/case-study-service-delivery" class="ins-media"><img src="../images/portfolio/business-systems.jpg" alt="How a business unlocked faster service delivery with better systems" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/case-study-service-delivery" class="linkarrow" aria-label="Read the article: How a business unlocked faster service delivery with better systems">Read article</a>
+          <li><a href="/insights/index.html">Insights</a></li>
+          <a href="/insights/ai-business-outcomes" class="ins-media"><img src="../images/services/ai-analytics-dashboard.jpg" alt="Why AI adoption should start with business outcomes" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/ai-business-outcomes" class="linkarrow" aria-label="Read the article: Why AI adoption should start with business outcomes">Read article</a>
+          <a href="/insights/cyber-resilience" class="ins-media"><img src="../images/services/cybersecurity-operations.jpg" alt="Practical cyber resilience steps every growing business should take" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/cyber-resilience" class="linkarrow" aria-label="Read the article: Practical cyber resilience steps every growing business should take">Read article</a>
+          <a href="/insights/cloud-migration-guide" class="ins-media"><img src="../images/services/cloud-infrastructure.jpg" alt="Modern cloud migration planning for resilient growth" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/cloud-migration-guide" class="linkarrow" aria-label="Read the article: Modern cloud migration planning for resilient growth">Read article</a>
+          <a href="/insights/business-automation" class="ins-media"><img src="../images/services/business-automation.jpg" alt="Automating the repetitive work that slows teams down" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/business-automation" class="linkarrow" aria-label="Read the article: Automating the repetitive work that slows teams down">Read article</a>
+          <a href="/insights/software-that-scales" class="ins-media"><img src="../images/services/software-development-team.jpg" alt="Build software that scales with the business rather than against it" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/software-that-scales" class="linkarrow" aria-label="Read the article: Build software that scales with the business rather than against it">Read article</a>
+          <a href="/insights/digital-transformation-roadmap" class="ins-media"><img src="../images/services/data-architecture.jpg" alt="Turning digital transformation into a practical growth program" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/digital-transformation-roadmap" class="linkarrow" aria-label="Read the article: Turning digital transformation into a practical growth program">Read article</a>
+          <a href="/insights/modern-web-development" class="ins-media"><img src="../images/services/digital-experience-design.jpg" alt="High-performing websites combine design, content and technical clarity" width="420" height="236" loading="lazy"></a>
+            <a href="/insights/modern-web-development" class="linkarrow" aria-label="Read the article: High-performing websites combine design, content and technical clarity">Read article</a>
