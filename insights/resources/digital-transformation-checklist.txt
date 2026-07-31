@@ -1,0 +1,7 @@
+Digital Transformation Checklist
+
+1. Define the business objective.
+2. Identify the processes that create friction.
+3. Prioritise initiatives by revenue, cost or experience impact.
+4. Align technology choices with the operating model.
+5. Measure success with clear KPIs.

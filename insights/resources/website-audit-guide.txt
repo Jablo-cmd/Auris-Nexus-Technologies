@@ -1,0 +1,7 @@
+Website Audit Guide
+
+- Review site speed and user experience
+- Check mobile responsiveness and accessibility
+- Audit content clarity and conversion paths
+- Review SEO structure and metadata
+- Identify opportunities for better engagement

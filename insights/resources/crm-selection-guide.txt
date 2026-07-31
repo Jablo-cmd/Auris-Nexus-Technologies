@@ -1,0 +1,7 @@
+CRM Selection Guide
+
+- Define the core business processes to support
+- Review integration needs with existing tools
+- Compare usability, reporting and automation features
+- Involve stakeholders from operations and sales
+- Evaluate implementation effort and long-term support
