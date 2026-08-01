@@ -9,10 +9,10 @@ RewriteEngine On
 # RewriteBase intentionally omitted so rules work at the domain root
 # (live) and inside a subfolder like /auris_nexus_business_solutions/ (WAMP).
 
-# Force HTTPS and canonical host on live in one redirect
+# Force HTTPS and canonical host (apex, no www) on live in one redirect
 RewriteCond %{HTTPS} off [OR]
-RewriteCond %{HTTP_HOST} !^www\.aurisnexus\.co\.za$ [NC]
-RewriteRule ^ https://www.aurisnexus.co.za%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTP_HOST} ^www\.aurisnexus\.co\.za$ [NC]
+RewriteRule ^ https://aurisnexus.co.za%{REQUEST_URI} [L,R=301]
 
 # Remove trailing slash (except real directories)
 RewriteCond %{REQUEST_FILENAME} !-d
