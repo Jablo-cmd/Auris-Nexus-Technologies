@@ -253,7 +253,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Sora:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="css/styles.css?v=1785192134" rel="stylesheet"/>
 <link href="/images/Web%20Development%20Hero.png" rel="preload" as="image" fetchpriority="high"/>
+<link rel="stylesheet" href="css/roi-calculator.css">
 <noscript><style>.reveal{opacity:1 !important;transform:none !important;}</style></noscript></head>
+<script src="js/roi-calculator.js"></script>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-DJ5BQVHL"
@@ -725,6 +727,197 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li><a href="/data-architecture.html">Data Architecture</a></li>
 <li><a class="footer-more" href="/services.html">All services →</a></li>
 </ul>
+
+
+<!-- =========================================================
+     AURIS NEXUS ROI CALCULATOR
+     ========================================================= -->
+<section class="roi-calculator-section" id="roi-calculator">
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="eyebrow">ROI ANALYSIS</span>
+      <h2>Calculate the value of automation</h2>
+      <p>
+        Estimate how much your organisation could save by automating
+        repetitive processes and workflows.
+      </p>
+    </div>
+
+    <div class="roi-calculator" data-roi-calculator>
+
+      <div class="roi-calculator__intro">
+        <h3>Automation Opportunity Calculator</h3>
+        <p>
+          Enter a few basic figures and we'll estimate your potential
+          annual savings, three-year value and return on investment.
+        </p>
+      </div>
+
+      <div class="roi-calculator__form">
+
+        <div class="roi-field">
+          <label for="roi-employees">
+            Employees involved
+          </label>
+          <input
+            id="roi-employees"
+            type="number"
+            min="1"
+            value="10"
+            placeholder="e.g. 25"
+          >
+        </div>
+
+        <div class="roi-field">
+          <label for="roi-hours">
+            Hours per employee spent on repetitive work / week
+          </label>
+          <input
+            id="roi-hours"
+            type="number"
+            min="0"
+            step="0.5"
+            value="5"
+            placeholder="e.g. 8"
+          >
+        </div>
+
+        <div class="roi-field">
+          <label for="roi-hourly-cost">
+            Estimated employee cost per hour (R)
+          </label>
+          <input
+            id="roi-hourly-cost"
+            type="number"
+            min="0"
+            step="10"
+            value="150"
+            placeholder="e.g. 150"
+          >
+        </div>
+
+        <div class="roi-field roi-field--range">
+          <label for="roi-automation">
+            Estimated automation potential
+            <strong>
+              <span id="roi-automation-value">50%</span>
+            </strong>
+          </label>
+
+          <input
+            id="roi-automation"
+            type="range"
+            min="10"
+            max="90"
+            step="5"
+            value="50"
+          >
+        </div>
+
+        <div class="roi-field">
+          <label for="roi-investment">
+            Estimated technology investment (optional)
+          </label>
+          <input
+            id="roi-investment"
+            type="number"
+            min="0"
+            step="1000"
+            placeholder="e.g. 75000"
+          >
+        </div>
+
+      </div>
+
+      <div class="roi-calculator__actions">
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="roi-calculate"
+        >
+          Calculate My ROI
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-secondary"
+          id="roi-reset"
+        >
+          Reset
+        </button>
+      </div>
+
+      <div
+        class="roi-error"
+        data-roi-error
+        aria-live="polite"
+      ></div>
+
+      <div
+        class="roi-results"
+        data-roi-results
+        hidden
+      >
+
+        <div class="roi-results__header">
+          <span class="eyebrow">YOUR ESTIMATE</span>
+          <h3>Potential automation value</h3>
+        </div>
+
+        <div class="roi-results__grid">
+
+          <div class="roi-result-card">
+            <span>Current annual process cost</span>
+            <strong id="roi-annual-cost">R0</strong>
+          </div>
+
+          <div class="roi-result-card">
+            <span>Estimated annual savings</span>
+            <strong id="roi-annual-savings">R0</strong>
+          </div>
+
+          <div class="roi-result-card">
+            <span>Estimated monthly savings</span>
+            <strong id="roi-monthly-savings">R0</strong>
+          </div>
+
+          <div class="roi-result-card">
+            <span>Three-year value</span>
+            <strong id="roi-three-year">R0</strong>
+          </div>
+
+          <div class="roi-result-card">
+            <span>Estimated payback period</span>
+            <strong id="roi-payback">—</strong>
+          </div>
+
+          <div class="roi-result-card roi-result-card--highlight">
+            <span>Estimated ROI</span>
+            <strong id="roi-percentage">0%</strong>
+          </div>
+
+        </div>
+
+        <div class="roi-results__cta">
+          <h4>Want to turn this potential into real savings?</h4>
+          <p>
+            Auris Nexus Technologies can assess your workflows,
+            identify automation opportunities and design the technology
+            needed to implement them.
+          </p>
+
+          <a href="contact.html" class="btn btn-primary">
+            Discuss Your Automation Opportunity
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
 </div>
 <div class="footer-col">
 <h4>Get in touch</h4>
