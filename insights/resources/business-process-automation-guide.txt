@@ -1,0 +1,7 @@
+Business Process Automation Guide
+
+- Map the workflow from start to finish
+- Identify repetitive steps and handoffs
+- Define approval and exception rules
+- Create a rollout plan with user feedback
+- Measure the impact and refine where needed

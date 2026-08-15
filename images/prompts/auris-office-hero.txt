@@ -1,0 +1,6 @@
+Reference image: images/Auris Team.png
+
+Prompt:
+Photorealistic architectural photograph of the Auris Nexus headquarters reception and open-plan workspace, taken from a wide-angle perspective. Use the provided reference image for materials, lighting, furniture style, color palette (teal accents, dark walls, warm timber desks), and company logo signage. Natural, cinematic daylight mixed with soft interior lighting, realistic shadows, high dynamic range. Include subtle South African character (modern corporate artwork or plant species). People in-frame should appear natural and secondary to architecture: a small group conversing, one person walking through reception. Composition: wide establishing horizontal format, clean negative space for hero typography on left. Output: high-resolution, realistic, no futuristic UI overlays.
+
+Usage: homepage hero, primary establishing shot. Export formats: avif, webp, jpg. Sizes: 2400px, 1600px, 800px.

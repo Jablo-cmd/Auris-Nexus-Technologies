@@ -1,0 +1,7 @@
+Cybersecurity Checklist
+
+- MFA enabled for critical systems
+- Privileged access reviewed regularly
+- Backups tested and stored securely
+- Incident response plan documented
+- Security awareness training completed

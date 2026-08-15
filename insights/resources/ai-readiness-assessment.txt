@@ -1,0 +1,7 @@
+AI Readiness Assessment
+
+- Business goals clearly defined
+- Data quality and accessibility reviewed
+- Team readiness and training assessed
+- Governance and risk controls identified
+- Pilot scope and success metrics agreed

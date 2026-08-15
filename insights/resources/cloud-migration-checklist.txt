@@ -1,0 +1,7 @@
+Cloud Migration Checklist
+
+- Review application dependencies and critical services
+- Confirm security, backup and recovery requirements
+- Align migration phases with business priorities
+- Validate testing and rollback processes
+- Review cost, performance and governance after launch

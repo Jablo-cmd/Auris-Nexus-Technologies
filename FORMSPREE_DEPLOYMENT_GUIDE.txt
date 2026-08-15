@@ -1,0 +1,470 @@
+# FORMSPREE MIGRATION - DEPLOYMENT & LIVE TESTING GUIDE
+
+**Date:** 2026-08-15  
+**Website:** https://aurisnexus.co.za  
+**Contact Form:** https://aurisnexus.co.za/contact.html  
+**Formspree Endpoint:** https://formspree.io/f/maewdqve  
+**Target Email:** info@aurisnexus.co.za
+
+---
+
+## FILES READY FOR DEPLOYMENT
+
+### File 1: contact.html
+- **Path:** /contact.html
+- **Upload to:** HOSTAFRICA public_html/
+- **Change:** Form action updated to Formspree
+- **Status:** ✅ Ready
+- **Size:** ~25 KB
+
+### File 2: js/main.js
+- **Path:** /js/main.js  
+- **Upload to:** HOSTAFRICA public_html/js/
+- **Change:** JavaScript handler updated for Formspree response format
+- **Status:** ✅ Ready
+- **Size:** ~5 KB
+
+**Total Files:** 2  
+**Total Upload Time:** 2-3 minutes  
+**Deploy Risk:** Minimal (frontend only)
+
+---
+
+## DEPLOYMENT STEPS
+
+### Via cPanel File Manager (Recommended)
+
+**Step 1: Log Into cPanel**
+1. Go to: https://hosting.hostafrica.net/cpanel
+2. Login with your HOSTAFRICA credentials
+3. Click: File Manager
+
+**Step 2: Upload contact.html**
+1. Navigate to: public_html/
+2. Right-click → Upload
+3. Select: `contact.html` from your local folder
+4. Confirm upload
+5. Verify file appears in directory
+
+**Step 3: Upload js/main.js**
+1. Navigate to: public_html/js/
+2. Right-click → Upload  
+3. Select: `main.js` from your local `js/` folder
+4. Confirm upload
+5. Verify file appears in directory
+
+**Step 4: Clear Cache (IMPORTANT)**
+1. Go to: https://aurisnexus.co.za/contact.html
+2. Press: Ctrl+Shift+Delete (Windows) or Cmd+Shift+Delete (Mac)
+3. Select: Cookies and cached images/files
+4. Time range: All time
+5. Click: Clear data
+
+**Step 5: Verify Files**
+1. Visit: https://aurisnexus.co.za/contact.html
+2. Press: F12 to open Developer Tools
+3. Go to: Network tab
+4. Reload page
+5. Inspect: contact.html file
+6. Search for: action="https://formspree.io"
+7. Should show: form action points to Formspree ✓
+
+---
+
+### Via SFTP (Advanced)
+
+**Using FileZilla or similar SFTP client:**
+
+1. Connect to HOSTAFRICA SFTP:
+   - Host: sftp.aurisnexus.co.za (or HOSTAFRICA SFTP address)
+   - Username: Your cPanel username
+   - Password: Your cPanel password
+   - Port: 22
+
+2. Navigate to: /public_html/
+
+3. Upload: contact.html
+
+4. Navigate to: /public_html/js/
+
+5. Upload: main.js
+
+6. Set permissions to 644 for both files
+
+---
+
+## LIVE FORM TESTING
+
+### Pre-Test Checklist
+
+- [ ] Both files uploaded to HOSTAFRICA
+- [ ] Files in correct locations (contact.html in root, main.js in js/)
+- [ ] Browser cache cleared
+- [ ] HTTPS certificate valid
+- [ ] info@aurisnexus.co.za email is active
+- [ ] Formspree account is active (dashboard accessible)
+
+### Test 1: Verify Form Configuration
+
+**Steps:**
+1. Visit: https://aurisnexus.co.za/contact.html
+2. Open: Developer Tools (F12)
+3. Go to: Inspector / Elements tab
+4. Find: `<form id="contact-form"`
+5. Verify: `action="https://formspree.io/f/maewdqve"`
+6. Verify: `method="POST"`
+
+**Expected Result:** Form action points to Formspree endpoint ✅
+
+---
+
+### Test 2: Submit Test Form
+
+**Steps:**
+
+1. Go to: https://aurisnexus.co.za/contact.html
+
+2. Fill in complete form:
+   ```
+   Name:               Formspree Verification Test
+   Email:              your-test-email@gmail.com
+   Company:            Auris QA
+   Phone:              0631234567
+   Industry:           Technology
+   Service Required:   Custom Software Development
+   Budget:             R75,000+
+   Timeline:           Next 30 days
+   Message:            This is a test submission to verify Formspree migration
+                       on 2026-08-15 at [current time]
+   ```
+
+3. DO NOT populate the hidden "website" field
+
+4. Click: "Request a Consultation"
+
+5. Observe: Button should change to "Sending…" (2-5 seconds)
+
+**Expected Result After 2-5 Seconds:**
+- ✅ Button returns to "Request a Consultation"
+- ✅ Success message appears: "Thank you. Your enquiry has been received. The Auris Nexus Technologies team will be in touch shortly."
+- ✅ Form clears (all fields empty)
+- ✅ No errors in console (F12 → Console tab)
+- ✅ No red error messages
+
+---
+
+### Test 3: Check Formspree Dashboard
+
+**Steps:**
+1. Log into: https://formspree.io/
+2. Select: Form f/maewdqve
+3. Go to: Submissions
+4. Look for: Your test submission
+5. Verify: All fields present (name, email, company, phone, industry, service, budget, timeline, message)
+
+**Expected Result:** ✅ Submission appears in Formspree dashboard
+
+---
+
+### Test 4: Verify Email Delivery
+
+**Checking Your Test Email:**
+1. Open: The test email account (your-test-email@gmail.com)
+2. Wait: 1-2 minutes after submission
+3. Look for: Email from Formspree or aurisnexus.co.za
+4. Subject should contain: "New submission" or "contact form"
+5. Body should contain: All submitted field values
+
+**Checking info@aurisnexus.co.za:**
+If you have access to info@aurisnexus.co.za mailbox:
+1. Check inbox (may be in spam if first time)
+2. Look for: Email from Formspree
+3. Subject: "New submission to your form"
+4. Verify: Message contains your test email in reply-to
+
+**Expected Result:**
+- ✅ Email arrives within 2 minutes
+- ✅ Contains all submitted data
+- ✅ Shows visitor's email as sender/reply-to
+- ✅ No spam flagging (if not, add to safe senders)
+
+---
+
+### Test 5: Error Handling
+
+**Test 5a: Submit without required field**
+
+1. Go to: https://aurisnexus.co.za/contact.html
+2. Fill only: Name field
+3. Leave empty: Email field (required)
+4. Click: "Request a Consultation"
+
+**Expected Result:**
+- ✅ Form does NOT submit
+- ✅ Validation message: "Please fill in this field" (pointing to Email)
+- ✅ No success or error message
+- ✅ Form data preserved
+
+---
+
+**Test 5b: Honeypot Test (Anti-Bot)**
+
+1. Go to: https://aurisnexus.co.za/contact.html
+2. Open: Developer Tools → Console
+3. Paste: `document.querySelector('input[name="website"]').value = 'http://spam.com'`
+4. Press: Enter
+5. Fill out rest of form normally
+6. Click: "Request a Consultation"
+
+**Expected Result:**
+- ✅ Submission appears to succeed (success message shown)
+- ✅ Form resets
+- ✅ BUT: No email actually sent to info@aurisnexus.co.za
+- ✅ Message may appear in Formspree dashboard (marked as spam/bot)
+- ✅ Prevents automated attacks
+
+---
+
+**Test 5c: Network Error (Simulate)**
+
+1. Go to: https://aurisnexus.co.za/contact.html
+2. Fill in form
+3. Open: Developer Tools → Network tab
+4. Toggle: "Offline" mode (simulate network disconnection)
+5. Click: "Request a Consultation"
+6. Observe: Page attempts to submit
+
+**Expected Result:**
+- ✅ Error message appears: "Could not reach the server. Please try again or email us directly."
+- ✅ Form is NOT reset (data preserved for retry)
+- ✅ Button returns to normal state
+- ✅ User can correct and retry
+
+---
+
+### Test 6: Mobile Responsiveness
+
+**Mobile Testing (via Developer Tools):**
+
+1. Go to: https://aurisnexus.co.za/contact.html
+2. Press: F12 (Developer Tools)
+3. Press: Ctrl+Shift+M (Toggle device toolbar)
+4. Select: iPhone 12 (375px)
+5. Fill out form on mobile
+6. Tap: "Request a Consultation"
+
+**Expected Result:**
+- ✅ Form scales correctly to mobile width
+- ✅ Fields stack vertically
+- ✅ No horizontal scroll
+- ✅ Button is tappable (not too small)
+- ✅ Keyboard doesn't cover form
+- ✅ Submission works on mobile
+- ✅ Success message displays
+
+---
+
+### Test 7: Cross-Browser Testing
+
+**Test in Multiple Browsers:**
+
+| Browser | Status | Notes |
+|---------|--------|-------|
+| Chrome/Chromium | Test | Latest version |
+| Firefox | Test | Latest version |
+| Safari | Test | Latest version |
+| Edge | Test | Latest version |
+| Mobile Chrome | Test | Via Android or DevTools |
+| Mobile Safari | Test | Via iPhone or DevTools |
+
+**For each browser:**
+1. Visit contact page
+2. Submit test form
+3. Verify success message
+4. Check: No console errors (F12 → Console)
+
+---
+
+## VERIFICATION CHECKLIST
+
+After completing all tests, verify:
+
+- [ ] Form submits successfully
+- [ ] Success message displays: "Thank you. Your enquiry..."
+- [ ] Form resets after success
+- [ ] Email arrives at your test address within 2 minutes
+- [ ] Formspree dashboard shows submission
+- [ ] Required field validation works
+- [ ] Honeypot prevents bot submissions
+- [ ] Error messages are user-friendly (no technical jargon)
+- [ ] Mobile layout is responsive
+- [ ] No console JavaScript errors
+- [ ] All form fields arrive in email
+- [ ] No duplicate submissions
+- [ ] Other pages unaffected (regression check)
+
+---
+
+## TROUBLESHOOTING
+
+### Issue: Form action still shows "/contact-submit.php"
+
+**Cause:** Browser cache
+
+**Solution:**
+1. Hard refresh: Ctrl+Shift+R (Windows) or Cmd+Shift+R (Mac)
+2. Clear site data: Settings → Cookies and site data → Clear all
+3. Try incognito window: Ctrl+Shift+N
+4. Wait 5 minutes (CloudFlare/CDN cache)
+
+---
+
+### Issue: Form submits but no success message
+
+**Cause:** JavaScript not updated or not loaded
+
+**Solution:**
+1. Check: File Manager - is js/main.js uploaded?
+2. Verify: File size is correct (should be ~5 KB)
+3. Hard refresh browser
+4. Check console (F12): Look for JavaScript errors
+5. Verify: Form action in HTML is correct
+
+---
+
+### Issue: Success message shows but no email arrives
+
+**Cause:** Formspree receiving but forwarding failed, or email goes to spam
+
+**Solution:**
+1. Check: Formspree dashboard - submission appears?
+2. If yes: Email delivery issue
+   - Check info@aurisnexus.co.za spam folder
+   - Check email server status (HOSTAFRICA mail)
+   - Verify email address is active in cPanel
+3. If no: Formspree not receiving
+   - Check form endpoint (should be https://formspree.io/f/maewdqve)
+   - Verify form UUID is correct
+   - Test endpoint manually with curl
+   - Contact Formspree support
+
+---
+
+### Issue: "Could not reach the server" error
+
+**Cause:** Network issue or endpoint unavailable
+
+**Solution:**
+1. Check: Internet connection
+2. Verify: https://formspree.io is accessible
+3. Check: Browser console for CORS errors
+4. Verify: HTTPS is working on aurisnexus.co.za
+5. Test: Direct endpoint access: https://formspree.io/f/maewdqve
+   - You should see a 405 Method Not Allowed (that's correct for GET)
+6. If no response: Contact HOSTAFRICA support
+
+---
+
+### Issue: Form validation not working
+
+**Cause:** Browser not supporting HTML5 validation or JavaScript disabled
+
+**Solution:**
+1. Verify: Browser supports HTML5 (all modern browsers do)
+2. Check: JavaScript is enabled (F12 → Console)
+3. Test: Different browser
+4. Verify: Input fields have `required` attribute
+5. Check: Email field has `type="email"`
+
+---
+
+### Issue: Honeypot not preventing bots
+
+**Solution:** This is expected - honeypot is working:
+- Bot might still submit (honeypot at JavaScript level)
+- Formspree also validates on server
+- Multiple layers of protection
+- Monitor Formspree dashboard for suspicious patterns
+- Consider adding reCAPTCHA if bot submissions increase
+
+---
+
+## SUCCESS CRITERIA
+
+The migration is **SUCCESSFUL** when:
+
+✅ Form action is: https://formspree.io/f/maewdqve  
+✅ Form method is: POST  
+✅ Test submission succeeds  
+✅ Success message displays: "Thank you. Your enquiry has been received..."  
+✅ Form resets on success  
+✅ Email arrives at recipient  
+✅ All fields present in email  
+✅ Sender/reply-to shows visitor email  
+✅ Error handling shows user-friendly messages  
+✅ Mobile responsive and functional  
+✅ No console JavaScript errors  
+✅ Other pages unaffected  
+✅ Honeypot working (bot submissions rejected)  
+✅ Cross-browser compatible  
+
+---
+
+## ROLLBACK PROCEDURE (If Needed)
+
+If Formspree migration causes issues:
+
+**Step 1: Revert Files**
+1. Upload old versions of contact.html and js/main.js
+2. Clear browser cache
+3. Test form with contact-submit.php endpoint
+
+**Step 2: Debug**
+1. Check: Formspree endpoint URL
+2. Verify: Form action in HTML
+3. Inspect: JavaScript console for errors
+4. Test: In incognito window
+
+**Step 3: Contact Support**
+- Formspree Support: hello@formspree.io
+- HOSTAFRICA Support: support@hostafrica.net
+
+---
+
+## SUPPORT RESOURCES
+
+**Formspree Documentation:**
+- https://formspree.io/help/
+- https://formspree.io/docs/
+- Common issues: https://formspree.io/FAQ/
+
+**HOSTAFRICA Support:**
+- Email: support@hostafrica.net
+- Phone: +27 86 000 2220
+- Ticket: https://hosting.hostafrica.net/knowledgebase/
+
+**Browser Developer Tools:**
+- Chrome: https://developer.chrome.com/docs/devtools/
+- Firefox: https://developer.mozilla.org/docs/Tools
+- Safari: https://developer.apple.com/safari/tools/
+
+---
+
+## TIMELINE
+
+| Step | Time | Status |
+|------|------|--------|
+| Upload contact.html | 1 min | Ready |
+| Upload js/main.js | 1 min | Ready |
+| Cache clear | 1 min | Ready |
+| Form submission test | 2 min | Ready |
+| Email delivery check | 2 min | Ready |
+| Error handling test | 3 min | Ready |
+| Mobile test | 2 min | Ready |
+| Cross-browser test | 5 min | Ready |
+| **Total** | **~20 min** | **Ready** |
+
+---
+
+**Status: READY FOR DEPLOYMENT AND LIVE TESTING**  
+**Next Step: Upload files to HOSTAFRICA and follow testing guide**

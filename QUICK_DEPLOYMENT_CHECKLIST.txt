@@ -1,0 +1,140 @@
+# HOSTAFRICA DEPLOYMENT CHECKLIST
+
+## Quick Summary
+
+**What's Wrong:**
+- contact-submit.php is not deployed on HOSTAFRICA
+- It returns HTTP 404
+- Contact form cannot process submissions
+
+**What to Fix:**
+- Upload 1 file: contact-submit.php to public_html root
+
+**Deployment Time:** 5 minutes
+
+---
+
+## Action Required from Auris Team
+
+### ✓ STEP 1: Locate the File
+
+File location:
+```
+c:\Users\admin\OneDrive\A.N.T work\Auris-Nexus-Technologies-main\contact-submit.php
+```
+
+### ✓ STEP 2: Access HOSTAFRICA cPanel
+
+1. Open browser: https://hosting.hostafrica.net/cpanel
+2. Log in with your HOSTAFRICA credentials
+3. Click: **File Manager**
+4. Navigate to: **public_html** folder
+
+### ✓ STEP 3: Upload File
+
+1. Click: **Upload** button
+2. Select: contact-submit.php from your computer
+3. Destination: public_html (same directory as index.html)
+4. File automatically gets correct permissions (644)
+
+### ✓ STEP 4: Verify Upload
+
+1. File should appear in public_html
+2. File size: ~4.2 KB
+3. File name: contact-submit.php (exactly, case-sensitive)
+
+---
+
+## Verification (After Upload)
+
+### Test 1: Check File is Live
+
+1. Open browser
+2. Go to: https://aurisnexus.co.za/contact-submit.php
+3. You should see:
+   ```json
+   {"status":"ERROR","message":"This endpoint accepts form submissions only."}
+   ```
+4. Status code: 405 Method Not Allowed
+5. ✅ If you see this: Deployment successful
+
+### Test 2: Test Contact Form
+
+1. Go to: https://aurisnexus.co.za/contact.html
+2. Fill in:
+   - Name: Test
+   - Email: your-email@example.com
+   - Message: Test submission
+3. Submit
+4. ✅ Should see success message
+5. ✅ Email should arrive at info@aurisnexus.co.za
+
+### Test 3: Check Spam Folder
+
+1. Log into: info@aurisnexus.co.za email
+2. Check: Inbox
+3. Check: Spam/Junk folder
+4. ✅ Test email should arrive within 1 minute
+
+---
+
+## If Upload Fails
+
+### Error: "Cannot Upload File"
+- Solution: Check file size isn't corrupted
+- Try: Download fresh copy of contact-submit.php from source
+
+### Error: "File Not Found After Upload"
+- Solution: Make sure you uploaded to public_html, not a subfolder
+- Check: File is at same level as index.html, contact.html, services.html
+
+### Error: "Still Returns 404 After Upload"
+- Solution: Clear browser cache (Ctrl+Shift+Delete)
+- Try: Open in new incognito/private window
+- Check: File permissions are 644 (via File Manager properties)
+
+### Error: "File Uploaded But Status Still 404"
+- Solution: Contact HOSTAFRICA support
+- Issue: PHP may not be enabled for your account
+- Request: "Enable PHP execution for .php files in public_html"
+
+---
+
+## Support Contact
+
+If you need help with HOSTAFRICA:
+- Email: support@hostafrica.net  
+- Phone: +27 86 000 2220
+- Chat: Available in cPanel
+
+Tell them: "PHP contact form handler (contact-submit.php) not executing - returns 404 instead of 405"
+
+---
+
+## Next Steps After Deployment
+
+1. ✅ Form submission testing (see Test 2 above)
+2. ✅ Email delivery verification (see Test 3 above)
+3. ✅ Honeypot testing (bot protection)
+4. ✅ Full site regression testing
+
+**Estimated time to verify:** 10 minutes
+
+---
+
+## Important
+
+- ⚠️ Do NOT modify contact-submit.php - already security reviewed
+- ⚠️ Do NOT rename file - must be exactly: contact-submit.php
+- ⚠️ Do NOT put in subfolder - must be in public_html root
+- ⚠️ Do NOT test with real customer data - use test emails only
+- ✅ After deployment, all should work automatically
+
+---
+
+## Rollback
+
+If anything breaks:
+1. Simply delete contact-submit.php from public_html
+2. Website will continue working (form will fail gracefully with 404)
+3. No data loss or broken pages

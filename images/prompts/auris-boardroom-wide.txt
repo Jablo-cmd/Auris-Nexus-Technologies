@@ -1,0 +1,6 @@
+Reference image: images/Auris Team.png
+
+Prompt:
+Wide architectural photograph of the Auris Nexus boardroom with executive seating, large display, and natural light. Maintain the same materials, palette and lighting approach as the reference. Composition should convey scale, governance and trust; include subtle South African detail in artwork or finishes.
+
+Usage: About/government pages. Export: avif, webp, jpg. Sizes: 2400, 1600, 800.

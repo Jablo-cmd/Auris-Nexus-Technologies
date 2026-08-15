@@ -1,0 +1,6 @@
+Reference image: images/Auris Team.png
+
+Prompt:
+Natural environmental shot of a small Auris Nexus team collaborating around a meeting table in the office. Include architectural cues, material palette and lighting matching the reference. People should be diverse, natural and not stylised; interaction candid. Depth of field to keep architecture and table details sharp, faces soft.
+
+Usage: About/team sections and case studies. Export: webp, jpg. Sizes: 1600, 1200, 800.

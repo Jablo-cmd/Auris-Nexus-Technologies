@@ -1,0 +1,6 @@
+Reference image: images/Auris Team.png
+
+Prompt:
+Photorealistic reception area of Auris Nexus: premium materials, branded sign, warm lighting, welcoming yet corporate. Natural perspective suitable for contact page hero, shallow DOF optional, include plant or South African artwork element. No people required, but one person could be walking in the background.
+
+Usage: contact page hero. Export: avif, webp, jpg. Sizes: 2400, 1600, 800.

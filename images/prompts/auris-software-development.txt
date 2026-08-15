@@ -1,0 +1,6 @@
+Reference image: images/Auris Team.png
+
+Prompt:
+Photorealistic environmental photograph of Auris Nexus software development area: developers collaborating around a pair-programming station, multiple monitors showing realistic IDE and architecture diagrams, warm timber surfaces and teal accents consistent with the reference image. Natural, candid interactions; people secondary to environment. Lighting: daylight with soft interior fill, premium colour grading. Avoid impersonable stock faces; no badges or identifiable data on screens.
+
+Usage: software development pages and cards. Export: webp, jpg. Sizes: 1600, 1200, 800, 420.

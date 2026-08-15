@@ -1,0 +1,6 @@
+Reference image: images/Auris Team.png
+
+Prompt:
+Photorealistic image illustrating cloud & data operations inside Auris Nexus: large wall-mounted screen displaying abstract but realistic data visualisations, engineers observing, neutral palette with teal accents, server-rack or monitoring station in background but not dominant. Emphasise realistic screens, high dynamic range, filmic contrast.
+
+Usage: cloud & data pages and thumbnails. Export: avif, webp, jpg. Sizes: 2400, 1600, 800.

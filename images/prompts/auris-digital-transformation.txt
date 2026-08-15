@@ -1,0 +1,6 @@
+Reference image: images/Auris Team.png
+
+Prompt:
+Environmental photograph showing a digital transformation scenario inside the Auris Nexus office. Medium shot of screens showing dashboards and data visualizations, a pair of colleagues reviewing a tablet near a monitor, warm wood desk, teal accent lighting and branded signage in the background. Prioritise photorealism, natural poses, shallow depth of field on foreground screen, realistic reflections and screen content that looks like enterprise dashboards (no real customer data). Colour grade: subtle teal highlights, neutral skin tones, premium cinematic contrast.
+
+Usage: homepage digital transformation section, service pages. Export: webp, jpg. Sizes: 1600, 1200, 800.
