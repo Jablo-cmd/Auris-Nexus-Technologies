@@ -1,0 +1,605 @@
+/* =========================================================
+   NEXA — AURIS NEXUS AI ASSISTANT
+   Premium UI / Zero dependencies
+   ========================================================= */
+
+#nexa-widget {
+  position: relative;
+  z-index: 99999;
+}
+
+/* ---------------------------------------------------------
+   Floating launcher
+   --------------------------------------------------------- */
+
+.nexa-launcher {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  height: 56px;
+  padding: 0 20px 0 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(20, 24, 30, 0.96),
+      rgba(8, 10, 14, 0.98)
+    );
+
+  color: #fff;
+
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  cursor: pointer;
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+
+  font-family: inherit;
+}
+
+.nexa-launcher:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(255, 255, 255, 0.28);
+
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.nexa-launcher:active {
+  transform: translateY(0);
+}
+
+.nexa-launcher-text {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* ---------------------------------------------------------
+   Nexa orb
+   --------------------------------------------------------- */
+
+.nexa-orb {
+  position: relative;
+
+  width: 34px;
+  height: 34px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.45) 12%,
+      rgba(255, 255, 255, 0.08) 28%,
+      transparent 55%
+    ),
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #9fa7b2 48%,
+      #3b424d
+    );
+
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.2),
+    0 0 22px rgba(255, 255, 255, 0.18);
+
+  overflow: hidden;
+}
+
+.nexa-orb::before,
+.nexa-orb::after {
+  content: "";
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.nexa-orb::before {
+  width: 21px;
+  height: 21px;
+
+  top: 6px;
+  left: 6px;
+
+  transform: rotate(35deg);
+}
+
+.nexa-orb::after {
+  width: 12px;
+  height: 12px;
+
+  top: 10px;
+  left: 10px;
+
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+/* ---------------------------------------------------------
+   Chat panel
+   --------------------------------------------------------- */
+
+.nexa-panel {
+  position: fixed;
+
+  right: 24px;
+  bottom: 92px;
+
+  width: min(410px, calc(100vw - 32px));
+  height: min(650px, calc(100vh - 120px));
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(21, 25, 31, 0.98),
+      rgba(7, 9, 12, 0.99)
+    );
+
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.55),
+    0 8px 30px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform:
+    translateY(18px)
+    scale(0.97);
+
+  transform-origin: bottom right;
+
+  transition:
+    opacity 180ms ease,
+    transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    visibility 220ms ease;
+
+  color: #fff;
+
+  font-family: inherit;
+}
+
+.nexa-panel.is-open {
+  opacity: 1;
+  visibility: visible;
+
+  transform:
+    translateY(0)
+    scale(1);
+}
+
+/* ---------------------------------------------------------
+   Header
+   --------------------------------------------------------- */
+
+.nexa-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 18px 14px;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.045),
+      transparent
+    );
+}
+
+.nexa-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nexa-brand strong {
+  display: block;
+
+  font-size: 15px;
+  line-height: 1.2;
+
+  letter-spacing: 0.01em;
+}
+
+.nexa-brand small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: rgba(255, 255, 255, 0.52);
+
+  font-size: 11px;
+  letter-spacing: 0.03em;
+}
+
+.nexa-avatar {
+  position: relative;
+
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      #fff 0%,
+      #cfd3d8 20%,
+      #777f89 45%,
+      #252b33 75%,
+      #101319 100%
+    );
+
+  box-shadow:
+    0 0 25px rgba(255, 255, 255, 0.14);
+}
+
+.nexa-avatar span {
+  width: 13px;
+  height: 13px;
+
+  border: 1px solid rgba(255, 255, 255, 0.9);
+
+  border-radius: 50%;
+}
+
+.nexa-close {
+  width: 34px;
+  height: 34px;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 22px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 160ms ease,
+    color 160ms ease;
+}
+
+.nexa-close:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+/* ---------------------------------------------------------
+   Online indicator
+   --------------------------------------------------------- */
+
+.nexa-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 9px 18px;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.nexa-status span {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #79e6a0;
+
+  box-shadow:
+    0 0 10px rgba(121, 230, 160, 0.65);
+}
+
+/* ---------------------------------------------------------
+   Messages
+   --------------------------------------------------------- */
+
+.nexa-messages {
+  flex: 1;
+
+  overflow-y: auto;
+
+  padding: 8px 16px 16px;
+
+  scroll-behavior: smooth;
+}
+
+.nexa-messages::-webkit-scrollbar {
+  width: 5px;
+}
+
+.nexa-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.nexa-messages::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+}
+
+.nexa-message {
+  width: fit-content;
+  max-width: 86%;
+
+  margin-bottom: 12px;
+
+  padding: 11px 13px;
+
+  border-radius: 15px;
+
+  font-size: 13px;
+  line-height: 1.55;
+
+  animation:
+    nexa-message-in 180ms ease both;
+}
+
+@keyframes nexa-message-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nexa-message--nexa {
+  margin-right: auto;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  background:
+    rgba(255, 255, 255, 0.055);
+
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.nexa-message--user {
+  margin-left: auto;
+
+  background: #fff;
+
+  color: #111;
+
+  border-bottom-right-radius: 5px;
+}
+
+/* ---------------------------------------------------------
+   Suggested questions
+   --------------------------------------------------------- */
+
+.nexa-suggestions {
+  display: flex;
+
+  gap: 7px;
+
+  padding: 4px 16px 12px;
+
+  overflow-x: auto;
+}
+
+.nexa-suggestions::-webkit-scrollbar {
+  display: none;
+}
+
+.nexa-suggestions button {
+  flex: 0 0 auto;
+
+  padding: 8px 11px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 999px;
+
+  background:
+    rgba(255, 255, 255, 0.045);
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-family: inherit;
+
+  font-size: 10px;
+
+  cursor: pointer;
+
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease;
+}
+
+.nexa-suggestions button:hover {
+  background:
+    rgba(255, 255, 255, 0.09);
+
+  border-color:
+    rgba(255, 255, 255, 0.2);
+
+  color: #fff;
+}
+
+/* ---------------------------------------------------------
+   Input
+   --------------------------------------------------------- */
+
+.nexa-input-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin: 0 12px;
+
+  padding: 7px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 15px;
+
+  background:
+    rgba(255, 255, 255, 0.045);
+}
+
+.nexa-input-area input {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 9px 10px;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: #fff;
+
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.nexa-input-area input::placeholder {
+  color: rgba(255, 255, 255, 0.34);
+}
+
+.nexa-input-area button {
+  width: 34px;
+  height: 34px;
+
+  flex: 0 0 auto;
+
+  border: 0;
+  border-radius: 10px;
+
+  background: #fff;
+
+  color: #111;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 160ms ease,
+    opacity 160ms ease;
+}
+
+.nexa-input-area button:hover {
+  transform: translateY(-1px);
+}
+
+.nexa-input-area button:active {
+  transform: translateY(0);
+}
+
+/* ---------------------------------------------------------
+   Footer
+   --------------------------------------------------------- */
+
+.nexa-footer {
+  padding: 9px 16px 13px;
+
+  color: rgba(255, 255, 255, 0.25);
+
+  font-size: 9px;
+
+  text-align: center;
+
+  letter-spacing: 0.02em;
+}
+
+/* ---------------------------------------------------------
+   Mobile
+   --------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+  .nexa-launcher {
+    right: 16px;
+    bottom: 16px;
+
+    height: 52px;
+
+    padding-right: 17px;
+  }
+
+  .nexa-panel {
+    right: 8px;
+    bottom: 78px;
+
+    width: calc(100vw - 16px);
+    height: min(680px, calc(100vh - 95px));
+
+    border-radius: 20px;
+  }
+
+  .nexa-message {
+    max-width: 90%;
+  }
+}
+
+/* ---------------------------------------------------------
+   Reduced motion
+   --------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .nexa-panel,
+  .nexa-launcher,
+  .nexa-message {
+    transition: none;
+    animation: none;
+  }
+}
