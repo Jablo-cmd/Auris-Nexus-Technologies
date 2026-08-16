@@ -54,6 +54,17 @@ RewriteRule ^ %1 [R=301,L]
   RewriteRule ^templates/ - [F,L]
   RewriteRule ^scripts/ - [F,L]
   RewriteRule ^_backup_html/ - [F,L]
+  # Internal working files: deployment notes, dev scripts, source-of-truth
+  # design assets. Never meant to be public web assets.
+  RewriteRule ^docs/ - [F,L]
+  RewriteRule ^tools/ - [F,L]
+  RewriteRule ^design-source/ - [F,L]
+</IfModule>
+
+# ── MIME types (some server configs lack a current mime.types entry) ──
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType image/avif .avif
 </IfModule>
 
 # ── Caching ──
