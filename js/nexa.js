@@ -115,6 +115,16 @@
       launcher.addEventListener('click', () => this.toggle(true));
       close.addEventListener('click', () => this.toggle(false));
 
+      document.addEventListener('keydown', (event) => {
+        if (event.key !== 'Escape') return;
+
+        const panel = document.getElementById('nexa-panel');
+        if (panel && panel.classList.contains('is-open')) {
+          this.toggle(false);
+          launcher.focus();
+        }
+      });
+
       form.addEventListener('submit', (event) => {
         event.preventDefault();
 

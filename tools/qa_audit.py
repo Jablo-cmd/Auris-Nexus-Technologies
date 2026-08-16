@@ -4,8 +4,8 @@
 Checks: broken local asset references, duplicate stylesheet/script/favicon
 includes, conflicting <img loading> attributes, missing alt text, empty/
 placeholder hrefs, dangling contact-submit.php references, missing/duplicate
-<title>/meta-description/canonical, multiple <h1>, malformed JSON-LD, and
-oversized images.
+<title>/meta-description/canonical, multiple <h1>, malformed JSON-LD,
+oversized images, and a broken/missing site.webmanifest icon reference.
 
 Usage: python tools/qa_audit.py
 """
@@ -54,7 +54,7 @@ def main():
         "broken_refs", "dup_stylesheets", "dup_scripts", "dup_favicons",
         "conflicting_loading", "missing_alt", "empty_href", "contact_php_refs",
         "missing_title", "missing_meta_desc", "missing_canonical",
-        "multi_h1", "no_h1", "bad_jsonld", "oversized_images",
+        "multi_h1", "no_h1", "bad_jsonld", "oversized_images", "bad_manifest",
     ]}
 
     files = sorted(html_files())
@@ -124,6 +124,20 @@ def main():
             p = Path(dirpath) / fn
             if p.suffix.lower() in (".png", ".jpg", ".jpeg") and p.stat().st_size > 500_000:
                 issues["oversized_images"].append(f"{p.relative_to(ROOT).as_posix()} -> {p.stat().st_size/1024:.0f} KB")
+
+    manifest = ROOT / "site.webmanifest"
+    if manifest.exists():
+        raw = manifest.read_text(encoding="utf-8-sig")
+        try:
+            data = json.loads(raw)
+        except json.JSONDecodeError as e:
+            issues["bad_manifest"].append(f"site.webmanifest -> {e}")
+        else:
+            for icon in data.get("icons", []):
+                src = icon.get("src", "")
+                target = resolve(manifest, src)
+                if not target.exists():
+                    issues["bad_manifest"].append(f"site.webmanifest -> icon not found: {src}")
 
     total = 0
     for key, items in issues.items():

@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "Auris Nexus Technologies",
   "short_name": "Auris Nexus Technologies",
   "description": "AI, software & secure digital solutions engineered for growth.",
@@ -8,7 +8,6 @@
   "background_color": "#070b1a",
   "theme_color": "#070b1a",
   "icons": [
-    { "src": "images/Auri logo.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+    { "src": "images/Auri%20logo.webp", "sizes": "384x256", "type": "image/webp", "purpose": "any" }
   ]
 }
-
