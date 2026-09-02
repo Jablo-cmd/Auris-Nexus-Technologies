@@ -19,6 +19,15 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} (.+)/$
 RewriteRule ^ %1 [R=301,L]
 
+# Retired standalone capability pages -> closest relevant surviving destination.
+# Cloud/hosting, application security and infrastructure are delivery concerns
+# handled inside projects, described on the Solutions page.
+RewriteRule ^cloud-hosting-migration\.html$ /services.html [R=301,L]
+RewriteRule ^cyber-security\.html$ /services.html [R=301,L]
+RewriteRule ^networking-infrastructure-setup\.html$ /services.html [R=301,L]
+# Data architecture work now lives under Data & Business Intelligence.
+RewriteRule ^data-architecture\.html$ /data-analytics-business-intelligence.html [R=301,L]
+
 </IfModule>
 
 # ── Block offline browsers / site rippers & scrapers ──

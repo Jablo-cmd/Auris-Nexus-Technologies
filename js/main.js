@@ -165,6 +165,54 @@
     counters.forEach(function (el) { cio.observe(el); });
   }
 
+  /* ---- Testimonials rotator ----
+     Renders only when at least one real .testi-card is present.
+     Add cards inside [data-testimonials] to activate; never populate with
+     fabricated quotes. */
+  (function () {
+    var block = doc.querySelector('[data-testimonials]');
+    if (!block) return;
+    var section = block.closest('[data-testimonials-section]') || block;
+    var cards = Array.prototype.slice.call(block.querySelectorAll('.testi-card'));
+    if (cards.length === 0) { section.hidden = true; return; }
+    section.hidden = false;
+
+    var dotsWrap = block.querySelector('.testi-dots');
+    var idx = 0, timer = null;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    var dots = cards.map(function (_, i) {
+      var d = doc.createElement('button');
+      d.type = 'button';
+      d.className = 'testi-dot';
+      d.setAttribute('aria-label', 'Show testimonial ' + (i + 1));
+      d.addEventListener('click', function () { go(i, true); });
+      dotsWrap && dotsWrap.appendChild(d);
+      return d;
+    });
+
+    function render() {
+      cards.forEach(function (c, i) { c.classList.toggle('is-active', i === idx); });
+      dots.forEach(function (d, i) { d.classList.toggle('is-active', i === idx); });
+    }
+    function go(i, manual) {
+      idx = (i + cards.length) % cards.length;
+      render();
+      if (manual) restart();
+    }
+    function next() { go(idx + 1); }
+    function restart() {
+      if (timer) clearInterval(timer);
+      if (!reduce && cards.length > 1) timer = setInterval(next, 6500);
+    }
+
+    if (dots.length <= 1 && dotsWrap) dotsWrap.style.display = 'none';
+    render();
+    restart();
+    block.addEventListener('mouseenter', function () { if (timer) clearInterval(timer); });
+    block.addEventListener('mouseleave', restart);
+  })();
+
   /* ---- AJAX contact form ---- */
   var form = doc.getElementById('contact-form');
   if (form) {

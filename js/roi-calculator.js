@@ -58,16 +58,22 @@
     }
 
     function getNumber(input) {
-      return Number.parseFloat(input.value) || 0;
+      const n = Number.parseFloat(input.value);
+      return Number.isFinite(n) ? n : 0;
+    }
+
+    function clamp(value, min, max) {
+      if (!Number.isFinite(value)) return min;
+      return Math.min(max, Math.max(min, value));
     }
 
     function calculate() {
       clearError();
 
-      const employees = getNumber(employeesInput);
-      const hoursPerWeek = getNumber(hoursInput);
-      const hourlyCost = getNumber(hourlyCostInput);
-      const automationPercentage = getNumber(automationInput);
+      const employees = clamp(getNumber(employeesInput), 0, 100000);
+      const hoursPerWeek = clamp(getNumber(hoursInput), 0, 80);
+      const hourlyCost = clamp(getNumber(hourlyCostInput), 0, 50000);
+      const automationPercentage = clamp(getNumber(automationInput), 0, 100);
 
       /*
        * Optional implementation investment.
@@ -75,7 +81,7 @@
        * If the user leaves it blank, we use a conservative
        * planning estimate based on the potential annual savings.
        */
-      let investment = getNumber(investmentInput);
+      let investment = clamp(getNumber(investmentInput), 0, 100000000);
 
       if (employees <= 0) {
         showError('Please enter the number of employees.');

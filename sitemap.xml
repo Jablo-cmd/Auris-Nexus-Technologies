@@ -6,21 +6,18 @@
   <url><loc>https://aurisnexus.co.za/portfolio.html</loc><priority>0.9</priority></url>
   <url><loc>https://aurisnexus.co.za/industries.html</loc><priority>0.9</priority></url>
   <url><loc>https://aurisnexus.co.za/contact.html</loc><priority>0.95</priority></url>
-  <url><loc>https://aurisnexus.co.za/insights/index.html</loc><priority>0.8</priority></url>
+  <url><loc>https://aurisnexus.co.za/insights/</loc><priority>0.8</priority></url>
   <url><loc>https://aurisnexus.co.za/pricing.html</loc><priority>0.7</priority></url>
   <url><loc>https://aurisnexus.co.za/faq.html</loc><priority>0.6</priority></url>
   <url><loc>https://aurisnexus.co.za/privacy.html</loc><priority>0.4</priority></url>
   <url><loc>https://aurisnexus.co.za/terms.html</loc><priority>0.4</priority></url>
-  <url><loc>https://aurisnexus.co.za/ai-integration.html</loc><priority>0.8</priority></url>
-  <url><loc>https://aurisnexus.co.za/web-development.html</loc><priority>0.8</priority></url>
-  <url><loc>https://aurisnexus.co.za/web-design.html</loc><priority>0.8</priority></url>
-  <url><loc>https://aurisnexus.co.za/cyber-security.html</loc><priority>0.8</priority></url>
-  <url><loc>https://aurisnexus.co.za/cloud-hosting-migration.html</loc><priority>0.8</priority></url>
-  <url><loc>https://aurisnexus.co.za/data-architecture.html</loc><priority>0.8</priority></url>
-  <url><loc>https://aurisnexus.co.za/data-analytics-business-intelligence.html</loc><priority>0.8</priority></url>
-  <url><loc>https://aurisnexus.co.za/mobile-app-development.html</loc><priority>0.8</priority></url>
-  <url><loc>https://aurisnexus.co.za/crm-business-management-systems.html</loc><priority>0.8</priority></url>
-  <url><loc>https://aurisnexus.co.za/networking-infrastructure-setup.html</loc><priority>0.8</priority></url>
+  <url><loc>https://aurisnexus.co.za/crm-business-management-systems.html</loc><priority>0.9</priority></url>
+  <url><loc>https://aurisnexus.co.za/business-automation.html</loc><priority>0.9</priority></url>
+  <url><loc>https://aurisnexus.co.za/ai-integration.html</loc><priority>0.9</priority></url>
+  <url><loc>https://aurisnexus.co.za/web-development.html</loc><priority>0.9</priority></url>
+  <url><loc>https://aurisnexus.co.za/data-analytics-business-intelligence.html</loc><priority>0.9</priority></url>
+  <url><loc>https://aurisnexus.co.za/web-design.html</loc><priority>0.9</priority></url>
+  <url><loc>https://aurisnexus.co.za/mobile-app-development.html</loc><priority>0.9</priority></url>
   <url><loc>https://aurisnexus.co.za/insights/ai-business-outcomes.html</loc><priority>0.6</priority></url>
   <url><loc>https://aurisnexus.co.za/insights/cyber-resilience.html</loc><priority>0.6</priority></url>
   <url><loc>https://aurisnexus.co.za/insights/cloud-migration-guide.html</loc><priority>0.6</priority></url>
