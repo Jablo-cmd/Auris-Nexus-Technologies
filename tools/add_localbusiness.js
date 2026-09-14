@@ -16,7 +16,7 @@ const NODE = {
   logo: 'https://aurisnexus.co.za/images/Auri%20logo.webp',
   image: 'https://aurisnexus.co.za/images/Web%20Development%20Hero.webp',
   telephone: '+27631226552',
-  email: 'info@aurisnexus.co.za',
+  email: 'sales@aurisnexus.co.za',
   priceRange: 'R12 500+',
   currenciesAccepted: 'ZAR',
   address: {
