@@ -147,7 +147,7 @@ ${drawerSolutions()}
 <a class="btn btn-primary btn-block" href="/contact.html">Start a Project</a>
 <div class="drawer-contact">
 <a href="tel:+27631226552">Call 063 122 6552</a>
-<a href="mailto:info@aurisnexus.co.za">info@aurisnexus.co.za</a>
+<a href="mailto:sales@aurisnexus.co.za">sales@aurisnexus.co.za</a>
 </div>
 </div>
 </aside>
@@ -226,7 +226,7 @@ ${solLinks}
 <h4>Get in touch</h4>
 <ul class="footer-contact">
 <li><a href="tel:+27631226552">063 122 6552</a></li>
-<li><a href="mailto:info@aurisnexus.co.za">info@aurisnexus.co.za</a></li>
+<li><a href="mailto:sales@aurisnexus.co.za">sales@aurisnexus.co.za</a></li>
 <li><span>140 Linden Road, Sandown</span></li>
 <li><span>Mon–Fri, 8am–5pm</span></li>
 </ul>
