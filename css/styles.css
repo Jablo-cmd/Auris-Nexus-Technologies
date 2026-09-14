@@ -661,11 +661,6 @@ h1, h2, h3, h4 {
 .footer-col a, .footer-contact span { color: var(--muted); font-size: .92rem; transition: color .2s var(--ease); }
 .footer-col a:hover { color: var(--purple-2); }
 .footer-more { color: var(--purple-2) !important; font-weight: 700; }
-.footer-trust { display: grid; grid-template-columns: max-content minmax(0, 1fr); align-items: center; gap: 28px; padding: 28px 0; border-bottom: 1px solid var(--line-2); }
-.footer-trust-title { margin: 0; color: var(--text); font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; white-space: nowrap; }
-.footer-client-logos { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; align-items: center; list-style: none; margin: 0; padding: 0; }
-.footer-client-logo { display: flex; align-items: center; justify-content: center; min-width: 0; min-height: 62px; padding: 10px 14px; border: 1px solid rgba(255,255,255,.12); border-radius: 12px; background: rgba(255,255,255,.94); }
-.footer-client-logo img { display: block; width: 100%; max-width: 132px; height: 34px; object-fit: contain; }
 .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; padding-top: 26px; color: var(--dim); font-size: .84rem; }
 .footer-bottom .credit a { color: var(--purple-2); font-weight: 600; }
 
@@ -690,49 +685,6 @@ h1, h2, h3, h4 {
 .err-foot { position: absolute; bottom: 22px; color: var(--dim); font-size: .84rem; }
 .err-foot a { color: var(--purple-2); }
 
-
-/* ==========================================================================
-   CLIENTS / TRUSTED LOGOS
-   ========================================================================== */
-.clients-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 32px;
-  align-items: center;
-  justify-items: center;
-  padding: 40px 0;
-}
-
-.client-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  border-radius: var(--radius-sm);
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--line-2);
-  transition: all .3s var(--ease);
-  min-height: 140px;
-  width: 100%;
-}
-
-.client-logo:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: var(--line);
-  transform: translateY(-4px);
-}
-
-.client-logo img {
-  max-width: 100%;
-  max-height: 80px;
-  object-fit: contain;
-  opacity: 0.9;
-  transition: opacity .3s var(--ease);
-}
-
-.client-logo:hover img {
-  opacity: 1;
-}
 
 .bg-subtle {
   background: linear-gradient(180deg, rgba(10, 16, 36, 0.5) 0%, rgba(7, 11, 26, 0) 100%);

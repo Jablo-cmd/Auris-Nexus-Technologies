@@ -13,46 +13,6 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  /* ---- Footer client trust signals ---- */
-  var footerShell = doc.querySelector('.site-footer .shell');
-  if (footerShell && !footerShell.querySelector('.footer-trust')) {
-    var script = doc.querySelector('script[src*="js/main.js"]');
-    var logoBase = script ? new URL('../images/Client%20logos/', script.src).href : '/images/Client%20logos/';
-    var clients = [
-      { file: 'Bisho%20Municipality.jpg', alt: 'Bisho Municipality logo', width: 521, height: 421 },
-      { file: 'BP.png', alt: 'BP logo', width: 678, height: 452 },
-      { file: 'Jo%20Jackson%20Dance%20Company.jfif', alt: 'Jo Jackson Dance Company logo', width: 447, height: 447 },
-      { file: 'NBC.png', alt: 'NBC logo', width: 568, height: 352 }
-    ];
-    var trust = doc.createElement('section');
-    trust.className = 'footer-trust';
-    trust.setAttribute('aria-labelledby', 'footer-trust-title');
-
-    var title = doc.createElement('p');
-    title.className = 'footer-trust-title';
-    title.id = 'footer-trust-title';
-    title.textContent = 'Trusted by';
-    trust.appendChild(title);
-
-    var logos = doc.createElement('ul');
-    logos.className = 'footer-client-logos';
-    clients.forEach(function (client) {
-      var item = doc.createElement('li');
-      item.className = 'footer-client-logo';
-      var image = doc.createElement('img');
-      image.src = logoBase + client.file;
-      image.alt = client.alt;
-      image.width = client.width;
-      image.height = client.height;
-      image.loading = 'lazy';
-      image.decoding = 'async';
-      item.appendChild(image);
-      logos.appendChild(item);
-    });
-    trust.appendChild(logos);
-    footerShell.insertBefore(trust, footerShell.querySelector('.footer-bottom'));
-  }
-
   /* ---- Mobile drawer ---- */
   var toggle = doc.getElementById('navToggle');
   var drawer = doc.getElementById('navDrawer');
