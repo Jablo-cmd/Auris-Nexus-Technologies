@@ -220,7 +220,7 @@
           lower.includes('hosting')
         ) {
           response =
-            "We provide cloud technology solutions including infrastructure, migration, hosting strategy and business systems designed for scalability.";
+            "Cloud, hosting and infrastructure aren't standalone services we sell — they're part of how we build and deploy the software and business systems your project needs.";
         } else {
           response =
             "I can help you explore Auris Nexus services, identify a suitable technology solution, or connect you with our team. What are you trying to achieve?";
