@@ -20,7 +20,9 @@
           aria-label="Open Nexa AI Assistant"
           aria-expanded="false"
         >
-          <span class="nexa-orb"></span>
+          <span class="nexa-orb" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 01-4.6 7.5 8.5 8.5 0 01-8.7-.4L3 20l1.5-4.5a8.4 8.4 0 01-.9-3.8 8.5 8.5 0 0117-.2z"></path><circle cx="8.5" cy="11.5" r="1"></circle><circle cx="12" cy="11.5" r="1"></circle><circle cx="15.5" cy="11.5" r="1"></circle></svg>
+          </span>
           <span class="nexa-launcher-text">Nexa</span>
         </button>
 
@@ -32,8 +34,8 @@
         >
           <header class="nexa-header">
             <div class="nexa-brand">
-              <div class="nexa-avatar">
-                <span></span>
+              <div class="nexa-avatar" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 01-4.6 7.5 8.5 8.5 0 01-8.7-.4L3 20l1.5-4.5a8.4 8.4 0 01-.9-3.8 8.5 8.5 0 0117-.2z"></path><circle cx="8.5" cy="11.5" r="1"></circle><circle cx="12" cy="11.5" r="1"></circle><circle cx="15.5" cy="11.5" r="1"></circle></svg>
               </div>
 
               <div>
