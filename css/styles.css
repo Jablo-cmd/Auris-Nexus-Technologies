@@ -1123,3 +1123,33 @@ footer a:hover{color:#FFB866}
  .page-hero .hero-actions .btn{width:100%}
  .feature-card,.ind-card,.trust-card,.price-card{padding:22px}
 }
+
+/* ==========================================================================
+   AURIS HOMEPAGE PARITY — remove legacy dark hero/section treatment
+   Internal pages should visually continue the homepage, not switch themes.
+   ========================================================================== */
+.page-hero,
+.page-hero::before,
+.svc-hero,
+.svc-hero::before,
+.hero:not(.home-hero),
+.hero:not(.home-hero)::before{
+  background:#fff !important;
+  background-image:none !important;
+}
+.page-hero::after,.svc-hero::after{display:none!important}
+.page-hero h1,.svc-hero h1,.hero:not(.home-hero) h1{color:var(--auris-navy)!important}
+.page-hero p,.svc-hero p,.hero:not(.home-hero) p{color:var(--auris-muted)!important}
+.page-hero .eyebrow,.svc-hero .eyebrow,.hero:not(.home-hero) .eyebrow{color:var(--auris-orange)!important}
+.page-hero .btn-primary,.svc-hero .btn-primary,.hero:not(.home-hero) .btn-primary{background:var(--auris-orange)!important;border-color:var(--auris-orange)!important;color:#fff!important}
+.page-hero .btn-ghost,.svc-hero .btn-ghost,.hero:not(.home-hero) .btn-ghost{background:#fff!important;border-color:var(--auris-navy)!important;color:var(--auris-navy)!important}
+.page-hero .page-hero-media img,.svc-hero-media img{
+  background:#e8edf3!important;border-color:rgba(0,26,72,.09)!important;
+  box-shadow:0 28px 70px rgba(0,26,72,.18)!important;
+}
+main>section:not(.home-hero):not(.home-industries):not(.home-final-cta){
+  color:var(--auris-ink);
+}
+main>section:not(.home-hero):not(.home-industries):not(.home-final-cta) h2,
+main>section:not(.home-hero):not(.home-industries):not(.home-final-cta) h3{color:var(--auris-navy)}
+main>section:not(.home-hero):not(.home-industries):not(.home-final-cta) p{color:var(--auris-muted)}
