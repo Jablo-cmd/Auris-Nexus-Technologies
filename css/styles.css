@@ -977,3 +977,56 @@ h1, h2, h3, h4 {
 @media (max-width:760px){.home-hero{padding:60px 0 70px}.home-hero-grid,.home-difference-grid,.home-support-inner,.home-industries-band{grid-template-columns:1fr}.home-hero-copy h1{font-size:clamp(2.55rem,12vw,4rem)}.home-hero-lead{font-size:1rem}.home-hero-image{transform:none}.home-hero-note{position:relative;left:auto;bottom:auto;display:inline-flex;margin-top:14px}.home-pillar-grid{grid-template-columns:1fr 1fr}.home-pillar{min-height:230px}.home-support-list{grid-template-columns:1fr}.home-principles{grid-template-columns:1fr}.home-work-grid{grid-template-columns:1fr}.home-case-feature{grid-column:auto}.home-work-more{align-items:flex-start;flex-direction:column}.home-process-grid{grid-template-columns:1fr}.home-process-step{border-right:0;border-bottom:1px solid var(--home-line)}.home-process-step:last-child{border-bottom:0}.home-industry-links{grid-template-columns:1fr}.home-final-cta{padding-bottom:70px}}
 @media (max-width:480px){.home-pillar-grid{grid-template-columns:1fr}.home-pillar{min-height:auto}.home-hero-actions{align-items:stretch;flex-direction:column}.home-btn,.home-text-cta{width:100%;text-align:center}.home-text-cta{padding:12px}.home-hero-note{width:100%}}
 @media (prefers-reduced-motion:reduce){.home-pillar,.home-case,.home-btn,.home-case-media img{transition:none!important;transform:none!important}}
+
+/* ==========================================================================
+   AURIS NEXUS DESIGN SYSTEM — shared visual language
+   Applied globally; existing layout/behaviour remains intact.
+   ========================================================================== */
+:root{
+  --auris-navy:#001A48;
+  --auris-navy-2:#06285F;
+  --auris-orange:#F28C28;
+  --auris-orange-dark:#D97706;
+  --auris-ink:#10213B;
+  --auris-muted:#5D6B80;
+  --auris-line:#DFE5EC;
+  --auris-soft:#F5F7FA;
+}
+body{color:var(--auris-ink);background:#fff}
+h1,h2,h3,h4,h5,h6{color:var(--auris-navy)}
+.eyebrow{color:var(--auris-orange)}
+a{transition:color .2s ease}
+.btn-primary,.btn.btn-primary{background:var(--auris-orange);border-color:var(--auris-orange);color:#fff;box-shadow:0 10px 24px rgba(242,140,40,.18)}
+.btn-primary:hover,.btn.btn-primary:hover{background:var(--auris-orange-dark);border-color:var(--auris-orange-dark);color:#fff}
+.btn-ghost,.btn.btn-ghost{background:#fff;border-color:var(--auris-navy);color:var(--auris-navy)}
+.btn-ghost:hover,.btn.btn-ghost:hover{background:#F4F7FB;border-color:var(--auris-navy);color:var(--auris-navy)}
+.page-hero{background:linear-gradient(135deg,#fff 0%,#F7F9FC 100%);border-bottom:1px solid var(--auris-line)}
+.page-hero h1{color:var(--auris-navy);letter-spacing:-.035em}
+.page-hero p{color:var(--auris-muted)}
+.section-head h2,.section-head h3{color:var(--auris-navy)}
+.card{border-color:var(--auris-line);box-shadow:0 8px 24px rgba(0,26,72,.035)}
+.card:hover{border-color:#BCC8D8}
+.feature-card,.ind-card,.price-card,.trust-card,.folio-card{background:#fff}
+.feature-card .ic,.ind-card .ic,.trust-icon{color:var(--auris-orange)}
+.linkarrow{color:var(--auris-navy)}
+.linkarrow:hover{color:var(--auris-orange)}
+.chip{border-color:var(--auris-line);background:#fff;color:var(--auris-navy)}
+.chip:hover{border-color:var(--auris-orange);color:var(--auris-orange)}
+.metric-strip{border-color:var(--auris-line)}
+.metric b{color:var(--auris-navy)}
+.metric span{color:var(--auris-muted)}
+.cta-band{background:var(--auris-navy);color:#fff}
+.cta-band h2{color:#fff}
+.cta-band p{color:#CBD5E1}
+.cta-band .eyebrow{color:#FFB866}
+.form-card,.contact-grid .info-list{border-color:var(--auris-line)}
+.form-title{color:var(--auris-navy)}
+input:focus,select:focus,textarea:focus{border-color:var(--auris-orange);box-shadow:0 0 0 3px rgba(242,140,40,.12);outline:none}
+.folio-tag,.price-tag-badge{background:var(--auris-orange);color:#fff}
+.price-amt{color:var(--auris-navy)}
+.price-card.featured{border-color:var(--auris-orange)}
+.svc-other .chip{color:var(--auris-navy)}
+footer{background:var(--auris-navy);color:#fff}
+footer h2,footer h3,footer h4{color:#fff}
+footer a{color:#CBD5E1}
+footer a:hover{color:#FFB866}
