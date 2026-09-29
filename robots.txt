@@ -8,3 +8,4 @@ Disallow: /tools/
 Disallow: /design-source/
 
 Sitemap: https://aurisnexus.co.za/sitemap.xml
+Sitemap: https://aurisnexus.co.za/news-sitemap.xml
