@@ -423,9 +423,18 @@ Solutions
 <div class="page-hero-media reveal d1"><img alt="Guidance on custom software, automation and AI decisions" decoding="async" fetchpriority="high" height="420" loading="eager" src="/images/services/ai-analytics-dashboard.jpg" width="560"/></div>
 </div>
 </section>
-<section class="section section--tight">
+<section class="section section--tight pb-0">
 <div class="shell">
-<div class="ins-grid"><article class="card ins-card reveal">
+<div class="ins-search-wrap reveal">
+<svg aria-hidden="true" class="ins-search-ic" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+<input aria-label="Search Auris Nexus Insights" autocomplete="off" id="insSearch" placeholder="Search Insights by title or topic…" type="search"/>
+</div>
+<p class="ins-search-empty" hidden id="insSearchEmpty">No insights match that search. Try a different keyword, or <a href="/contact.html">talk to us directly</a>.</p>
+</div>
+</section>
+<section class="section section--tight pt-0">
+<div class="shell">
+<div class="ins-grid" id="insGrid"><article class="card ins-card reveal">
 <a class="ins-media" href="/insights/why-businesses-must-adopt-ai-in-daily-operations.html"><img alt="Why businesses must adopt AI in their daily operations" height="236" loading="lazy" src="../images/services/ai-analytics-dashboard.jpg" width="420"/></a>
 <div class="ins-body">
 <div class="ins-meta"><span class="ins-badge">Artificial Intelligence</span><span>8 min read</span></div>
@@ -535,7 +544,7 @@ Solutions
 </div>
 </div>
 </section>
-<div class="insights-editorial-note" style="margin-top:24px"><p><strong>Editorial standards:</strong> Our Insights follow published standards for authorship, sourcing, corrections and AI-assisted content.</p><p><a class="linkarrow" href="/insights/editorial-policy.html">Read our editorial standards</a> · <a class="linkarrow" href="/insights/rss.xml">RSS feed</a></p></div>
+<div class="insights-editorial-note" style="margin-top:24px"><p><strong>Editorial standards:</strong> Our Insights follow published standards for authorship, sourcing, corrections and AI-assisted content, written by <a href="/insights/authors/loyiso-ngcala.html">Loyiso Ngcala</a>, Founder &amp; Managing Director.</p><p><a class="linkarrow" href="/insights/editorial-policy.html">Read our editorial standards</a> · <a class="linkarrow" href="/insights/rss.xml">RSS feed</a></p></div>
 <section class="section pt-0">
 <div class="shell">
 <div class="cta-band reveal">
@@ -613,5 +622,25 @@ Solutions
 </div>
 </footer>
 <script src="../js/main.js?v=1789405582" defer></script>
+<script>
+(function () {
+  var input = document.getElementById('insSearch');
+  var grid = document.getElementById('insGrid');
+  var empty = document.getElementById('insSearchEmpty');
+  if (!input || !grid) return;
+  var cards = Array.prototype.slice.call(grid.querySelectorAll('.ins-card'));
+  input.addEventListener('input', function () {
+    var q = input.value.trim().toLowerCase();
+    var visible = 0;
+    cards.forEach(function (card) {
+      var text = card.textContent.toLowerCase();
+      var match = !q || text.indexOf(q) !== -1;
+      card.style.display = match ? '' : 'none';
+      if (match) visible++;
+    });
+    if (empty) empty.hidden = visible !== 0;
+  });
+})();
+</script>
 </body>
 </html>
