@@ -179,7 +179,7 @@ h1, h2, h3, h4 {
 
 .brand { display: inline-flex; align-items: center; gap: 11px; flex-shrink: 0; }
 .brand-logo { width: 40px; height: 40px; border-radius: 11px; object-fit: cover; }
-.brand-name { font-family: var(--font-head); font-weight: 800; font-size: 1.12rem; letter-spacing: -.01em; color: var(--navy); }
+.brand-name { font-family: var(--font-head); font-weight: 800; font-size: 1.12rem; letter-spacing: -.01em; color: var(--navy); }\n.site-footer .brand-name { color: #fff; }
 
 .nav-links { display: flex; align-items: center; gap: clamp(4px, 0.6vw, 12px); flex: 1; justify-content: center; }
 .nav-link {
