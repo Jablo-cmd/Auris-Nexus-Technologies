@@ -1,3 +1,4 @@
+# SEO deployment baseline: 2026-10-05
 User-agent: *
 Allow: /
 Disallow: /includes/
