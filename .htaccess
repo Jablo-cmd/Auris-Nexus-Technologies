@@ -27,6 +27,9 @@ RewriteRule ^cyber-security\.html$ /services.html [R=301,L]
 RewriteRule ^networking-infrastructure-setup\.html$ /services.html [R=301,L]
 # Data architecture work now lives under Data & Business Intelligence.
 RewriteRule ^data-architecture\.html$ /data-analytics-business-intelligence.html [R=301,L]
+RewriteRule ^cloud-solutions\.html$ /services.html [R=301,L]
+RewriteRule ^networking-infrastructure\.html$ /services.html [R=301,L]
+RewriteRule ^data-solutions\.html$ /data-analytics-business-intelligence.html [R=301,L]
 
 </IfModule>
 
