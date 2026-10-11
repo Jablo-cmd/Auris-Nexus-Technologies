@@ -621,6 +621,18 @@ Solutions
   var params = new URLSearchParams(window.location.search);
   var raw = (params.get('project') || '').toLowerCase().replace(/[^a-z0-9]/g, '');
   var wantsDemo = params.has('demo') || raw !== '';
+  var requestedService = (params.get('service') || '').trim();
+  if (requestedService) {
+    var requestedSelect = document.getElementById('service');
+    if (requestedSelect) {
+      for (var j = 0; j < requestedSelect.options.length; j++) {
+        if (requestedSelect.options[j].text.toLowerCase() === requestedService.toLowerCase()) {
+          requestedSelect.selectedIndex = j;
+          break;
+        }
+      }
+    }
+  }
   if (!wantsDemo) return;
 
   var MAP = {
