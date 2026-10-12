@@ -236,7 +236,7 @@ def main():
                     page_text, re.I
                 )
                 if canonical_match:
-                    canonical_url = canonical_match.group(1) or canonical_match.group(2)
+                    canonical_url = canonical_match.group(1)
                     if canonical_url.startswith("https://aurisnexus.co.za/") and canonical_url not in seen_urls:
                         issues["sitemap_missing_pages"].append(
                             f"{rel} -> indexable canonical missing from sitemap: {canonical_url}"
