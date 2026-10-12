@@ -83,18 +83,18 @@ def main():
             )
 
         # Detect pages competing through duplicate titles/descriptions, excluding redirect stubs.
-        is_redirect = bool(re.search(r'<meta[^>]+http-equiv=["\\']refresh["\\']', text, re.I))
+        is_redirect = bool(re.search(r'<meta[^>]+http-equiv="refresh"', text, re.I))
         if not is_redirect:
             title_match = re.search(r"<title[^>]*>(.*?)</title>", text, re.I | re.S)
             desc_match = re.search(
-                r'<meta\\s+(?=[^>]*name=["\\']description["\\'])(?=[^>]*content=["\\']([^"\\']+)["\\'])[^>]*>',
+                r'<meta\s+(?=[^>]*name="description")(?=[^>]*content="([^"]+)")[^>]*>',
                 text, re.I
             )
             if title_match:
-                title_value = re.sub(r"\\s+", " ", title_match.group(1)).strip().casefold()
+                title_value = re.sub(r"\s+", " ", title_match.group(1)).strip().casefold()
                 title_pages.setdefault(title_value, []).append(rel)
             if desc_match:
-                desc_value = re.sub(r"\\s+", " ", desc_match.group(1)).strip().casefold()
+                desc_value = re.sub(r"\s+", " ", desc_match.group(1)).strip().casefold()
                 description_pages.setdefault(desc_value, []).append(rel)
 
         for ref in local_asset_refs(text):
@@ -226,14 +226,13 @@ def main():
                 if re.search(r'<meta[^>]+http-equiv=["\\']refresh["\\']', page_text, re.I):
                     continue
                 robots_match = re.search(
-                    r'<meta\\s+(?=[^>]*name=["\\']robots["\\'])(?=[^>]*content=["\\']([^"\\']+)["\\'])[^>]*>',
+                    r'<meta\s+(?=[^>]*name="robots")(?=[^>]*content="([^"]+)")[^>]*>',
                     page_text, re.I
                 )
                 if robots_match and "noindex" in robots_match.group(1).lower():
                     continue
                 canonical_match = re.search(
-                    r'<link\\b[^>]*rel=["\\']canonical["\\'][^>]*href=["\\']([^"\\']+)["\\']|'
-                    r'<link\\b[^>]*href=["\\']([^"\\']+)["\\'][^>]*rel=["\\']canonical["\\']',
+                    r'<link\b(?=[^>]*rel="canonical")(?=[^>]*href="([^"]+)")[^>]*>',
                     page_text, re.I
                 )
                 if canonical_match:
