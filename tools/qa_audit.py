@@ -223,7 +223,7 @@ def main():
                 if rel in {"403.html", "404.html", "500.html"}:
                     continue
                 page_text = f.read_text(encoding="utf-8", errors="replace")
-                if re.search(r'<meta[^>]+http-equiv=["\\']refresh["\\']', page_text, re.I):
+                if re.search(r'<meta[^>]+http-equiv="refresh"', page_text, re.I):
                     continue
                 robots_match = re.search(
                     r'<meta\s+(?=[^>]*name="robots")(?=[^>]*content="([^"]+)")[^>]*>',
