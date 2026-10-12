@@ -33,11 +33,11 @@ const NODE = {
     longitude: 28.021826,
   },
   hasMap: 'https://maps.google.com/?q=140+Linden+Street,+Sandown,+2196',
-  areaServed: { '@type': 'Country', name: 'South Africa' },
+  sameAs: [\n    'https://za.linkedin.com/company/auris-nexus-technologies',\n    'https://github.com/Jablo-cmd/Auris-Nexus-Technologies',\n  ],\n  founder: {\n    '@type': 'Person',\n    '@id': 'https://aurisnexus.co.za/about.html#loyiso-ngcala',\n    name: 'Loyiso Ngcala',\n    url: 'https://za.linkedin.com/in/ngcalasd7000',\n  },\n  identifier: { '@type': 'PropertyValue', propertyID: 'CIPC', value: '2026/606690/07' },\n  areaServed: [\n    { '@type': 'City', name: 'Sandton' },\n    { '@type': 'City', name: 'Johannesburg' },\n    { '@type': 'Country', name: 'South Africa' },\n  ],
   openingHoursSpecification: [{
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-    opens: '09:00',
+    opens: '08:00',
     closes: '17:00',
   }],
 };
