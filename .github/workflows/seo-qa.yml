@@ -15,5 +15,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Validate LocalBusiness schema generator syntax
+        run: node --check tools/add_localbusiness.js
       - name: Run static SEO and production QA
         run: python tools/qa_audit.py
