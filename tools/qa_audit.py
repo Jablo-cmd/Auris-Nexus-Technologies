@@ -54,13 +54,48 @@ def main():
         "broken_refs", "dup_stylesheets", "dup_scripts", "dup_favicons",
         "conflicting_loading", "missing_alt", "empty_href", "contact_php_refs",
         "missing_title", "missing_meta_desc", "missing_canonical",
-        "multi_h1", "no_h1", "bad_jsonld", "oversized_images", "bad_manifest",
+        "multi_h1", "no_h1", "bad_jsonld", "oversized_images", "bad_manifest", "wrong_business_address", "incomplete_business_address", "duplicate_canonical", "duplicate_titles", "duplicate_descriptions", "sitemap_errors", "sitemap_missing_pages",
     ]}
 
     files = sorted(html_files())
+    title_pages = {}
+    description_pages = {}
     for f in files:
         rel = f.relative_to(ROOT).as_posix()
         text = f.read_text(encoding="utf-8", errors="replace")
+
+        # Permanent regression guard: the registered business address is Linden Street.
+        # Catch stale variants anywhere in page content, including JSON-LD and visible text.
+        if re.search(r"Linden(?:\s+|\+|%20)Road", text, re.I):
+            issues["wrong_business_address"].append(
+                f"{rel} -> obsolete address spelling; expected 140 Linden Street"
+            )
+
+        canonical_tags = re.findall(r'<link\b[^>]*rel=["\']canonical["\'][^>]*>', text, re.I)
+        if len(canonical_tags) > 1:
+            issues["duplicate_canonical"].append(f"{rel} -> {len(canonical_tags)} canonical tags")
+
+        if re.search(r"140 Linden Street,\s*Sandown\s*</span>", text, re.I) or re.search(
+            r"<strong>Office</strong>\s*<span>140 Linden Street Sandown</span>", text, re.I
+        ):
+            issues["incomplete_business_address"].append(
+                f"{rel} -> visible address is abbreviated; use the full approved business address"
+            )
+
+        # Detect pages competing through duplicate titles/descriptions, excluding redirect stubs.
+        is_redirect = bool(re.search(r'<meta[^>]+http-equiv="refresh"', text, re.I))
+        if not is_redirect:
+            title_match = re.search(r"<title[^>]*>(.*?)</title>", text, re.I | re.S)
+            desc_match = re.search(
+                r'<meta\s+(?=[^>]*name="description")(?=[^>]*content="([^"]+)")[^>]*>',
+                text, re.I
+            )
+            if title_match:
+                title_value = re.sub(r"\s+", " ", title_match.group(1)).strip().casefold()
+                title_pages.setdefault(title_value, []).append(rel)
+            if desc_match:
+                desc_value = re.sub(r"\s+", " ", desc_match.group(1)).strip().casefold()
+                description_pages.setdefault(desc_value, []).append(rel)
 
         for ref in local_asset_refs(text):
             target = resolve(f, ref)
@@ -139,6 +174,76 @@ def main():
                 if not target.exists():
                     issues["bad_manifest"].append(f"site.webmanifest -> icon not found: {src}")
 
+
+    for title_value, pages in title_pages.items():
+        if len(pages) > 1:
+            issues["duplicate_titles"].append(f"{title_value!r} -> {', '.join(pages)}")
+    for desc_value, pages in description_pages.items():
+        if len(pages) > 1:
+            issues["duplicate_descriptions"].append(f"{desc_value[:100]!r} -> {', '.join(pages)}")
+
+    # The generator is a source of truth too: it must never reintroduce the old address.
+    generator = ROOT / "tools" / "add_localbusiness.js"
+    if generator.exists():
+        generator_text = generator.read_text(encoding="utf-8", errors="replace")
+        if re.search(r"Linden(?:\s+|\+|%20)Road", generator_text, re.I):
+            issues["wrong_business_address"].append(
+                "tools/add_localbusiness.js -> generator would reintroduce the obsolete address"
+            )
+
+    # Check that every sitemap URL belongs to this site and maps to a published HTML file.
+    sitemap = ROOT / "sitemap.xml"
+    if sitemap.exists():
+        try:
+            import xml.etree.ElementTree as ET
+            tree = ET.parse(sitemap)
+            seen_urls = set()
+            for node in tree.findall(".//{*}loc"):
+                url = (node.text or "").strip()
+                parsed = urllib.parse.urlparse(url)
+                if parsed.scheme != "https" or parsed.netloc.lower() != "aurisnexus.co.za":
+                    issues["sitemap_errors"].append(f"sitemap.xml -> unexpected URL: {url}")
+                    continue
+                if url in seen_urls:
+                    issues["sitemap_errors"].append(f"sitemap.xml -> duplicate URL: {url}")
+                seen_urls.add(url)
+                pathname = urllib.parse.unquote(parsed.path).lstrip("/")
+                if not pathname:
+                    target = ROOT / "index.html"
+                elif pathname.endswith("/"):
+                    target = ROOT / pathname / "index.html"
+                else:
+                    target = ROOT / pathname
+                if not target.is_file():
+                    issues["sitemap_errors"].append(f"sitemap.xml -> URL has no file: {url}")
+
+            # Every canonical, indexable content page should be discoverable from the sitemap.
+            for f in files:
+                rel = f.relative_to(ROOT).as_posix()
+                if rel in {"403.html", "404.html", "500.html"}:
+                    continue
+                page_text = f.read_text(encoding="utf-8", errors="replace")
+                if re.search(r'<meta[^>]+http-equiv="refresh"', page_text, re.I):
+                    continue
+                robots_match = re.search(
+                    r'<meta\s+(?=[^>]*name="robots")(?=[^>]*content="([^"]+)")[^>]*>',
+                    page_text, re.I
+                )
+                if robots_match and "noindex" in robots_match.group(1).lower():
+                    continue
+                canonical_match = re.search(
+                    r'<link\b(?=[^>]*rel="canonical")(?=[^>]*href="([^"]+)")[^>]*>',
+                    page_text, re.I
+                )
+                if canonical_match:
+                    canonical_url = canonical_match.group(1)
+                    if canonical_url.startswith("https://aurisnexus.co.za/") and canonical_url not in seen_urls:
+                        issues["sitemap_missing_pages"].append(
+                            f"{rel} -> indexable canonical missing from sitemap: {canonical_url}"
+                        )
+        except (ET.ParseError, OSError) as e:
+            issues["sitemap_errors"].append(f"sitemap.xml -> {e}")
+
     total = 0
     for key, items in issues.items():
         print(f"\n[{key}] {len(items)}")
@@ -147,7 +252,8 @@ def main():
         total += len(items)
 
     print(f"\n{'='*50}\nTOTAL ISSUES: {total}\nPages scanned: {len(files)}")
-    return 0
+    critical = ("wrong_business_address", "incomplete_business_address", "duplicate_canonical", "duplicate_titles", "duplicate_descriptions", "bad_jsonld", "sitemap_errors", "sitemap_missing_pages")
+    return 1 if any(issues[key] for key in critical) else 0
 
 if __name__ == "__main__":
     sys.exit(main())
