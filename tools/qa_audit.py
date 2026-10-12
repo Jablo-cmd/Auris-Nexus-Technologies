@@ -54,13 +54,24 @@ def main():
         "broken_refs", "dup_stylesheets", "dup_scripts", "dup_favicons",
         "conflicting_loading", "missing_alt", "empty_href", "contact_php_refs",
         "missing_title", "missing_meta_desc", "missing_canonical",
-        "multi_h1", "no_h1", "bad_jsonld", "oversized_images", "bad_manifest",
+        "multi_h1", "no_h1", "bad_jsonld", "oversized_images", "bad_manifest", "wrong_business_address", "duplicate_canonical", "sitemap_errors",
     ]}
 
     files = sorted(html_files())
     for f in files:
         rel = f.relative_to(ROOT).as_posix()
         text = f.read_text(encoding="utf-8", errors="replace")
+
+        # Permanent regression guard: the registered business address is Linden Street.
+        # Catch stale variants anywhere in page content, including JSON-LD and visible text.
+        if re.search(r"\\b140\\s+Linden\\s+(?:Road|Rd)\\b", text, re.I):
+            issues["wrong_business_address"].append(
+                f"{rel} -> obsolete address spelling; expected 140 Linden Street"
+            )
+
+        canonical_tags = re.findall(r'<link\\b[^>]*rel=["\\']canonical["\\'][^>]*>', text, re.I)
+        if len(canonical_tags) > 1:
+            issues["duplicate_canonical"].append(f"{rel} -> {len(canonical_tags)} canonical tags")
 
         for ref in local_asset_refs(text):
             target = resolve(f, ref)
@@ -138,6 +149,44 @@ def main():
                 target = resolve(manifest, src)
                 if not target.exists():
                     issues["bad_manifest"].append(f"site.webmanifest -> icon not found: {src}")
+
+
+    # The generator is a source of truth too: it must never reintroduce the old address.
+    generator = ROOT / "tools" / "add_localbusiness.js"
+    if generator.exists():
+        generator_text = generator.read_text(encoding="utf-8", errors="replace")
+        if re.search(r"\\b140\\s+Linden\\s+(?:Road|Rd)\\b|140\\+Linden\\+Road", generator_text, re.I):
+            issues["wrong_business_address"].append(
+                "tools/add_localbusiness.js -> generator would reintroduce the obsolete address"
+            )
+
+    # Check that every sitemap URL belongs to this site and maps to a published HTML file.
+    sitemap = ROOT / "sitemap.xml"
+    if sitemap.exists():
+        try:
+            import xml.etree.ElementTree as ET
+            tree = ET.parse(sitemap)
+            seen_urls = set()
+            for node in tree.findall(".//{*}loc"):
+                url = (node.text or "").strip()
+                parsed = urllib.parse.urlparse(url)
+                if parsed.scheme != "https" or parsed.netloc.lower() != "aurisnexus.co.za":
+                    issues["sitemap_errors"].append(f"sitemap.xml -> unexpected URL: {url}")
+                    continue
+                if url in seen_urls:
+                    issues["sitemap_errors"].append(f"sitemap.xml -> duplicate URL: {url}")
+                seen_urls.add(url)
+                pathname = urllib.parse.unquote(parsed.path).lstrip("/")
+                if not pathname:
+                    target = ROOT / "index.html"
+                elif pathname.endswith("/"):
+                    target = ROOT / pathname / "index.html"
+                else:
+                    target = ROOT / pathname
+                if not target.is_file():
+                    issues["sitemap_errors"].append(f"sitemap.xml -> URL has no file: {url}")
+        except (ET.ParseError, OSError) as e:
+            issues["sitemap_errors"].append(f"sitemap.xml -> {e}")
 
     total = 0
     for key, items in issues.items():
