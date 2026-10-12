@@ -66,7 +66,7 @@ def main():
 
         # Permanent regression guard: the registered business address is Linden Street.
         # Catch stale variants anywhere in page content, including JSON-LD and visible text.
-        if re.search(r"\b140\s+Linden\s+(?:Road|Rd)\b", text, re.I):
+        if re.search(r"Linden(?:\s+|\+|%20)Road", text, re.I):
             issues["wrong_business_address"].append(
                 f"{rel} -> obsolete address spelling; expected 140 Linden Street"
             )
@@ -186,7 +186,7 @@ def main():
     generator = ROOT / "tools" / "add_localbusiness.js"
     if generator.exists():
         generator_text = generator.read_text(encoding="utf-8", errors="replace")
-        if re.search(r"\b140\s+Linden\s+(?:Road|Rd)\b|140\+Linden\+Road", generator_text, re.I):
+        if re.search(r"Linden(?:\s+|\+|%20)Road", generator_text, re.I):
             issues["wrong_business_address"].append(
                 "tools/add_localbusiness.js -> generator would reintroduce the obsolete address"
             )
