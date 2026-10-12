@@ -252,7 +252,8 @@ def main():
         total += len(items)
 
     print(f"\n{'='*50}\nTOTAL ISSUES: {total}\nPages scanned: {len(files)}")
-    return 0
+    critical = ("wrong_business_address", "incomplete_business_address", "duplicate_canonical", "duplicate_titles", "duplicate_descriptions", "bad_jsonld", "sitemap_errors", "sitemap_missing_pages")
+    return 1 if any(issues[key] for key in critical) else 0
 
 if __name__ == "__main__":
     sys.exit(main())
