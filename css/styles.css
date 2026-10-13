@@ -831,6 +831,7 @@ h1, h2, h3, h4 {
    ========================================================================== */
 .quote-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 18px; margin-top: 34px; }
 .quote-grid--single { max-width: 820px; }
+.quote-grid--stack { align-items: start; }
 .quote-card { position: relative; margin: 0; padding: 46px 32px 28px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); display: flex; flex-direction: column; }
 .quote-card::before { content: "\201C"; position: absolute; top: 6px; left: 24px; font-family: var(--font-head); font-size: 4.6rem; line-height: 1; color: var(--cyan); opacity: .22; }
 .quote-card blockquote { margin: 0; position: relative; }
@@ -841,6 +842,7 @@ h1, h2, h3, h4 {
 .quote-card figcaption a { color: var(--cyan); font-size: .85rem; font-weight: 700; margin-top: 4px; }
 .quote-card--compact { padding: 42px 30px 24px; }
 .quote-card--compact blockquote p { font-size: 1.05rem; }
+.quote-card--pull blockquote p { font-family: var(--font-head); font-weight: 600; font-size: clamp(1.2rem, 2vw, 1.45rem); line-height: 1.5; color: var(--navy); }
 @media (max-width: 620px) { .quote-card { padding: 42px 22px 22px; } }
 
 .cs { scroll-margin-top: 96px; }
