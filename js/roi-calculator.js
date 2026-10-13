@@ -67,7 +67,8 @@
       return Math.min(max, Math.max(min, value));
     }
 
-    function calculate() {
+    function calculate(options) {
+      const quiet = options === true;
       clearError();
 
       const employees = clamp(getNumber(employeesInput), 0, 100000);
@@ -84,24 +85,28 @@
       let investment = clamp(getNumber(investmentInput), 0, 100000000);
 
       if (employees <= 0) {
+        if (quiet) return;
         showError('Please enter the number of employees.');
         employeesInput.focus();
         return;
       }
 
       if (hoursPerWeek <= 0) {
+        if (quiet) return;
         showError('Please enter the weekly manual-work hours.');
         hoursInput.focus();
         return;
       }
 
       if (hourlyCost <= 0) {
+        if (quiet) return;
         showError('Please enter an estimated hourly employee cost.');
         hourlyCostInput.focus();
         return;
       }
 
       if (automationPercentage <= 0) {
+        if (quiet) return;
         showError('Please select an estimated automation percentage.');
         automationInput.focus();
         return;
@@ -207,10 +212,12 @@
 
         results.classList.add('roi-results--animate');
 
-        results.scrollIntoView({
-          behavior: 'smooth',
-          block: 'nearest'
-        });
+        if (!quiet) {
+          results.scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest'
+          });
+        }
       }
     }
 
@@ -265,8 +272,21 @@
      * Calculate.
      */
     if (calculateButton) {
-      calculateButton.addEventListener('click', calculate);
+      calculateButton.addEventListener('click', function () {
+        calculate();
+      });
     }
+
+    /*
+     * Show an estimate for the default figures straight away, and keep it
+     * current as the visitor edits, so the results panel is never empty.
+     */
+    calculate(true);
+    calculator.addEventListener('input', function () {
+      if (results && !results.hidden) {
+        calculate(true);
+      }
+    });
 
     /*
      * Reset.
