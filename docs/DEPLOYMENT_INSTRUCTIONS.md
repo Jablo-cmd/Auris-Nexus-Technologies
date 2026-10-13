@@ -1,4 +1,25 @@
-# Auris Nexus Technologies - Live Deployment Fix Instructions
+# Auris Nexus Technologies - Deployment
+
+## Current deployment (October 2026)
+
+- The site is served by **GitHub Pages** from the `main` branch of this
+  repository, at the custom domain in `CNAME` (`aurisnexus.co.za`).
+  Do not change or delete `CNAME`, and do not change the Pages source.
+- Every push to `main` starts the **"pages build and deployment"** run
+  (Actions tab). The site is live once that run finishes green.
+- **Merges made through a GitHub App or bot connection may not start a
+  Pages deployment.** If a merge to `main` shows an "SEO QA" run but no
+  "pages build and deployment" run, merge or push the next change as a
+  repository owner from the GitHub web UI or your own git client.
+- The contact form posts to Formspree (`contact.html`); the PHP handler
+  below is no longer used (see `design-source/deprecated/`).
+- `tools/rebuild_chrome.js` rewrites the header, drawer and footer on
+  every page. Check its contact details match the live pages before
+  running it.
+
+---
+
+## Historical: HostAfrica PHP handler (no longer used)
 
 **Critical Blocker:** contact-submit.php is missing from live server
 **Status:** Ready for deployment
