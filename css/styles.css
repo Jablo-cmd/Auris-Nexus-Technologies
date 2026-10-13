@@ -200,13 +200,38 @@ h1, h2, h3, h4 {
 
 .nav-actions { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
 .nav-wa {
-  display: none; align-items: center; justify-content: center;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px; flex-shrink: 0;
   width: 42px; height: 42px; border-radius: 50%;
   background: rgba(37,211,102,.12); color: #1fa855; border: 1px solid rgba(37,211,102,.28);
   transition: transform .25s var(--ease), background .25s var(--ease);
 }
 .nav-wa svg { width: 21px; height: 21px; }
 .nav-wa:hover { transform: translateY(-2px); background: rgba(37,211,102,.2); }
+/* Header fit: the menu, WhatsApp and "Start a Project" must all stay on screen */
+@media (min-width: 1400px) {
+  .nav-wa { width: auto; padding: 0 16px 0 13px; border-radius: 999px; font-weight: 700; font-size: .9rem; }
+  .nav-wa::after { content: "WhatsApp"; }
+}
+@media (min-width: 901px) and (max-width: 1279px) {
+  .site-header .brand-name { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .nav { gap: 16px; }
+  .nav-actions { gap: 10px; }
+}
+@media (min-width: 901px) and (max-width: 1060px) {
+  .nav-link { padding: 8px 9px; font-size: .88rem; }
+}
+@media (max-width: 374px) {
+  .site-header .brand-name { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
+@media (max-width: 480px) {
+  .nav { gap: 10px; }
+  .nav-actions { gap: 8px; }
+  .site-header .brand { gap: 8px; }
+  .site-header .brand-logo { width: 34px; height: 34px; }
+  .site-header .brand-name { font-size: .95rem; }
+  .nav-wa { width: 38px; height: 38px; }
+  .nav-wa svg { width: 19px; height: 19px; }
+}
 
 /* Mega menu */
 .has-mega { position: relative; }
