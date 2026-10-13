@@ -179,7 +179,8 @@ h1, h2, h3, h4 {
 
 .brand { display: inline-flex; align-items: center; gap: 11px; flex-shrink: 0; }
 .brand-logo { width: 40px; height: 40px; border-radius: 11px; object-fit: cover; }
-.brand-name { font-family: var(--font-head); font-weight: 800; font-size: 1.12rem; letter-spacing: -.01em; color: var(--navy); }\n.site-footer .brand-name { color: #fff; }
+.brand-name { font-family: var(--font-head); font-weight: 800; font-size: 1.12rem; letter-spacing: -.01em; color: var(--navy); }
+.site-footer .brand-name { color: #fff; }
 
 .nav-links { display: flex; align-items: center; gap: clamp(4px, 0.6vw, 12px); flex: 1; justify-content: center; }
 .nav-link {
@@ -819,6 +820,28 @@ h1, h2, h3, h4 {
 .cs-index-name { font-family: var(--font-head); font-size: 1.15rem; margin: 0 0 8px; color: var(--navy); }
 .cs-index .folio-body > p { margin-bottom: 12px; }
 .cs-index .linkarrow { margin-top: auto; font-size: .88rem; }
+
+/* Client project without a product screenshot — typographic panel */
+.folio-media--brand { display: flex !important; flex-direction: column; justify-content: flex-end; gap: 6px; padding: 26px; background: var(--grad); color: #fff; text-decoration: none; }
+.folio-media--brand .folio-brand-name { font-family: var(--font-head); font-weight: 800; font-size: clamp(1.4rem, 2.4vw, 1.9rem); line-height: 1.1; letter-spacing: -.01em; }
+.folio-media--brand .folio-brand-url { font-size: .82rem; font-weight: 600; color: rgba(255,255,255,.78); }
+
+/* ==========================================================================
+   CLIENT TESTIMONIALS
+   ========================================================================== */
+.quote-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 18px; margin-top: 34px; }
+.quote-grid--single { max-width: 820px; }
+.quote-card { position: relative; margin: 0; padding: 46px 32px 28px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); display: flex; flex-direction: column; }
+.quote-card::before { content: "\201C"; position: absolute; top: 6px; left: 24px; font-family: var(--font-head); font-size: 4.6rem; line-height: 1; color: var(--cyan); opacity: .22; }
+.quote-card blockquote { margin: 0; position: relative; }
+.quote-card blockquote p { color: var(--text); font-size: 1rem; line-height: 1.7; margin: 0 0 14px; }
+.quote-card figcaption { margin-top: auto; padding-top: 18px; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 2px; }
+.quote-card figcaption strong { color: var(--navy); font-weight: 800; }
+.quote-card figcaption span { color: var(--muted); font-size: .88rem; }
+.quote-card figcaption a { color: var(--cyan); font-size: .85rem; font-weight: 700; margin-top: 4px; }
+.quote-card--compact { padding: 42px 30px 24px; }
+.quote-card--compact blockquote p { font-size: 1.05rem; }
+@media (max-width: 620px) { .quote-card { padding: 42px 22px 22px; } }
 
 .cs { scroll-margin-top: 96px; }
 .cs-featured { position: relative; }
