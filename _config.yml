@@ -1,0 +1,14 @@
+# GitHub Pages build settings.
+# The site is plain HTML (no Jekyll templates); this file only keeps
+# internal working files out of the published site at aurisnexus.co.za.
+# Do not add a "url", "baseurl" or theme: CNAME sets the domain.
+exclude:
+  - docs
+  - tools
+  - design-source
+  - package.json
+  - package-lock.json
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - vendor

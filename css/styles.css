@@ -442,6 +442,8 @@ h1, h2, h3, h4 {
 .cta-band .hero-actions { justify-content: center; }
 .cta-band .btn-ghost { background: rgba(255,255,255,.08); color: #fff; border-color: var(--line-dark); }
 .cta-band .btn-ghost:hover { background: rgba(255,255,255,.16); border-color: rgba(255,255,255,.4); }
+.cta-band .btn-primary { background: #fff; color: var(--navy); box-shadow: 0 14px 32px rgba(0,0,0,.25); }
+.cta-band .btn-primary:hover { background: #fff; color: var(--navy-2); }
 
 /* ==========================================================================
    PAGE HERO (interior pages)
