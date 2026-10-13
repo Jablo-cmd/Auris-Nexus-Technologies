@@ -1,6 +1,6 @@
 # Auris Nexus Technologies - Deployment
 
-## Current deployment (October 2026)
+## Current deployment ( 13 October 2026)
 
 - The site is served by **GitHub Pages** from the `main` branch of this
   repository, at the custom domain in `CNAME` (`aurisnexus.co.za`).
