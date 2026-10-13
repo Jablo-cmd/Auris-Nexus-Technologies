@@ -12,11 +12,11 @@
     var style = doc.createElement('style');
     style.id = 'auris-promo-ticker-styles';
     style.textContent = [
-      '.auris-promo-ticker{--promo-navy:#001A48;--promo-cyan:#098FB4;--promo-teal:#00B3BF;position:relative;z-index:80;display:flex;align-items:center;gap:clamp(12px,2vw,28px);width:100%;min-height:64px;padding:10px clamp(14px,3vw,32px);overflow:hidden;background:linear-gradient(105deg,#001338 0%,var(--promo-navy) 34%,#064B80 72%,var(--promo-cyan) 100%);color:#fff;border-top:3px solid var(--promo-teal);border-bottom:2px solid rgba(0,179,191,.95);box-shadow:0 8px 24px rgba(0,26,72,.2);isolation:isolate}',
+      '.auris-promo-ticker{--promo-navy:#001A48;--promo-cyan:#098FB4;--promo-teal:#00B3BF;position:relative;z-index:80;display:flex;align-items:center;gap:clamp(12px,2vw,28px);width:100%;min-height:46px;padding:8px 0;overflow:hidden;background:linear-gradient(105deg,#001338 0%,var(--promo-navy) 34%,#064B80 72%,var(--promo-cyan) 100%);color:#fff;border-top:3px solid var(--promo-teal);border-bottom:2px solid rgba(0,179,191,.95);box-shadow:0 8px 24px rgba(0,26,72,.2);isolation:isolate}',
       '.auris-promo-ticker:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(105deg,transparent 15%,rgba(255,255,255,.08) 48%,transparent 72%);background-size:220% 100%;animation:auris-promo-sheen 8s ease-in-out infinite}',
       '.auris-promo-ticker__label{flex:0 0 auto;display:inline-flex;align-items:center;gap:9px;padding:10px 14px;border:1px solid rgba(112,243,238,.65);border-radius:7px;background:linear-gradient(135deg,#00B3BF,#75F3ED);box-shadow:0 0 22px rgba(0,179,191,.22);font-size:.72rem;font-weight:900;letter-spacing:.075em;text-transform:uppercase;color:#001A48;white-space:nowrap}',
       '.auris-promo-ticker__dot{width:8px;height:8px;flex:0 0 8px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px rgba(0,26,72,.12),0 0 14px rgba(255,255,255,.8);animation:auris-promo-pulse 1.8s ease-in-out infinite}',
-      '.auris-promo-ticker__viewport{flex:1 1 auto;min-width:0;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent)}',
+      '.auris-promo-ticker__viewport{flex:1 1 auto;min-width:0;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}',
       '.auris-promo-ticker__track{display:flex;width:max-content;align-items:center;will-change:transform;animation:auris-promo-right 34s linear infinite}',
       '.auris-promo-ticker__group{display:flex;flex:0 0 auto;align-items:center;gap:clamp(24px,4vw,54px);padding-right:clamp(24px,4vw,54px);white-space:nowrap}',
       '.auris-promo-ticker__message{display:inline-flex;align-items:center;gap:10px;font-size:.94rem;font-weight:700;letter-spacing:.005em;color:#fff;white-space:nowrap;text-shadow:0 1px 10px rgba(0,0,0,.15)}',
@@ -30,8 +30,8 @@
       '@keyframes auris-promo-right{from{transform:translateX(-50%)}to{transform:translateX(0)}}',
       '@keyframes auris-promo-pulse{0%,100%{transform:scale(1);box-shadow:0 0 0 4px rgba(0,26,72,.12),0 0 14px rgba(255,255,255,.8)}50%{transform:scale(1.18);box-shadow:0 0 0 7px rgba(0,26,72,.08),0 0 20px rgba(255,255,255,1)}}',
       '@keyframes auris-promo-sheen{0%,100%{background-position:100% 0}50%{background-position:0 0}}',
-      '@media(max-width:760px){.auris-promo-ticker{gap:10px;min-height:58px;padding:8px 10px}.auris-promo-ticker__label{font-size:.62rem;letter-spacing:.035em;padding:9px 10px;gap:6px}.auris-promo-ticker__message{font-size:.82rem}.auris-promo-ticker__cta{font-size:.72rem;min-height:38px;padding:7px 10px;gap:5px}.auris-promo-ticker__cta svg{width:14px;height:14px;flex-basis:14px}}',
-      '@media(max-width:420px){.auris-promo-ticker{gap:7px;min-height:54px;padding:7px 8px}.auris-promo-ticker__label{font-size:.57rem;letter-spacing:0;padding:8px 7px;gap:5px}.auris-promo-ticker__label-text{display:inline}.auris-promo-ticker__cta{padding:7px 8px;font-size:.68rem;gap:4px}.auris-promo-ticker__cta span{white-space:nowrap}.auris-promo-ticker__group{gap:20px}.auris-promo-ticker__message{font-size:.76rem}}',
+      '@media(max-width:760px){.auris-promo-ticker{min-height:42px;padding:7px 0}.auris-promo-ticker__label{font-size:.62rem;letter-spacing:.035em;padding:9px 10px;gap:6px}.auris-promo-ticker__message{font-size:.82rem}.auris-promo-ticker__cta{font-size:.72rem;min-height:38px;padding:7px 10px;gap:5px}.auris-promo-ticker__cta svg{width:14px;height:14px;flex-basis:14px}}',
+      '@media(max-width:420px){.auris-promo-ticker{min-height:40px;padding:6px 0}.auris-promo-ticker__label{font-size:.57rem;letter-spacing:0;padding:8px 7px;gap:5px}.auris-promo-ticker__label-text{display:inline}.auris-promo-ticker__cta{padding:7px 8px;font-size:.68rem;gap:4px}.auris-promo-ticker__cta span{white-space:nowrap}.auris-promo-ticker__group{gap:20px}.auris-promo-ticker__message{font-size:.76rem}}',
       '@media(prefers-reduced-motion:reduce){.auris-promo-ticker:before{animation:none}.auris-promo-ticker__track{animation:none;transform:none}.auris-promo-ticker__group[aria-hidden="true"]{display:none}.auris-promo-ticker__viewport{mask-image:none}}'
     ].join('');
     doc.head.appendChild(style);
@@ -40,19 +40,14 @@
     ticker.id = 'auris-promo-ticker';
     ticker.className = 'auris-promo-ticker';
     ticker.setAttribute('aria-label', 'Auris Nexus website design and development promotion');
-    var whatsappUrl = 'https://wa.me/27631226552?text=' + encodeURIComponent('Hi Auris Nexus Technologies, I would like to discuss the free technology consultation for website design and development.');
     var messages = '<span class="auris-promo-ticker__message"><span class="auris-promo-ticker__spark" aria-hidden="true">✦</span><strong>FREE TECHNOLOGY CONSULTATION</strong></span>' +
       '<span class="auris-promo-ticker__message">Website design &amp; development built around your business</span>' +
       '<span class="auris-promo-ticker__message"><span class="auris-promo-ticker__spark" aria-hidden="true">✦</span>Premium. Responsive. Designed to convert.</span>' +
       '<span class="auris-promo-ticker__message">Ready for a better website? Let’s talk.</span>';
     ticker.innerHTML =
-      '<span class="auris-promo-ticker__label"><span class="auris-promo-ticker__dot" aria-hidden="true"></span><span class="auris-promo-ticker__label-text">AURIS WEB STUDIO</span></span>' +
       '<div class="auris-promo-ticker__viewport" aria-label="Free technology consultation. Website design and development. Premium responsive websites designed around your business.">' +
         '<div class="auris-promo-ticker__track"><div class="auris-promo-ticker__group">' + messages + '</div><div class="auris-promo-ticker__group" aria-hidden="true">' + messages + '</div></div>' +
-      '</div>' +
-      '<a class="auris-promo-ticker__cta" href="' + whatsappUrl + '" target="_blank" rel="noopener noreferrer" aria-label="Chat with Auris Nexus on WhatsApp about a free website consultation">' +
-        '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.4-4.7A8.5 8.5 0 1 1 20.5 11.7Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.2 7.8c.2-.4.5-.4.8-.4h.4c.2 0 .3.1.4.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c-.2.2-.2.3-.1.5.5.9 1.2 1.6 2.1 2.1.2.1.4.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.6.8c.2.1.3.2.3.4 0 .3-.2 1.1-.7 1.4-.5.4-1.1.6-1.8.4-1-.2-2.2-.8-3.4-1.9-1.4-1.3-2.1-2.8-2.3-3.8-.2-.8.2-1.4.8-1.8Z" fill="currentColor"/></svg>' +
-        '<span>Chat on WhatsApp</span></a>';
+      '</div>';
 
     var header = doc.getElementById('siteHeader') || doc.querySelector('header.site-header');
     var skipLink = doc.querySelector('a.skip-link');
