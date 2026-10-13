@@ -113,6 +113,10 @@ for (const file of files) {
     console.log('skip    ' + relative + ' (error/redirect page)');
     continue;
   }
+  if (/^google[0-9a-f]+\.html$/.test(relative)) {
+    console.log('skip    ' + relative + ' (search console verification file)');
+    continue;
+  }
 
   const original = html;
   let foundBusinessNode = false;
