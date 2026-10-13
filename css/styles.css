@@ -821,10 +821,9 @@ h1, h2, h3, h4 {
 .cs-index .folio-body > p { margin-bottom: 12px; }
 .cs-index .linkarrow { margin-top: auto; font-size: .88rem; }
 
-/* Client project without a product screenshot — typographic panel */
-.folio-media--brand { display: flex !important; flex-direction: column; justify-content: flex-end; gap: 6px; padding: 26px; background: var(--grad); color: #fff; text-decoration: none; }
-.folio-media--brand .folio-brand-name { font-family: var(--font-head); font-weight: 800; font-size: clamp(1.4rem, 2.4vw, 1.9rem); line-height: 1.1; letter-spacing: -.01em; }
-.folio-media--brand .folio-brand-url { font-size: .82rem; font-weight: 600; color: rgba(255,255,255,.78); }
+/* Client project shown by its logo — panel colour matches the logo's background */
+.folio-media--logo { display: flex !important; align-items: center; justify-content: center; background: #27ABB8; }
+.folio-media--logo img { width: auto; height: 78%; max-width: 78%; object-fit: contain; }
 
 /* ==========================================================================
    CLIENT TESTIMONIALS
