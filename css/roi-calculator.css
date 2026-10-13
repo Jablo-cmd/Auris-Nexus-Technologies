@@ -312,3 +312,6 @@
     width: 100%;
   }
 }
+/* Results CTA sits on the navy panel, so invert it for contrast */
+.roi-results-cta.btn-primary { background: #fff; color: var(--navy); }
+.roi-results-cta.btn-primary:hover { background: #fff; color: var(--navy-2); }
