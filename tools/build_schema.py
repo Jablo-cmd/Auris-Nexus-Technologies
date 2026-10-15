@@ -122,6 +122,13 @@ PAGE_TYPES = {
     "insights/authors/loyiso-ngcala.html": "ProfilePage",
 }
 
+# Industry pages describe a service; its name must appear in the page's H1.
+INDUSTRY_SERVICES = {
+    "logistics.html": "Logistics software",
+    "corporate.html": "Business management software",
+    "healthcare.html": "Healthcare administration software",
+}
+
 # Short breadcrumb labels for pages without a visible breadcrumb trail.
 CRUMB_LABELS = {
     "about.html": "About",
@@ -296,24 +303,25 @@ def build_graph(rel, page):
 
     graph = [ORGANIZATION, WEBSITE, PERSON, webpage, breadcrumb]
 
-    for node in olds:
-        if "Service" in types(node):
-            label = crumbs[-1][0] if len(crumbs) > 1 else name
-            service = {
-                "@type": "Service",
-                "@id": url + "#service",
-                "name": node.get("name") or label,
-                "serviceType": node.get("name") or label,
-                "description": node.get("description") or description,
-                "provider": {"@id": ORG_ID},
-                "areaServed": {"@type": "Country", "name": "South Africa"},
-                "url": url,
-            }
-            if node.get("audience"):
-                service["audience"] = node["audience"]
-            graph.append(service)
-            webpage["mainEntity"] = webpage.get("mainEntity") or {"@id": url + "#service"}
-            break
+    services = [n for n in olds if "Service" in types(n)]
+    if not services and rel in INDUSTRY_SERVICES:
+        services = [{"name": INDUSTRY_SERVICES[rel]}]
+    for node in services[:1]:
+        label = crumbs[-1][0] if len(crumbs) > 1 else name
+        service = {
+            "@type": "Service",
+            "@id": url + "#service",
+            "name": node.get("name") or label,
+            "serviceType": node.get("name") or label,
+            "description": node.get("description") or description,
+            "provider": {"@id": ORG_ID},
+            "areaServed": {"@type": "Country", "name": "South Africa"},
+            "url": url,
+        }
+        if node.get("audience"):
+            service["audience"] = node["audience"]
+        graph.append(service)
+        webpage["mainEntity"] = webpage.get("mainEntity") or {"@id": url + "#service"}
 
     for node in olds:
         if types(node) & {"Article", "BlogPosting"}:
