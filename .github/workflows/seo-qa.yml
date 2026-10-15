@@ -25,6 +25,8 @@ jobs:
         run: node --check tools/rebuild_chrome.js
       - name: Structured data is up to date
         run: python tools/build_schema.py --check
+      - name: Reading-time labels are consistent
+        run: python tools/reading_times.py --check
       - name: Sitemap is up to date
         run: python tools/build_sitemap.py --check
       - name: Run static SEO and production QA
