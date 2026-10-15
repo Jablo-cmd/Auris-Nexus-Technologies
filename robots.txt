@@ -1,11 +1,4 @@
-# SEO deployment baseline: 2026-10-05
 User-agent: *
 Allow: /
-Disallow: /includes/
-Disallow: /templates/
-Disallow: /extracted/
-Disallow: /docs/
-Disallow: /tools/
-Disallow: /design-source/
 
 Sitemap: https://aurisnexus.co.za/sitemap.xml

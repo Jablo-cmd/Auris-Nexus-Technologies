@@ -4,106 +4,62 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": "ProfessionalService",
       "@id": "https://aurisnexus.co.za/#organization",
       "name": "Auris Nexus Technologies",
+      "legalName": "Auris Nexus Technologies (Pty) Ltd",
+      "alternateName": "Auris Nexus",
       "url": "https://aurisnexus.co.za/",
-      "legalName": "Auris Nexus Technologies",
-      "sameAs": [
-        "https://za.linkedin.com/company/auris-nexus-technologies",
-        "https://github.com/Jablo-cmd/Auris-Nexus-Technologies"
-      ],
-      "founder": {
-        "@type": "Person",
-        "@id": "https://aurisnexus.co.za/about.html#loyiso-ngcala",
-        "name": "Loyiso Ngcala",
-        "url": "https://za.linkedin.com/in/ngcalasd7000"
-      },
+      "logo": "https://aurisnexus.co.za/images/Auri%20logo.webp",
+      "image": "https://aurisnexus.co.za/images/Web%20Development%20Hero.webp",
+      "description": "Technology consulting and digital solutions company helping South African businesses solve operational challenges through technology consulting, custom software, business automation, digital transformation, AI integration and business systems.",
+      "foundingDate": "2026-07",
       "identifier": {
         "@type": "PropertyValue",
         "propertyID": "CIPC",
         "value": "2026/606690/07"
       },
-      "logo": "https://aurisnexus.co.za/images/Auri%20logo.webp",
+      "founder": {
+        "@id": "https://aurisnexus.co.za/insights/authors/loyiso-ngcala.html#person"
+      },
       "email": "info@aurisnexus.co.za",
-      "telephone": "+27631226552"
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://aurisnexus.co.za/#website",
-      "url": "https://aurisnexus.co.za/",
-      "name": "Auris Nexus Technologies",
-      "publisher": {
-        "@id": "https://aurisnexus.co.za/#organization"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "url": "https://aurisnexus.co.za/healthcare.html",
-      "name": "Healthcare Software Solutions | Digital Healthcare Operations | Auris Nexus",
-      "description": "Healthcare software solutions for administrative workflows, information management, reporting, portals and secure role-based access — designed around operational requirements.",
-      "isPartOf": {
-        "@id": "https://aurisnexus.co.za/#website"
-      }
-    },
-    {
-      "@type": [
-        "LocalBusiness",
-        "ProfessionalService"
-      ],
-      "@id": "https://aurisnexus.co.za/#localbusiness",
-      "name": "Auris Nexus Technologies",
-      "description": "Technology consulting and digital solutions partner helping organisations solve operational challenges through custom software, automation, digital transformation and AI integration.",
-      "url": "https://aurisnexus.co.za/",
-      "logo": "https://aurisnexus.co.za/images/Auri%20logo.webp",
-      "image": "https://aurisnexus.co.za/images/Web%20Development%20Hero.webp",
       "telephone": "+27631226552",
-      "email": "info@aurisnexus.co.za",
-      "priceRange": "R12 500+",
-      "currenciesAccepted": "ZAR",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "140 Linden Street",
-        "addressLocality": "Sandown",
+        "streetAddress": "140 Linden Street, Sandown",
+        "addressLocality": "Sandton",
         "addressRegion": "Gauteng",
         "postalCode": "2196",
         "addressCountry": "ZA"
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -26.109677,
-        "longitude": 28.021826
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=140+Linden+Street%2C+Sandown%2C+Sandton+2196",
+      "areaServed": "ZA",
+      "knowsAbout": [
+        "Technology consulting",
+        "Custom software development",
+        "Business process automation",
+        "Digital transformation",
+        "AI integration",
+        "Business systems",
+        "Data and business intelligence",
+        "Web development",
+        "Mobile app development"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": "+27631226552",
+        "email": "info@aurisnexus.co.za",
+        "areaServed": "ZA",
+        "availableLanguage": [
+          "en"
+        ]
       },
-      "hasMap": "https://maps.google.com/?q=140+Linden+Street,+Sandown,+Sandton,+Gauteng+2196",
       "sameAs": [
-        "https://za.linkedin.com/company/auris-nexus-technologies",
-        "https://github.com/Jablo-cmd/Auris-Nexus-Technologies"
+        "https://za.linkedin.com/company/auris-nexus-technologies"
       ],
-      "founder": {
-        "@type": "Person",
-        "@id": "https://aurisnexus.co.za/about.html#loyiso-ngcala",
-        "name": "Loyiso Ngcala",
-        "url": "https://za.linkedin.com/in/ngcalasd7000"
-      },
-      "identifier": {
-        "@type": "PropertyValue",
-        "propertyID": "CIPC",
-        "value": "2026/606690/07"
-      },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Sandton"
-        },
-        {
-          "@type": "City",
-          "name": "Johannesburg"
-        },
-        {
-          "@type": "Country",
-          "name": "South Africa"
-        }
-      ],
+      "priceRange": "R12 500+",
+      "currenciesAccepted": "ZAR",
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -118,10 +74,76 @@
           "closes": "17:00"
         }
       ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://aurisnexus.co.za/#website",
+      "url": "https://aurisnexus.co.za/",
+      "name": "Auris Nexus Technologies",
+      "description": "Technology consulting and digital solutions built around how your organisation works.",
+      "publisher": {
+        "@id": "https://aurisnexus.co.za/#organization"
+      },
+      "inLanguage": "en-ZA"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://aurisnexus.co.za/insights/authors/loyiso-ngcala.html#person",
+      "name": "Loyiso Ngcala",
+      "jobTitle": "Founder & Managing Director",
+      "url": "https://aurisnexus.co.za/insights/authors/loyiso-ngcala.html",
+      "sameAs": [
+        "https://za.linkedin.com/in/ngcalasd7000"
+      ],
+      "worksFor": {
+        "@id": "https://aurisnexus.co.za/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://aurisnexus.co.za/healthcare.html#webpage",
+      "url": "https://aurisnexus.co.za/healthcare.html",
+      "name": "Healthcare Software Solutions",
+      "description": "Healthcare software solutions for administrative workflows, information management, reporting, portals and secure role-based access.",
+      "isPartOf": {
+        "@id": "https://aurisnexus.co.za/#website"
+      },
+      "about": {
+        "@id": "https://aurisnexus.co.za/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://aurisnexus.co.za/healthcare.html#breadcrumb"
+      },
+      "inLanguage": "en-ZA"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://aurisnexus.co.za/healthcare.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://aurisnexus.co.za/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Industries",
+          "item": "https://aurisnexus.co.za/industries.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Healthcare Software for Better Administration",
+          "item": "https://aurisnexus.co.za/healthcare.html"
+        }
+      ]
     }
   ]
 }
-</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aurisnexus.co.za/"},{"@type":"ListItem","position":2,"name":"Industries","item":"https://aurisnexus.co.za/industries.html"},{"@type":"ListItem","position":3,"name":"Healthcare","item":"https://aurisnexus.co.za/healthcare.html"}]}</script><link rel="icon" href="/images/Auri%20logo.webp" type="image/webp"><link rel="stylesheet" href="css/styles.css?v=1792195200"></head>
+</script>
+<link rel="icon" href="/images/Auri%20logo.webp" type="image/webp"><link rel="stylesheet" href="css/styles.css?v=1792195200"></head>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-DJ5BQVHL"
@@ -144,6 +166,13 @@ Solutions
 </a>
 <div class="mega">
 <div class="mega-grid">
+<a class="mega-item" href="/technology-consulting.html">
+<span class="mega-ic"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 3v18M3 12h18"></path><circle cx="12" cy="12" r="8"></circle></svg></span>
+<span class="mega-tx">
+<strong>Technology Consulting</strong>
+<span>Analyse the business problem, define the right solution and create a practical technology roadmap.</span>
+</span>
+</a>
 <a class="mega-item" href="/web-development.html">
 <span class="mega-ic"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6M13 4l-2 16"></path></svg></span>
 <span class="mega-tx">
@@ -182,7 +211,7 @@ Solutions
 <a class="mega-item" href="/ai-integration.html">
 <span class="mega-ic"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"></path><path d="M5 19l.8 2.2L8 22l-2.2.8L5 25M19 4l.6 1.6L21 6l-1.4.4"></path></svg></span>
 <span class="mega-tx">
-<strong>AI Solutions</strong>
+<strong>AI Integration</strong>
 <span>Practical AI inside real workflows — assistants, document intelligence, decision support.</span>
 </span>
 </a>
@@ -244,12 +273,13 @@ Solutions
 <div class="drawer-services">
 <p class="drawer-label">Solutions</p>
 <div class="drawer-svc-grid">
+<a class="drawer-svc" href="/technology-consulting.html"><span class="mega-ic"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 3v18M3 12h18"></path><circle cx="12" cy="12" r="8"></circle></svg></span>Technology Consulting</a>
 <a class="drawer-svc" href="/web-development.html"><span class="mega-ic"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6M13 4l-2 16"></path></svg></span>Web Development</a>
 <a class="drawer-svc" href="/web-design.html"><span class="mega-ic"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 20h9"></path><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4z"></path></svg></span>Web Design</a>
 <a class="drawer-svc" href="/crm-business-management-systems.html"><span class="mega-ic"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"></rect><rect x="13" y="3" width="8" height="8" rx="2"></rect><rect x="3" y="13" width="8" height="8" rx="2"></rect><rect x="13" y="13" width="8" height="8" rx="2"></rect></svg></span>Business Systems</a>
 <a class="drawer-svc" href="/business-automation.html"><span class="mega-ic"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M17 2l4 4-4 4"></path><path d="M3 11V9a4 4 0 014-4h14"></path><path d="M7 22l-4-4 4-4"></path><path d="M21 13v2a4 4 0 01-4 4H3"></path></svg></span>Business Automation</a>
 <a class="drawer-svc" href="/mobile-app-development.html"><span class="mega-ic"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2"></rect><path d="M11 18h2"></path></svg></span>Mobile App Development</a>
-<a class="drawer-svc" href="/ai-integration.html"><span class="mega-ic"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"></path><path d="M5 19l.8 2.2L8 22l-2.2.8L5 25M19 4l.6 1.6L21 6l-1.4.4"></path></svg></span>AI Solutions</a>
+<a class="drawer-svc" href="/ai-integration.html"><span class="mega-ic"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"></path><path d="M5 19l.8 2.2L8 22l-2.2.8L5 25M19 4l.6 1.6L21 6l-1.4.4"></path></svg></span>AI Integration</a>
 <a class="drawer-svc" href="/data-analytics-business-intelligence.html"><span class="mega-ic"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M4 20V4M4 20h16M8 16v-4M12 16V8M16 16v-6"></path></svg></span>Data & Business Intelligence</a>
 </div>
 </div>
@@ -284,7 +314,7 @@ Solutions
 </a>
 </nav>
 
-<main id="main"><section class="page-hero"><div class="shell"><nav aria-label="Breadcrumb" class="crumbs"><a href="/">Home</a><span class="sep">/</span><a href="/industries.html">Industries</a><span class="sep">/</span>Healthcare Software for Better Administration</nav><span class="eyebrow">Industry solutions</span><h1>Healthcare Software for Better Administration</h1><p>Digital systems for healthcare organisations that need clearer administrative workflows, structured information and better operational visibility.</p><div class="hero-actions"><a class="btn btn-primary" href="/contact.html">Discuss your requirements</a><a class="btn btn-ghost" href="/technology-consulting.html">Talk to a technology consultant</a></div></div></section><section class="section section--tight"><div class="shell"><div class="section-head"><span class="eyebrow">The operational challenge</span><h2 class="h-sm">Technology should fit the workflow.</h2><p>Healthcare organisations manage sensitive information alongside appointments, administration, staff workflows, reporting and communication. Technology needs to support those processes without adding unnecessary complexity.</p></div></div></section><section class="section pt-0"><div class="shell"><div class="section-head"><span class="eyebrow">Our approach</span><h2 class="h-sm">From process to practical system.</h2><p>Auris Nexus can design business systems around defined healthcare workflows, with role-based access, structured records, workflow automation, reporting and integration considered as part of the solution architecture.</p></div></div></section><section class="section pt-0"><div class="shell"><div class="cta-band"><span class="eyebrow">Relevant Auris capability</span><h2 class="h-sm">Built around the business problem.</h2><p>Our healthcare offering is capability-led rather than presented as a catalogue of healthcare products. We apply the same business-systems engineering approach used across our operational platforms, with requirements, privacy, access control and implementation scope defined for each engagement.</p><div class="hero-actions"><a class="btn btn-primary" href="/technology-consulting.html">See relevant work</a><a class="btn btn-ghost" href="/crm-business-management-systems.html">Explore business systems</a></div></div></div></section><section class="section pt-0"><div class="shell"><div class="section-head"><span class="eyebrow">Related solutions</span><h2 class="h-sm">Connect the industry need to the right capability.</h2><div class="hero-actions"><a class="btn btn-ghost" href="/crm-business-management-systems.html">Business Systems</a><a class="btn btn-ghost" href="/business-automation.html">Related solution</a><a class="btn btn-primary" href="/contact.html">Start a conversation</a></div></div></div></section></main>
+<main id="main"><section class="page-hero"><div class="shell"><nav aria-label="Breadcrumb" class="crumbs"><a href="/">Home</a><span class="sep">/</span><a href="/industries.html">Industries</a><span class="sep">/</span>Healthcare Software for Better Administration</nav><span class="eyebrow">Industry solutions</span><h1>Healthcare Software for Better Administration</h1><p>Digital systems for healthcare organisations that need clearer administrative workflows, structured information and better operational visibility.</p><div class="hero-actions"><a class="btn btn-primary" href="/contact.html">Discuss your requirements</a><a class="btn btn-ghost" href="/technology-consulting.html">Talk to a technology consultant</a></div></div></section><section class="section section--tight"><div class="shell"><div class="section-head"><span class="eyebrow">The operational challenge</span><h2 class="h-sm">Technology should fit the workflow.</h2><p>Healthcare organisations manage sensitive information alongside appointments, administration, staff workflows, reporting and communication. Technology needs to support those processes without adding unnecessary complexity.</p></div></div></section><section class="section pt-0"><div class="shell"><div class="section-head"><span class="eyebrow">Our approach</span><h2 class="h-sm">From process to practical system.</h2><p>Auris Nexus can design business systems around defined healthcare workflows, with role-based access, structured records, workflow automation, reporting and integration considered as part of the solution architecture.</p></div></div></section><section class="section pt-0"><div class="shell"><div class="cta-band"><span class="eyebrow">Relevant Auris capability</span><h2 class="h-sm">Built around the business problem.</h2><p>Our healthcare offering is capability-led rather than presented as a catalogue of healthcare products. We apply the same business-systems engineering approach used across our operational platforms, with requirements, privacy, access control and implementation scope defined for each engagement.</p><div class="hero-actions"><a class="btn btn-primary" href="/case-studies/sebetsa-workforce-operations-platform.html">See relevant work</a><a class="btn btn-ghost" href="/crm-business-management-systems.html">Explore business systems</a></div></div></div></section><section class="section pt-0"><div class="shell"><div class="section-head"><span class="eyebrow">Related solutions</span><h2 class="h-sm">Connect the industry need to the right capability.</h2><div class="hero-actions"><a class="btn btn-ghost" href="/crm-business-management-systems.html">Business Systems</a><a class="btn btn-ghost" href="/business-automation.html">Related solution</a><a class="btn btn-primary" href="/contact.html">Start a conversation</a></div></div></div></section></main>
 <footer class="site-footer">
 <div class="shell">
 <div class="footer-cta reveal">
@@ -325,12 +355,13 @@ Solutions
 <div class="footer-col">
 <h4>Solutions</h4>
 <ul>
+<li><a href="/technology-consulting.html">Technology Consulting</a></li>
 <li><a href="/web-development.html">Web Development</a></li>
 <li><a href="/web-design.html">Web Design</a></li>
 <li><a href="/crm-business-management-systems.html">Business Systems</a></li>
 <li><a href="/business-automation.html">Business Automation</a></li>
 <li><a href="/mobile-app-development.html">Mobile App Development</a></li>
-<li><a href="/ai-integration.html">AI Solutions</a></li>
+<li><a href="/ai-integration.html">AI Integration</a></li>
 <li><a href="/data-analytics-business-intelligence.html">Data & Business Intelligence</a></li>
 <li><a class="footer-more" href="/services.html">All solutions →</a></li>
 </ul>

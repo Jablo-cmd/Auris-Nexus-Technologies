@@ -12,13 +12,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Full history: sitemap lastmod dates come from each page's last commit.
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - name: Validate LocalBusiness schema generator syntax
-        run: node --check tools/add_localbusiness.js
+      - name: Validate generator script syntax
+        run: node --check tools/rebuild_chrome.js
+      - name: Structured data is up to date
+        run: python tools/build_schema.py --check
+      - name: Sitemap is up to date
+        run: python tools/build_sitemap.py --check
       - name: Run static SEO and production QA
         run: python tools/qa_audit.py

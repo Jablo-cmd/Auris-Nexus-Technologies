@@ -3,10 +3,10 @@ const fs = require('fs'); const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 const M = {
   'ai-integration.html': {
-    t: 'AI Solutions | Practical AI for Business Workflows | Auris Nexus Technologies',
+    t: 'AI Integration | Practical AI for Business Workflows | Auris Nexus Technologies',
     d: 'Auris Nexus builds practical AI into real business workflows — intelligent assistants, document intelligence, AI-assisted decisions — where it removes work or improves an outcome.',
     k: 'AI solutions South Africa, practical AI for business, document intelligence, intelligent assistants, AI workflow automation, AI integration South Africa',
-    name: 'AI Solutions', st: 'AI Solutions',
+    name: 'AI Integration', st: 'AI Integration',
     sd: 'We build practical AI into the workflows your team already uses — assistants, extraction, classification, drafting and decision support.',
   },
   'web-development.html': {
