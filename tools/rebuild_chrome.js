@@ -205,7 +205,7 @@ ${IC.wa}
 063 122 6552</a>
 </div>
 <div class="footer-col">
-<h4>Company</h4>
+<h3>Company</h3>
 <ul>
 <li><a href="/about.html">About</a></li>
 <li><a href="/portfolio.html">Work</a></li>
@@ -218,14 +218,14 @@ ${IC.wa}
 </ul>
 </div>
 <div class="footer-col">
-<h4>Solutions</h4>
+<h3>Solutions</h3>
 <ul>
 ${solLinks}
 <li><a class="footer-more" href="/services.html">All solutions →</a></li>
 </ul>
 </div>
 <div class="footer-col">
-<h4>Get in touch</h4>
+<h3>Get in touch</h3>
 <ul class="footer-contact">
 <li><a href="tel:+27631226552">063 122 6552</a></li>
 <li><a href="mailto:info@aurisnexus.co.za">info@aurisnexus.co.za</a></li>

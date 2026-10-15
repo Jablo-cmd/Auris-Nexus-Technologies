@@ -266,7 +266,7 @@ def main():
             if 'class="site-header"' in text:
                 for region, pattern in (("mega menu", r'<div class="mega-grid">(.*?)</div>\s*</div>'),
                                         ("mobile drawer", r'<div class="drawer-svc-grid">(.*?)</div>'),
-                                        ("footer", r"<h4>Solutions</h4>\s*<ul>(.*?)</ul>")):
+                                        ("footer", r"<h3>Solutions</h3>\s*<ul>(.*?)</ul>")):
                     m = re.search(pattern, text, re.S)
                     first = re.search(r'href="([^"]+)"', m.group(1)) if m else None
                     if not first or first.group(1) != "/technology-consulting.html":
