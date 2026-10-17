@@ -12,7 +12,8 @@ Errors
   Auris Organization/Person nodes, dangling @id references, more than one
   BreadcrumbList, FAQ schema text not visible on the page, Service schema that
   does not match the page, forbidden strings, main navigation without Technology
-  Consulting, and more than 45% copy shared between two indexable pages.
+  Consulting, more than 45% copy shared between two indexable pages, SVG
+  og:image/twitter:image, and Formspree forms without a _gotcha honeypot.
 Warnings
   long titles, description length, thin pages and heading-level skips.
 
@@ -172,6 +173,14 @@ def main():
         for m in re.finditer(r'<a\b[^>]*href="([^"]*)"', text):
             if m.group(1).strip() in ("#", "", "javascript:void(0)", "javascript:;"):
                 err("empty_href", f'{rel} -> href="{m.group(1)}"')
+        # Facebook, LinkedIn, X and WhatsApp do not render SVG link previews.
+        for m in re.finditer(r'<meta\b[^>]*(?:og:image|twitter:image)"[^>]*>', text):
+            if re.search(r'content="[^"]+\.svg"', m.group(0)):
+                err("svg_share_image", f"{rel} -> {m.group(0)[:110]}")
+        # Formspree only discards spam when the honeypot field is named _gotcha.
+        for form in re.findall(r'<form\b[^>]*formspree\.io.*?</form>', text, re.S):
+            if 'name="_gotcha"' not in form:
+                err("formspree_honeypot", f"{rel} -> form has no _gotcha honeypot")
 
         # --- head essentials ---
         title = title_of(text)
