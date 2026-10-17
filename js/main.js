@@ -39,13 +39,13 @@
     var ticker = doc.createElement('aside');
     ticker.id = 'auris-promo-ticker';
     ticker.className = 'auris-promo-ticker';
-    ticker.setAttribute('aria-label', 'Auris Nexus website design and development promotion');
+    ticker.setAttribute('aria-label', 'Auris Nexus free technology consultation');
     var messages = '<span class="auris-promo-ticker__message"><span class="auris-promo-ticker__spark" aria-hidden="true">✦</span><strong>FREE TECHNOLOGY CONSULTATION</strong></span>' +
-      '<span class="auris-promo-ticker__message">Website design &amp; development built around your business</span>' +
-      '<span class="auris-promo-ticker__message"><span class="auris-promo-ticker__spark" aria-hidden="true">✦</span>Premium. Responsive. Designed to convert.</span>' +
-      '<span class="auris-promo-ticker__message">Ready for a better website? Let’s talk.</span>';
+      '<span class="auris-promo-ticker__message">Custom software, automation and AI built around how your business works</span>' +
+      '<span class="auris-promo-ticker__message"><span class="auris-promo-ticker__spark" aria-hidden="true">✦</span>Technology consulting · Software development · Business automation · AI integration</span>' +
+      '<span class="auris-promo-ticker__message">Not sure where to start? Let’s talk.</span>';
     ticker.innerHTML =
-      '<div class="auris-promo-ticker__viewport" aria-label="Free technology consultation. Website design and development. Premium responsive websites designed around your business.">' +
+      '<div class="auris-promo-ticker__viewport" aria-label="Free technology consultation. Custom software, automation and AI built around how your business works: technology consulting, software development, business automation and AI integration.">' +
         '<div class="auris-promo-ticker__track"><div class="auris-promo-ticker__group">' + messages + '</div><div class="auris-promo-ticker__group" aria-hidden="true">' + messages + '</div></div>' +
       '</div>';
 
