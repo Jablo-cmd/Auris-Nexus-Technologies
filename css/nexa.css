@@ -351,6 +351,25 @@
   color: rgba(255, 255, 255, 0.84);
 }
 
+.nexa-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  margin-top: 8px;
+}
+
+.nexa-links a {
+  color: #70f3ee;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.nexa-links a:focus-visible {
+  outline: 2px solid #70f3ee;
+  outline-offset: 2px;
+}
+
 .nexa-message--user {
   margin-left: auto;
 
