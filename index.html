@@ -186,10 +186,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="images/Auri%20logo.webp" rel="icon" type="image/webp"/>
 <link href="images/Auri%20logo.webp" rel="apple-touch-icon"/>
 <link href="site.webmanifest" rel="manifest"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Sora:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="css/styles.css?v=1792195200" rel="stylesheet"/>
+<link as="font" crossorigin="" href="/fonts/manrope-latin.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="/fonts/sora-latin.woff2" rel="preload" type="font/woff2"/>
+<link href="css/styles.css?v=1792281600" rel="stylesheet"/>
 <link href="/images/portfolio/cit-lms-dashboard.webp" rel="preload" as="image" fetchpriority="high"/>
 <link rel="stylesheet" href="css/roi-calculator.css?v=1792022400">
 <noscript><style>.reveal{opacity:1 !important;transform:none !important;}</style></noscript><!-- production deployment 2026-09-26 -->
@@ -205,7 +204,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="site-header" id="siteHeader" role="banner">
 <div class="shell nav">
 <a aria-label="Auris Nexus Technologies – home" class="brand" href="/">
-<img alt="Auris Nexus Technologies logo" class="brand-logo" height="40" src="/images/Auri%20logo.webp" width="40"/>
+<img alt="Auris Nexus Technologies logo" class="brand-logo" height="40" src="/images/auri-logo-96.webp" width="40"/>
 <span class="brand-name">Auris Nexus Technologies</span>
 </a>
 <nav aria-label="Primary" class="nav-links">
@@ -305,7 +304,7 @@ Solutions
 <aside aria-hidden="true" class="drawer" id="navDrawer">
 <div class="drawer-head">
 <a class="brand" href="/">
-<img alt="Auris Nexus Technologies logo" class="brand-logo" height="38" src="/images/Auri%20logo.webp" width="38"/>
+<img alt="Auris Nexus Technologies logo" class="brand-logo" height="38" src="/images/auri-logo-96.webp" width="38"/>
 <span class="brand-name">Auris Nexus Technologies</span>
 </a>
 <button type="button" aria-label="Close menu" class="drawer-close" id="drawerClose">
@@ -454,21 +453,21 @@ Solutions
       <p>Explore selected Auris Nexus work across education, performance management, operations and business systems.</p>
     </div>
     <div class="home-work-grid">
-      <a class="home-case home-case-feature reveal" href="/portfolio.html">
+      <a class="home-case home-case-feature reveal" href="/case-studies/funda360-school-management-platform.html">
         <div class="home-case-media"><img alt="Funda360 school management platform dashboard" src="/images/portfolio/funda360-dashboard.webp" width="900" height="620" loading="lazy"/></div>
-        <div class="home-case-body"><span>Education · Business Software</span><h3>Funda360</h3><p>Multi-tenant school management software built around education administration and operational workflows.</p><strong>View case studies →</strong></div>
+        <div class="home-case-body"><span>Education · Business Software</span><h3>Funda360</h3><p>Multi-tenant school management software built around education administration and operational workflows.</p><strong>Read the case study →</strong></div>
       </a>
-      <a class="home-case reveal d1" href="/portfolio.html">
+      <a class="home-case reveal d1" href="/case-studies/cit-leave-management-system.html">
         <div class="home-case-media"><img alt="CIT Leave Management System dashboard" src="/images/portfolio/cit-lms-dashboard.webp" width="900" height="620" loading="lazy"/></div>
-        <div class="home-case-body"><span>Business Systems · HR</span><h3>CIT Leave Management System</h3><p>A business leave-management system designed to bring the process into a structured digital workflow.</p><strong>View case studies →</strong></div>
+        <div class="home-case-body"><span>Business Systems · HR</span><h3>CIT Leave Management System</h3><p>A business leave-management system designed to bring the process into a structured digital workflow.</p><strong>Read the case study →</strong></div>
       </a>
-      <a class="home-case reveal d2" href="/portfolio.html">
+      <a class="home-case reveal d2" href="/case-studies/logios-logistics-operations-platform.html">
         <div class="home-case-media"><img alt="LOGIOS OS logistics operations dashboard" src="/images/portfolio/logios-dashboard.webp" width="900" height="620" loading="lazy"/></div>
-        <div class="home-case-body"><span>Logistics · Operations</span><h3>LOGIOS OS</h3><p>Logistics operations software covering scheduling, jobs, incidents, fleet, drivers, customers, compliance and reporting.</p><strong>View case studies →</strong></div>
+        <div class="home-case-body"><span>Logistics · Operations</span><h3>LOGIOS OS</h3><p>Logistics operations software covering scheduling, jobs, incidents, fleet, drivers, customers, compliance and reporting.</p><strong>Read the case study →</strong></div>
       </a>
     </div>
     <div class="home-work-more">
-      <span>Also in our work: Sebetsa · Pro Energy Solutions · Jo Jackson Dance Co</span>
+      <span>Also in our work: <a href="/case-studies/sebetsa-workforce-operations-platform.html">Sebetsa</a> · <a href="/case-studies/pro-energy-solutions-corporate-website.html">Pro Energy Solutions</a> · Jo Jackson Dance Co</span>
       <a class="home-text-cta" href="/portfolio.html">Explore Case Studies <span aria-hidden="true">→</span></a>
     </div>
     <div class="quote-grid reveal">
@@ -572,7 +571,7 @@ Solutions
 <div class="footer-grid">
 <div class="footer-brand">
 <a class="brand" href="/">
-<img alt="Auris Nexus Technologies logo" class="brand-logo" height="42" src="/images/Auri%20logo.webp" width="42"/>
+<img alt="Auris Nexus Technologies logo" class="brand-logo" height="42" src="/images/auri-logo-96.webp" width="42"/>
 <span class="brand-name">Auris Nexus Technologies</span>
 </a>
 <p>Business technology, software and automation built around how your organisation actually works.</p>
@@ -591,6 +590,16 @@ Solutions
 <li><a href="/faq.html">FAQ</a></li>
 <li><a href="/privacy.html">Privacy</a></li>
 <li><a href="/terms.html">Terms</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h3>Industries</h3>
+<ul>
+<li><a href="/education.html">Education</a></li>
+<li><a href="/healthcare.html">Healthcare</a></li>
+<li><a href="/logistics.html">Logistics</a></li>
+<li><a href="/corporate.html">Corporate</a></li>
+<li><a class="footer-more" href="/industries.html">All industries →</a></li>
 </ul>
 </div>
 <div class="footer-col">

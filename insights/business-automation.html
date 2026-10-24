@@ -218,10 +218,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="../images/Auri%20logo.webp" rel="icon" type="image/webp"/>
 <link href="../images/Auri%20logo.webp" rel="apple-touch-icon"/>
 <link href="../site.webmanifest" rel="manifest"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Sora:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="../css/styles.css?v=1792195200" rel="stylesheet"/>
+<link as="font" crossorigin="" href="/fonts/manrope-latin.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="/fonts/sora-latin.woff2" rel="preload" type="font/woff2"/>
+<link href="../css/styles.css?v=1792281600" rel="stylesheet"/>
 <noscript><style>.reveal{opacity:1 !important;transform:none !important;}</style></noscript>
 </head>
 <body>
@@ -235,7 +234,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="site-header" id="siteHeader" role="banner">
 <div class="shell nav">
 <a aria-label="Auris Nexus Technologies – home" class="brand" href="/">
-<img alt="Auris Nexus Technologies logo" class="brand-logo" height="40" src="/images/Auri%20logo.webp" width="40"/>
+<img alt="Auris Nexus Technologies logo" class="brand-logo" height="40" src="/images/auri-logo-96.webp" width="40"/>
 <span class="brand-name">Auris Nexus Technologies</span>
 </a>
 <nav aria-label="Primary" class="nav-links">
@@ -335,7 +334,7 @@ Solutions
 <aside aria-hidden="true" class="drawer" id="navDrawer">
 <div class="drawer-head">
 <a class="brand" href="/">
-<img alt="Auris Nexus Technologies logo" class="brand-logo" height="38" src="/images/Auri%20logo.webp" width="38"/>
+<img alt="Auris Nexus Technologies logo" class="brand-logo" height="38" src="/images/auri-logo-96.webp" width="38"/>
 <span class="brand-name">Auris Nexus Technologies</span>
 </a>
 <button type="button" aria-label="Close menu" class="drawer-close" id="drawerClose">
@@ -405,7 +404,7 @@ Solutions
 </section>
 <section class="section pt-0">
 <div class="shell article">
-<div class="article-hero-img reveal"><img alt="Automating the repetitive work that slows teams down" height="440" loading="lazy" src="../images/services/business-automation.jpg" width="780"/></div>
+<div class="article-hero-img"><img alt="Automating the repetitive work that slows teams down" height="440" src="../images/services/business-automation.webp" width="780" srcset="../images/services/business-automation-640.webp 640w, ../images/services/business-automation.webp 1200w" sizes="(max-width: 760px) calc(100vw - 32px), 780px" fetchpriority="high" decoding="async"/></div>
 <div class="article-body reveal d1">
 <p>Business automation solutions are most valuable when they remove friction from work that is repetitive, predictable and high-volume. That gives teams more time for judgement, service and growth.</p>
 <p>Most organisations do not need a large automation programme to see results. They need to find the few processes where people spend hours moving information from one place to another, and fix those properly. This article explains how to find them, how to automate them well, and what to avoid.</p>
@@ -477,27 +476,27 @@ Solutions
 <div class="section-head center reveal"><span class="eyebrow center">Keep reading</span><h2 class="h-sm">Related insights</h2></div>
 <div class="ins-grid">
 <article class="card ins-card reveal d1">
-<a class="ins-media" href="/insights/ai-business-outcomes.html"><img alt="Why AI adoption should start with business outcomes" height="236" loading="lazy" src="../images/services/ai-analytics-dashboard.jpg" width="420"/></a>
+<a class="ins-media" href="/insights/ai-business-outcomes.html"><img alt="Why AI adoption should start with business outcomes" height="236" loading="lazy" src="../images/services/ai-analytics-dashboard.webp" width="420" srcset="../images/services/ai-analytics-dashboard-640.webp 640w, ../images/services/ai-analytics-dashboard.webp 1200w" sizes="(max-width: 760px) calc(100vw - 32px), 420px"/></a>
 <div class="ins-body">
 <div class="ins-meta"><span class="ins-badge">Artificial Intelligence</span><span>2 min read</span></div>
 <h3>Why AI adoption should start with business outcomes</h3>
-<a aria-label="Read the article: Why AI adoption should start with business outcomes" class="linkarrow" href="/insights/ai-business-outcomes.html">Read article</a>
+<a aria-label="Read article: Why AI adoption should start with business outcomes" class="linkarrow" href="/insights/ai-business-outcomes.html">Read article</a>
 </div>
 </article>
 <article class="card ins-card reveal d2">
-<a class="ins-media" href="/insights/cyber-resilience.html"><img alt="Practical cyber resilience steps every growing business should take" height="236" loading="lazy" src="../images/services/cybersecurity-operations.jpg" width="420"/></a>
+<a class="ins-media" href="/insights/cyber-resilience.html"><img alt="Practical cyber resilience steps every growing business should take" height="236" loading="lazy" src="../images/services/cybersecurity-operations.webp" width="420" srcset="../images/services/cybersecurity-operations-640.webp 640w, ../images/services/cybersecurity-operations.webp 1200w" sizes="(max-width: 760px) calc(100vw - 32px), 420px"/></a>
 <div class="ins-body">
 <div class="ins-meta"><span class="ins-badge">Cyber Security</span><span>2 min read</span></div>
 <h3>Practical cyber resilience steps every growing business should take</h3>
-<a aria-label="Read the article: Practical cyber resilience steps every growing business should take" class="linkarrow" href="/insights/cyber-resilience.html">Read article</a>
+<a aria-label="Read article: Practical cyber resilience steps every growing business should take" class="linkarrow" href="/insights/cyber-resilience.html">Read article</a>
 </div>
 </article>
 <article class="card ins-card reveal d3">
-<a class="ins-media" href="/insights/cloud-migration-guide.html"><img alt="Modern cloud migration planning for resilient growth" height="236" loading="lazy" src="../images/services/cloud-infrastructure.jpg" width="420"/></a>
+<a class="ins-media" href="/insights/cloud-migration-guide.html"><img alt="Modern cloud migration planning for resilient growth" height="236" loading="lazy" src="../images/services/cloud-infrastructure.webp" width="420" srcset="../images/services/cloud-infrastructure-640.webp 640w, ../images/services/cloud-infrastructure.webp 1200w" sizes="(max-width: 760px) calc(100vw - 32px), 420px"/></a>
 <div class="ins-body">
 <div class="ins-meta"><span class="ins-badge">Cloud Computing</span><span>2 min read</span></div>
 <h3>Modern cloud migration planning for resilient growth</h3>
-<a aria-label="Read the article: Modern cloud migration planning for resilient growth" class="linkarrow" href="/insights/cloud-migration-guide.html">Read article</a>
+<a aria-label="Read article: Modern cloud migration planning for resilient growth" class="linkarrow" href="/insights/cloud-migration-guide.html">Read article</a>
 </div>
 </article>
 </div>
@@ -520,7 +519,7 @@ Solutions
 <div class="footer-grid">
 <div class="footer-brand">
 <a class="brand" href="/">
-<img alt="Auris Nexus Technologies logo" class="brand-logo" height="42" src="/images/Auri%20logo.webp" width="42"/>
+<img alt="Auris Nexus Technologies logo" class="brand-logo" height="42" src="/images/auri-logo-96.webp" width="42"/>
 <span class="brand-name">Auris Nexus Technologies</span>
 </a>
 <p>Business technology, software and automation built around how your organisation actually works.</p>
@@ -539,6 +538,16 @@ Solutions
 <li><a href="/faq.html">FAQ</a></li>
 <li><a href="/privacy.html">Privacy</a></li>
 <li><a href="/terms.html">Terms</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h3>Industries</h3>
+<ul>
+<li><a href="/education.html">Education</a></li>
+<li><a href="/healthcare.html">Healthcare</a></li>
+<li><a href="/logistics.html">Logistics</a></li>
+<li><a href="/corporate.html">Corporate</a></li>
+<li><a class="footer-more" href="/industries.html">All industries →</a></li>
 </ul>
 </div>
 <div class="footer-col">

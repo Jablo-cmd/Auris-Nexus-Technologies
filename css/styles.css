@@ -3,6 +3,10 @@
    Light-first · navy + cyan accent · restrained · executive-consulting feel
    ========================================================================== */
 
+/* Self-hosted variable fonts (latin subset, SIL OFL), preloaded in each page head. */
+@font-face { font-family: "Manrope"; font-style: normal; font-weight: 400 800; font-display: swap; src: url("../fonts/manrope-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Sora"; font-style: normal; font-weight: 600 800; font-display: swap; src: url("../fonts/sora-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
 :root {
   /* Brand */
   --navy:      #001A48;
@@ -715,7 +719,7 @@ h1, h2, h3, h4 {
 .footer-cta-actions .btn-primary:hover { background: var(--bg-soft); }
 .footer-cta-actions .btn-ghost { background: rgba(255,255,255,.06); color: #fff; border-color: var(--line-dark); }
 .footer-cta-actions .btn-ghost:hover { background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.4); }
-.footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 28px; padding-bottom: 40px; border-bottom: 1px solid var(--line-dark); }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr; gap: 28px; padding-bottom: 40px; border-bottom: 1px solid var(--line-dark); }
 .footer-brand p { color: var(--muted-dark); font-size: .92rem; margin: 16px 0; max-width: 320px; }
 .footer-wa { display: inline-flex; align-items: center; gap: 8px; color: #3ddc84; font-weight: 700; font-size: .92rem; }
 .footer-wa svg { width: 18px; height: 18px; }
@@ -896,6 +900,8 @@ h1, h2, h3, h4 {
   font-size: clamp(2.6rem, 7vw, 4.6rem);
   color: var(--line);
 }
+/* Decorative watermark number: drawn from data-num so it is not text content. */
+.cs-num::before { content: attr(data-num); }
 .cs-head h2 { margin: 14px 0 0; }
 .cs-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 16px; }
 .cs-meta .folio-tag--inline { margin-bottom: 0; }
@@ -1142,3 +1148,6 @@ h1, h2, h3, h4 {
   margin: 18px 0 0;
   color: var(--muted);
 }
+.home-work-more span a{color:var(--home-navy);font-weight:700;text-decoration:underline;text-underline-offset:3px}.home-work-more span a:hover{color:var(--cyan-text)}
+/* Above-the-fold hero content renders immediately (it is usually the LCP element); the reveal animation is for content further down. */
+.home-hero .reveal,.page-hero .reveal{opacity:1;transform:none;transition:none}

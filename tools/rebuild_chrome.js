@@ -107,7 +107,7 @@ function header(active) {
   return `<header class="site-header" id="siteHeader" role="banner">
 <div class="shell nav">
 <a aria-label="Auris Nexus Technologies – home" class="brand" href="/">
-<img alt="Auris Nexus Technologies logo" class="brand-logo" height="40" src="/images/Auri%20logo.webp" width="40"/>
+<img alt="Auris Nexus Technologies logo" class="brand-logo" height="40" src="/images/auri-logo-96.webp" width="40"/>
 <span class="brand-name">Auris Nexus Technologies</span>
 </a>
 <nav aria-label="Primary" class="nav-links">
@@ -129,7 +129,7 @@ ${IC.wa}
 <aside aria-hidden="true" class="drawer" id="navDrawer">
 <div class="drawer-head">
 <a class="brand" href="/">
-<img alt="Auris Nexus Technologies logo" class="brand-logo" height="38" src="/images/Auri%20logo.webp" width="38"/>
+<img alt="Auris Nexus Technologies logo" class="brand-logo" height="38" src="/images/auri-logo-96.webp" width="38"/>
 <span class="brand-name">Auris Nexus Technologies</span>
 </a>
 <button type="button" aria-label="Close menu" class="drawer-close" id="drawerClose">
@@ -196,7 +196,7 @@ function footer() {
 <div class="footer-grid">
 <div class="footer-brand">
 <a class="brand" href="/">
-<img alt="Auris Nexus Technologies logo" class="brand-logo" height="42" src="/images/Auri%20logo.webp" width="42"/>
+<img alt="Auris Nexus Technologies logo" class="brand-logo" height="42" src="/images/auri-logo-96.webp" width="42"/>
 <span class="brand-name">Auris Nexus Technologies</span>
 </a>
 <p>${TAGLINE}</p>
@@ -215,6 +215,16 @@ ${IC.wa}
 <li><a href="/faq.html">FAQ</a></li>
 <li><a href="/privacy.html">Privacy</a></li>
 <li><a href="/terms.html">Terms</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h3>Industries</h3>
+<ul>
+<li><a href="/education.html">Education</a></li>
+<li><a href="/healthcare.html">Healthcare</a></li>
+<li><a href="/logistics.html">Logistics</a></li>
+<li><a href="/corporate.html">Corporate</a></li>
+<li><a class="footer-more" href="/industries.html">All industries →</a></li>
 </ul>
 </div>
 <div class="footer-col">
