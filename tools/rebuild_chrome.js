@@ -241,6 +241,7 @@ ${solLinks}
 <li><a href="mailto:info@aurisnexus.co.za">info@aurisnexus.co.za</a></li>
 <li><span>140 Linden Street, Sandown, Sandton, Gauteng 2196, South Africa</span></li>
 <li><a href="/software-development-johannesburg.html">Software development in Johannesburg</a></li>
+<li><a href="/web-design-johannesburg.html">Web design in Johannesburg</a></li>
 <li><span>Mon–Fri, 8am–5pm</span></li>
 </ul>
 </div>
@@ -258,6 +259,7 @@ const ACTIVE = {
   'services.html': 'solutions',
   'crm-business-management-systems.html': 'solutions',
   'software-development-johannesburg.html': 'solutions',
+  'web-design-johannesburg.html': 'solutions',
   'business-automation.html': 'solutions',
   'ai-integration.html': 'solutions',
   'web-development.html': 'solutions',
