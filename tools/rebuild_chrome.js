@@ -261,6 +261,8 @@ const ACTIVE = {
   'software-development-johannesburg.html': 'solutions',
   'web-design-johannesburg.html': 'solutions',
   'web-design-pretoria.html': 'solutions',
+  'web-design-cape-town.html': 'solutions',
+  'web-design-durban.html': 'solutions',
   'business-automation.html': 'solutions',
   'ai-integration.html': 'solutions',
   'web-development.html': 'solutions',
