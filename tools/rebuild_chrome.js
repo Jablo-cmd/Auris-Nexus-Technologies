@@ -260,6 +260,7 @@ const ACTIVE = {
   'crm-business-management-systems.html': 'solutions',
   'software-development-johannesburg.html': 'solutions',
   'web-design-johannesburg.html': 'solutions',
+  'web-design-pretoria.html': 'solutions',
   'business-automation.html': 'solutions',
   'ai-integration.html': 'solutions',
   'web-development.html': 'solutions',
