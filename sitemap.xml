@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://aurisnexus.co.za/</loc><lastmod>2026-10-27</lastmod><priority>1.0</priority></url>
+  <url><loc>https://aurisnexus.co.za/</loc><lastmod>2026-10-29</lastmod><priority>1.0</priority></url>
   <url><loc>https://aurisnexus.co.za/about.html</loc><lastmod>2026-10-27</lastmod><priority>0.9</priority></url>
   <url><loc>https://aurisnexus.co.za/ai-integration.html</loc><lastmod>2026-10-27</lastmod><priority>0.9</priority></url>
   <url><loc>https://aurisnexus.co.za/business-automation.html</loc><lastmod>2026-10-27</lastmod><priority>0.9</priority></url>
@@ -14,7 +14,7 @@
   <url><loc>https://aurisnexus.co.za/industries.html</loc><lastmod>2026-10-27</lastmod><priority>0.9</priority></url>
   <url><loc>https://aurisnexus.co.za/logistics.html</loc><lastmod>2026-10-27</lastmod><priority>0.85</priority></url>
   <url><loc>https://aurisnexus.co.za/mobile-app-development.html</loc><lastmod>2026-10-27</lastmod><priority>0.9</priority></url>
-  <url><loc>https://aurisnexus.co.za/portfolio.html</loc><lastmod>2026-10-27</lastmod><priority>0.9</priority></url>
+  <url><loc>https://aurisnexus.co.za/portfolio.html</loc><lastmod>2026-10-29</lastmod><priority>0.9</priority></url>
   <url><loc>https://aurisnexus.co.za/pricing.html</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority></url>
   <url><loc>https://aurisnexus.co.za/privacy.html</loc><lastmod>2026-10-27</lastmod><priority>0.5</priority></url>
   <url><loc>https://aurisnexus.co.za/services.html</loc><lastmod>2026-10-27</lastmod><priority>0.95</priority></url>
@@ -27,11 +27,12 @@
   <url><loc>https://aurisnexus.co.za/web-design-pretoria.html</loc><lastmod>2026-10-28</lastmod><priority>0.85</priority></url>
   <url><loc>https://aurisnexus.co.za/web-design.html</loc><lastmod>2026-10-28</lastmod><priority>0.9</priority></url>
   <url><loc>https://aurisnexus.co.za/web-development.html</loc><lastmod>2026-10-27</lastmod><priority>0.9</priority></url>
-  <url><loc>https://aurisnexus.co.za/case-studies/cit-leave-management-system.html</loc><lastmod>2026-10-27</lastmod><priority>0.9</priority></url>
-  <url><loc>https://aurisnexus.co.za/case-studies/funda360-school-management-platform.html</loc><lastmod>2026-10-27</lastmod><priority>0.9</priority></url>
-  <url><loc>https://aurisnexus.co.za/case-studies/logios-logistics-operations-platform.html</loc><lastmod>2026-10-27</lastmod><priority>0.9</priority></url>
-  <url><loc>https://aurisnexus.co.za/case-studies/pro-energy-solutions-corporate-website.html</loc><lastmod>2026-10-27</lastmod><priority>0.85</priority></url>
-  <url><loc>https://aurisnexus.co.za/case-studies/sebetsa-workforce-operations-platform.html</loc><lastmod>2026-10-27</lastmod><priority>0.85</priority></url>
+  <url><loc>https://aurisnexus.co.za/case-studies/cit-leave-management-system.html</loc><lastmod>2026-10-29</lastmod><priority>0.9</priority></url>
+  <url><loc>https://aurisnexus.co.za/case-studies/funda360-school-management-platform.html</loc><lastmod>2026-10-29</lastmod><priority>0.9</priority></url>
+  <url><loc>https://aurisnexus.co.za/case-studies/logios-logistics-operations-platform.html</loc><lastmod>2026-10-29</lastmod><priority>0.9</priority></url>
+  <url><loc>https://aurisnexus.co.za/case-studies/pro-energy-solutions-corporate-website.html</loc><lastmod>2026-10-29</lastmod><priority>0.85</priority></url>
+  <url><loc>https://aurisnexus.co.za/case-studies/sebetsa-workforce-operations-platform.html</loc><lastmod>2026-10-29</lastmod><priority>0.85</priority></url>
+  <url><loc>https://aurisnexus.co.za/case-studies/trade-command-trading-operations-console.html</loc><lastmod>2026-10-29</lastmod><priority>0.85</priority></url>
   <url><loc>https://aurisnexus.co.za/insights/ai-business-outcomes.html</loc><lastmod>2026-10-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://aurisnexus.co.za/insights/build-buy-or-configure-business-software.html</loc><lastmod>2026-10-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://aurisnexus.co.za/insights/business-automation.html</loc><lastmod>2026-10-27</lastmod><priority>0.6</priority></url>
