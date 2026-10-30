@@ -186,11 +186,11 @@ Earlier today (already live): five pillar pages, assessment page, CTAs, contact 
 | Sebetsa | **Delivered & In Use** (corrected from "Built & Tested") | **Client project** (owner-confirmed; label added) | React, TypeScript, Vite, Tailwind, Supabase, PostgreSQL |
 | CIT Leave Management System | Delivered & In Use | **Client project** (owner-confirmed; label added) | React, TypeScript, Tailwind, Supabase, PostgreSQL |
 | LOGIOS OS | In active development (to be commissioned) | **Auris Nexus product** (owner-confirmed; label added) | Documented on page |
-| Trade Command | Built & Tested | Not stated ("private console") | React, TypeScript, Vite, Supabase, PostgreSQL, PWA |
+| Trade Command | Built & Tested | **Client project** (owner-confirmed; label added) | React, TypeScript, Vite, Supabase, PostgreSQL, PWA |
 | Pro Energy Solutions | Completed | Client website | — |
 | **Auris x AI** | Not yet launched | **Auris Nexus internal system** (owner-confirmed) | No material in repository yet |
 
-No case study states a measured business outcome, and none should until outcomes are verified. Schema templates for Funda360 and Sebetsa are ready (plan §3).
+No case study states a measured business outcome, and none should until outcomes are verified. Funda360 carries `WebApplication` structured data; the Sebetsa template was dropped because Sebetsa is a client's system, not an Auris product (plan §3).
 
 ## 14. Content recommendations (Recommended)
 
@@ -239,6 +239,8 @@ Sources:
 | Browser (Playwright) `/where-we-work.html` | 1366px and 390px: no page overflow; 9-row table; FAQ opens; footer link present; "About" nav active; no page errors |
 | Build | No build step (GitHub Pages serves files directly) |
 
+All checks above were re-run on 30 Oct 2026 after the GTM removal and the documentation updates, with the same results.
+
 ## 17. Outstanding access requirements (Outstanding)
 
 - **OpenRush credits:** top up to finish keyword research for Ghana, Zimbabwe, Botswana, Namibia, Zambia and Mozambique, and to pull live SERPs for competitor analysis (about 60 credits).
@@ -271,11 +273,11 @@ Sources:
 
 1. **Claim a Google Business Profile** for the Sandton office (one listing, exact NAP). It's the only realistic route to "near me" and Johannesburg local results.
 2. **Get listed on Clutch or GoodFirms** with 2–3 verified client reviews. Directories own page one for the target terms.
-3. **Answer section 18**, especially the "region" claim and international invoicing, so every published statement is verified.
+3. ~~Answer section 18~~ (done 30 Oct 2026, apart from the Cape Town / Durban delivery model in item 6).
 4. **Search Console:** submit the sitemap, request indexing of the 5 pillar pages, the assessment page and "Where we work", and export a baseline of impressions by country.
 5. ~~Resolve GTM/GA4~~ (done 30 Oct 2026). Note that GA4 page views from 30 Oct onward are no longer doubled, so compare periods with care.
 6. **Build the Cape Town software page** once its delivery model is confirmed (the highest measured city demand).
-7. **Add engagement types and schema to the case studies** (plan §3); confirm or drop "Auris AI".
+7. ~~Add engagement types and schema to the case studies; confirm or drop "Auris AI"~~ (done 30 Oct 2026: every case study is labelled, Funda360 has `WebApplication` schema, and Auris x AI is confirmed as an internal system awaiting launch).
 8. **Top up OpenRush** to measure the Southern African markets and pull competitor SERPs, then re-score section 3.
 9. **Publish the two AI drafts** after confirming the capabilities they describe. Low search volume, but they feed AI answers.
 10. **Run the monthly AI visibility check** (`docs/AI_VISIBILITY_MONITORING.md`) and add Nigeria and Kenya queries, to see whether assistants ever name Auris outside South Africa before investing in those markets.
