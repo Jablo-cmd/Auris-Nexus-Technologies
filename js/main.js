@@ -289,6 +289,8 @@
             track('generate_lead', {
               form_type: fieldValue(form, 'enquiry_type') || 'contact',
               service: fieldValue(form, 'service'),
+              sector: fieldValue(form, 'sector'),
+              heard_about: fieldValue(form, 'source'),
               project: fieldValue(form, 'project')
             });
             if (status) { status.classList.add('is-ok'); status.textContent = 'Thank you. Your enquiry has been received. The Auris Nexus Technologies team will be in touch shortly.'; }
