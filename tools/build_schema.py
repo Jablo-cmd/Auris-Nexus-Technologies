@@ -164,6 +164,37 @@ CRUMB_LABELS = {
     "insights/authors/loyiso-ngcala.html": "Loyiso Ngcala",
 }
 
+# Auris Nexus's own software products, described as WebApplication entities on
+# their case-study pages. Client projects are not listed: they belong to clients.
+# Every featureList item must also appear on the visible page.
+SOFTWARE = {
+    "case-studies/funda360-school-management-platform.html": {
+        "name": "Funda360",
+        "alternateName": "Funda360 School Management Platform",
+        "description": (
+            "A multi-tenant school management platform that brings school administration, learner "
+            "records, admissions, staff management and executive dashboards into one role-aware "
+            "system that each school runs independently."
+        ),
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "School management system",
+        "operatingSystem": "Web browser",
+        "browserRequirements": "Requires a modern web browser with JavaScript enabled.",
+        "image": BASE + "images/portfolio/funda360-dashboard.webp",
+        "screenshot": BASE + "images/portfolio/funda360-dashboard.webp",
+        "featureList": [
+            "Multi-tenant architecture: each school is an isolated tenant",
+            "Role-based access control, with data and screens scoped per role",
+            "Learner registry, admissions and alumni management",
+            "Staff and employee management",
+            "Executive dashboards: enrolment and fee-collection summaries",
+            "Secure authentication with two-factor authentication for sensitive roles",
+            "Live system-status monitoring",
+        ],
+        "audience": {"@type": "Audience", "audienceType": "Schools and school groups"},
+    },
+}
+
 LD_RE = re.compile(r'[ \t]*<script type="application/ld\+json">.*?</script>\n?', re.S)
 
 
@@ -363,6 +394,14 @@ def build_graph(rel, page):
             }
             graph.append({k: v for k, v in article.items() if v})
             break
+
+    app = SOFTWARE.get(rel)
+    if app:
+        graph.append({"@type": "WebApplication", "@id": url + "#software", **app, "url": url,
+                      "creator": {"@id": ORG_ID}, "publisher": {"@id": ORG_ID},
+                      "isPartOf": {"@id": url + "#webpage"}, "inLanguage": "en-ZA"})
+        webpage["about"] = {"@id": url + "#software"}
+        webpage["mainEntity"] = {"@id": url + "#software"}
 
     return {"@context": "https://schema.org", "@graph": graph}
 
