@@ -1,3 +1,53 @@
+# robots.txt for https://aurisnexus.co.za
+#
+# Every page on this site is public marketing content; there are no private,
+# admin or account routes. Internal folders (docs/, tools/, design-source/) are
+# excluded from the published site by _config.yml, so they return 404.
+#
+# Search and AI-answer crawlers are listed explicitly so each permission is a
+# deliberate choice. A crawler that matches a named group ignores the "*" group.
+# Policy decided by the owner; see docs/SEO_AI_VISIBILITY_AUDIT.md (robots policy).
+
+# --- Search engines ---
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# --- AI search and answer engines (citations and links back to the site) ---
+# ChatGPT search
+User-agent: OAI-SearchBot
+Allow: /
+
+# Perplexity search index
+User-agent: PerplexityBot
+Allow: /
+
+# Anthropic Claude search
+User-agent: Claude-SearchBot
+Allow: /
+
+# --- AI model training (owner decision: currently allowed) ---
+# To opt out of training while staying visible in AI search, change the
+# "Allow: /" below to "Disallow: /" for the relevant crawler.
+# OpenAI model training
+User-agent: GPTBot
+Allow: /
+
+# Google Gemini / Vertex AI training (does not affect Google Search)
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic model training
+User-agent: ClaudeBot
+Allow: /
+
+# Apple Intelligence training (does not affect Applebot search)
+User-agent: Applebot-Extended
+Allow: /
+
+# --- Everyone else ---
 User-agent: *
 Allow: /
 
