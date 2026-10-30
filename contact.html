@@ -536,21 +536,33 @@ Solutions
 <input id="phone" name="phone" placeholder="0XX XXX XXXX" type="tel"/>
 </div>
 <div class="field">
-<label for="industry">Industry</label>
-<input id="industry" name="industry" placeholder="Financial services, healthcare, etc." type="text"/>
+<label for="sector">Sector</label>
+<select id="sector" name="sector">
+<option value="">Select your sector</option>
+<option>Education / schools</option>
+<option>Legal / professional services</option>
+<option>Engineering / construction / field services</option>
+<option>Logistics / transport</option>
+<option>Healthcare</option>
+<option>Financial services</option>
+<option>Corporate / other services</option>
+<option>Other</option>
+</select>
 </div>
 <div class="field">
 <label for="service">Service Required</label>
 <select id="service" name="service">
 <option value="">Select the closest fit</option>
 <option>Technology Consulting</option>
+<option>Custom Software Development</option>
+<option>Business Automation</option>
+<option>AI Integration</option>
+<option>Digital Transformation</option>
+<option>Business Systems</option>
+<option>Mobile App Development</option>
+<option>Data &amp; Business Intelligence</option>
 <option>Web Development</option>
 <option>Web Design</option>
-<option>Business Systems</option>
-<option>Business Automation</option>
-<option>Mobile App Development</option>
-<option>AI Integration</option>
-<option>Data &amp; Business Intelligence</option>
 <option>Not sure yet</option>
 <option>Other</option>
 </select>
@@ -559,10 +571,10 @@ Solutions
 <label for="budget">Budget Range (optional)</label>
 <select id="budget" name="budget">
 <option value="">Prefer not to say</option>
-<option>Under R15,000</option>
-<option>R15,000 – R30,000</option>
+<option>Under R30,000</option>
 <option>R30,000 – R75,000</option>
-<option>R75,000+</option>
+<option>R75,000 – R150,000</option>
+<option>R150,000+</option>
 </select>
 </div>
 <div class="field col-2">
@@ -574,6 +586,18 @@ Solutions
 <option>Next 3 months</option>
 <option>Next 6 months</option>
 <option>Planning phase</option>
+</select>
+</div>
+<div class="field col-2">
+<label for="source">How did you find us? (optional)</label>
+<select id="source" name="source">
+<option value="">Select an option</option>
+<option>Google search</option>
+<option>Bing or another search engine</option>
+<option>AI assistant (ChatGPT, Gemini, Copilot, Perplexity)</option>
+<option>LinkedIn</option>
+<option>Referral or word of mouth</option>
+<option>Other</option>
 </select>
 </div>
 <div class="field col-2">
