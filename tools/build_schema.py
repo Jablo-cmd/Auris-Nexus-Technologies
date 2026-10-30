@@ -356,6 +356,10 @@ def build_graph(rel, page):
                 "publisher": {"@id": ORG_ID},
                 "mainEntityOfPage": {"@id": url + "#webpage"},
                 "inLanguage": "en-ZA",
+                # Optional fields an article may declare in its own markup.
+                "articleSection": node.get("articleSection"),
+                "keywords": node.get("keywords"),
+                "citation": node.get("citation"),
             }
             graph.append({k: v for k, v in article.items() if v})
             break

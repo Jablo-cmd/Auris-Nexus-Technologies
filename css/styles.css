@@ -1151,3 +1151,16 @@ h1, h2, h3, h4 {
 .home-work-more span a{color:var(--home-navy);font-weight:700;text-decoration:underline;text-underline-offset:3px}.home-work-more span a:hover{color:var(--cyan-text)}
 /* Above-the-fold hero content renders immediately (it is usually the LCP element); the reveal animation is for content further down. */
 .home-hero .reveal,.page-hero .reveal{opacity:1;transform:none;transition:none}
+
+/* Article tables, contents list and sources (Insights articles) */
+.article-table { overflow-x: auto; margin: 24px 0; border: 1px solid var(--line); border-radius: var(--radius-sm); }
+.article-table table { width: 100%; border-collapse: collapse; font-size: .95rem; min-width: 620px; }
+.article-table th, .article-table td { padding: 12px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.article-table thead th { background: var(--bg-soft); color: var(--navy); font-weight: 700; }
+.article-table tbody th { color: var(--navy); font-weight: 700; }
+.article-table tbody tr:last-child > * { border-bottom: 0; }
+.article-toc { margin: 24px 0 32px; padding: 18px 22px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--bg-soft); }
+.article-toc p { margin: 0 0 8px; }
+.article-toc ol { margin: 0; }
+.article-body h2[id] { scroll-margin-top: 96px; }
+.article-sources { font-size: .95rem; }
