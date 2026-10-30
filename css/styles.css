@@ -1164,3 +1164,7 @@ h1, h2, h3, h4 {
 .article-toc ol { margin: 0; }
 .article-body h2[id] { scroll-margin-top: 96px; }
 .article-sources { font-size: .95rem; }
+
+/* Pages whose hero image was removed so each image appears only once */
+.svc-hero.no-media, .page-hero-split.no-media { grid-template-columns: 1fr; }
+.process-media:not(:has(img)) { aspect-ratio: auto; min-height: 72px; background: var(--grad-soft, #eef6ff); }
