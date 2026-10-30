@@ -253,7 +253,7 @@ Sources:
 2. **About FAQ "and the region" claim**: resolved 30 Oct 2026. The owner confirmed clients are in South Africa; the FAQ now says "works with clients across South Africa" and links to Where we work.
 3. **International invoicing**: resolved 30 Oct 2026. Quotes in rand, US dollars or the client's currency at the equivalent of rand pricing; stated on Where we work and `llms.txt`.
 4. **In-person meetings**: resolved 30 Oct 2026. At the Sandton office or any venue agreed with the client; stated on Where we work and `llms.txt`.
-5. **Engagement type**: resolved for Funda360, LOGIOS OS, Sebetsa, CIT and Pro Energy. Still open: Trade Command's engagement type, and whether "Auris AI" exists.
+5. **Engagement type**: resolved for every case study. Trade Command is a client project (labelled 30 Oct 2026). **Auris AI exists** (owner-confirmed) but has no material in the repository; a case study needs a description, status, engagement type and screenshots from the owner.
 6. **Cape Town / Durban delivery model**, before those pages are written.
 
 ## 19. Risks and unresolved issues
