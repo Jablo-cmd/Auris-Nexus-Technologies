@@ -58,7 +58,7 @@ Each case study states the project's status and whether it is an Auris Nexus pro
 - [CIT leave management system](https://aurisnexus.co.za/case-studies/cit-leave-management-system.html): client project, delivered and in use
 - [LOGIOS OS logistics operations platform](https://aurisnexus.co.za/case-studies/logios-logistics-operations-platform.html): Auris Nexus product, in development
 - [Sebetsa workforce and operations platform](https://aurisnexus.co.za/case-studies/sebetsa-workforce-operations-platform.html): client project, delivered and in use
-- [Trade Command trading operations console](https://aurisnexus.co.za/case-studies/trade-command-trading-operations-console.html)
+- [Trade Command trading operations console](https://aurisnexus.co.za/case-studies/trade-command-trading-operations-console.html): client project, built and tested
 - [Pro Energy Solutions corporate website](https://aurisnexus.co.za/case-studies/pro-energy-solutions-corporate-website.html): client project, completed
 
 ## Company and guidance
