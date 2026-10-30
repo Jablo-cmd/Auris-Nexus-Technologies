@@ -24,7 +24,7 @@ Every section is marked **Done** (shipped and verified), **Recommended** (not do
 | Structured data | One `@graph` per page: Organization (ProfessionalService), WebSite, WebPage/FAQPage, BreadcrumbList, Service, Article |
 | HTTPS / host | `http://` and `www.` 301 to `https://aurisnexus.co.za/` |
 | Mobile | New pages checked at 390px and 1366px: no horizontal overflow |
-| Analytics | GA4 lead events live (`generate_lead`, `contact_click`); possible GTM/GA4 double counting still unresolved |
+| Analytics | GA4 lead events live (`generate_lead`, `contact_click`). GTM/GA4 double counting resolved 30 Oct 2026: GTM removed, direct GA4 loaded once on every content page |
 | **Search visibility** | **The search index holds no ranking keywords or ranking pages for `aurisnexus.co.za` in South Africa** (OpenRush `inspect_domain`, 30 Oct 2026). The domain is new; authority, not on-page SEO, is now the main constraint. |
 
 ## 2. Existing geographic SEO coverage (Done)
@@ -244,7 +244,7 @@ Sources:
 - **OpenRush credits:** top up to finish keyword research for Ghana, Zimbabwe, Botswana, Namibia, Zambia and Mozambique, and to pull live SERPs for competitor analysis (about 60 credits).
 - **Google Search Console:** country and query performance; submit the sitemap; inspect new URLs.
 - **Bing Webmaster Tools:** add the site; IndexNow (blocked from this environment's network).
-- **Google Tag Manager:** confirm whether container `GTM-DJ5BQVHL` contains a GA4 tag (double-counting decision).
+- ~~Google Tag Manager~~: resolved 30 Oct 2026 (GTM held a duplicate GA4 tag; removed from the site).
 - **GA4:** mark `generate_lead` and `contact_click` as key events; add custom dimensions.
 
 ## 18. Outstanding business information (Outstanding)
@@ -263,7 +263,7 @@ Sources:
 | The domain has no measurable rankings yet; on-page work alone won't create visibility | Directory listings with genuine reviews, Google Business Profile, PR and partner links (playbook §2) |
 | Thin or programmatic location pages would trigger doorway / scaled-content policies | Evidence gate and the similarity check in plan §2.3 |
 | Claims about the region or international clients without evidence | Section 18 items 2–4 |
-| Possible GA4 double counting distorts measurement | Owner GTM check |
+| ~~Possible GA4 double counting~~ | Resolved 30 Oct 2026 |
 | Low demand for "AI integration" terms | Write AI content for buyers and AI answer engines, not for search volume |
 | GitHub Pages cannot 301 or set security headers | Hosting decision (plan §1.3), not urgent |
 
@@ -273,7 +273,7 @@ Sources:
 2. **Get listed on Clutch or GoodFirms** with 2–3 verified client reviews. Directories own page one for the target terms.
 3. **Answer section 18**, especially the "region" claim and international invoicing, so every published statement is verified.
 4. **Search Console:** submit the sitemap, request indexing of the 5 pillar pages, the assessment page and "Where we work", and export a baseline of impressions by country.
-5. **Resolve GTM/GA4** so lead data is trustworthy before judging any channel.
+5. ~~Resolve GTM/GA4~~ (done 30 Oct 2026). Note that GA4 page views from 30 Oct onward are no longer doubled, so compare periods with care.
 6. **Build the Cape Town software page** once its delivery model is confirmed (the highest measured city demand).
 7. **Add engagement types and schema to the case studies** (plan §3); confirm or drop "Auris AI".
 8. **Top up OpenRush** to measure the Southern African markets and pull competitor SERPs, then re-score section 3.

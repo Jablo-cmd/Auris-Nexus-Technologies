@@ -121,7 +121,12 @@ Nothing was changed. No tokens or IDs were invented.
 **D. Microsoft Clarity (optional)**
 Only if heatmaps and session recordings are wanted. It must be covered in the privacy policy (POPIA) and, ideally, added through GTM rather than a new page snippet. Not installed.
 
-**A2. Finding to settle in the same check (30 Oct 2026)**
+**A1. Resolved 30 Oct 2026**
+The owner confirmed GTM container `GTM-DJ5BQVHL` held one tag, a Google Tag for `G-W1KZXGKB56` firing on all pages. That double-counted page views on the 56 pages that also loaded GA4 directly. The four industry pages had only GTM's `noscript` fallback, so they weren't tracked at all. **Fix:** GTM was removed from the website (both snippets, 60 pages), and the direct GA4 snippet was added to `corporate.html`, `education.html`, `healthcare.html` and `logistics.html`. Every content page now loads `G-W1KZXGKB56` exactly once, and the lead events are unaffected. The GTM container still exists but is no longer loaded; leave it or delete it.
+
+**To re-introduce GTM later** (for example for Meta, LinkedIn or Ads tags): add the GTM snippets back, **remove** the direct `gtag.js` block from every page in the same change, and inside GTM keep the Google Tag (`G-W1KZXGKB56`, Initialization – All Pages). `js/main.js` calls `gtag()`, which then needs the Google Tag deployed via GTM; verify in GA4 DebugView that `generate_lead` and `contact_click` still arrive.
+
+**A2. (Historical) Finding that led to A1**
 `corporate.html`, `education.html`, `healthcare.html` and `logistics.html` load GTM but **not** the direct GA4 snippet; every other content page loads both. So:
 - If GTM *does* contain the GA4 tag, the other pages double-count page views. Fix: remove the direct `gtag.js` block from those pages and rely on GTM.
 - If GTM does *not* contain the GA4 tag, these four industry pages record no page views at all. Fix: add the same direct snippet the other pages use.
