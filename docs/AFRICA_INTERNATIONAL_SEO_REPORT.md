@@ -250,7 +250,7 @@ Sources:
 ## 18. Outstanding business information (Outstanding)
 
 1. **"Ownership: 100%"**: still ambiguous; not published. Confirm the exact wording and evidence.
-2. **About FAQ: "works with clients across South Africa and the region"**: confirm there have been clients outside South Africa, or change it to "available to organisations in the region".
+2. **About FAQ "and the region" claim**: resolved 30 Oct 2026. The owner confirmed clients are in South Africa; the FAQ now says "works with clients across South Africa" and links to Where we work.
 3. **International invoicing:** the new FAQ says currency is "confirmed in the written quote". Confirm you can quote and invoice non-SA clients, and in which currencies.
 4. **In-person meetings:** the new page says meetings at the Sandton office are by appointment, and that Johannesburg and Pretoria clients can meet in person. Confirm.
 5. **Engagement type** for each case study (product, client, demo, prototype), and whether "Auris AI" exists.
