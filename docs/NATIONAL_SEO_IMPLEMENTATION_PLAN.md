@@ -541,7 +541,7 @@ In GA4, mark `generate_lead` and `contact_click` as key events. **First resolve 
 
 | # | Task | Section | Effort | Needs owner? |
 |---|---|---|---|---|
-| 1 | Lead tracking events (**done 30 Oct 2026**, see the analytics playbook section E) + resolve GTM/GA4 double counting (**open**: needs GTM access, playbook A and A2) | 4.5 | ½ day | GTM access |
+| 1 | Lead tracking events (**done 30 Oct 2026**, see the analytics playbook section E) + resolve GTM/GA4 double counting (**done 30 Oct 2026**: GTM removed from the site, direct GA4 on all 60 content pages; playbook A1) | 4.5 | ½ day | GTM access |
 | 2 | Contact form fields (services, sector, budget, source) (**done 30 Oct 2026**) | 4.4 | ½ day | Budget bands (approved: under R30k / R30–75k / R75–150k / R150k+) |
 | 3 | Digital Opportunity Assessment page + CTA standardisation (**done 30 Oct 2026**: 45-minute video call, written summary within 3 working days; header button reads "Free assessment" to fit) | 4.2, 4.3 | 2 days | Offer wording (confirmed) |
 | 4 | Home page title and hero copy | 4.6 | 1 hour | Approve copy |
