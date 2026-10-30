@@ -1,5 +1,5 @@
 ---
-status: DRAFT - not published, requires owner review
+status: PUBLISHED 2026-10-30 at /insights/custom-software-development-cost-south-africa.html (the live page is the source of truth; edit it, not this draft)
 proposed_url: /insights/custom-software-development-cost-south-africa.html
 title: How Much Does Custom Software Development Cost in South Africa? | Auris Nexus
 meta_description: What custom software costs in South Africa, what drives the price, and how to budget for build, hosting and support, with Auris Nexus starting prices.
