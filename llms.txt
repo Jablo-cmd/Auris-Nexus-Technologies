@@ -13,7 +13,7 @@ Tagline: Transforming Businesses Through Technology
 - Email: info@aurisnexus.co.za
 - Website: https://aurisnexus.co.za/
 - LinkedIn: https://za.linkedin.com/company/auris-nexus-technologies
-- B-BBEE: Level 1 EME
+- B-BBEE: Level 1 EME; 100% black-owned
 - Primary market: South Africa
 
 ## Locations and coverage
@@ -22,6 +22,8 @@ Tagline: Transforming Businesses Through Technology
 - South Africa: works with organisations nationally; outside Gauteng, engagements normally run by video call.
 - Outside South Africa: available remotely to organisations elsewhere in Africa and overseas.
 - Working hours: Monday to Friday, 08:00–17:00 SAST (UTC+2).
+- In-person meetings: at the Sandton office or another venue agreed with the client.
+- Quotes for international clients: in rand, US dollars or the client's currency, at the equivalent of the rand pricing.
 - Details: [Where we work](https://aurisnexus.co.za/where-we-work.html)
 
 ## Core services
@@ -50,14 +52,14 @@ Tagline: Transforming Businesses Through Technology
 
 ## Project case studies
 
-Each case study states the project's status.
+Each case study states the project's status and whether it is an Auris Nexus product or client work.
 
-- [Funda360 school management platform](https://aurisnexus.co.za/case-studies/funda360-school-management-platform.html)
-- [CIT leave management system](https://aurisnexus.co.za/case-studies/cit-leave-management-system.html)
-- [LOGIOS OS logistics operations platform](https://aurisnexus.co.za/case-studies/logios-logistics-operations-platform.html)
-- [Sebetsa workforce and operations platform](https://aurisnexus.co.za/case-studies/sebetsa-workforce-operations-platform.html)
+- [Funda360 school management platform](https://aurisnexus.co.za/case-studies/funda360-school-management-platform.html): Auris Nexus product, in production
+- [CIT leave management system](https://aurisnexus.co.za/case-studies/cit-leave-management-system.html): client project, delivered and in use
+- [LOGIOS OS logistics operations platform](https://aurisnexus.co.za/case-studies/logios-logistics-operations-platform.html): Auris Nexus product, in development
+- [Sebetsa workforce and operations platform](https://aurisnexus.co.za/case-studies/sebetsa-workforce-operations-platform.html): client project, delivered and in use
 - [Trade Command trading operations console](https://aurisnexus.co.za/case-studies/trade-command-trading-operations-console.html)
-- [Pro Energy Solutions corporate website](https://aurisnexus.co.za/case-studies/pro-energy-solutions-corporate-website.html)
+- [Pro Energy Solutions corporate website](https://aurisnexus.co.za/case-studies/pro-energy-solutions-corporate-website.html): client project, completed
 
 ## Company and guidance
 

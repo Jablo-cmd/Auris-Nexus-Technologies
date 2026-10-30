@@ -182,10 +182,10 @@ Earlier today (already live): five pillar pages, assessment page, CTAs, contact 
 
 | Project | Status shown on site | Engagement type | Stack documented |
 |---|---|---|---|
-| Funda360 | Deployed & In Use | Not stated: owner to confirm (product vs client) | React, TypeScript, Vite, Supabase, PostgreSQL |
-| Sebetsa | Built & Tested | Not stated | React, TypeScript, Vite, Tailwind, Supabase, PostgreSQL |
-| CIT Leave Management System | Delivered | Built "for a single organisation" (likely client) | React, TypeScript, Tailwind, Supabase, PostgreSQL |
-| LOGIOS OS | In active development | Not stated | Documented on page |
+| Funda360 | Deployed & In Use | **Auris Nexus product** (owner-confirmed; label added) | React, TypeScript, Vite, Supabase, PostgreSQL |
+| Sebetsa | **Delivered & In Use** (corrected from "Built & Tested") | **Client project** (owner-confirmed; label added) | React, TypeScript, Vite, Tailwind, Supabase, PostgreSQL |
+| CIT Leave Management System | Delivered & In Use | **Client project** (owner-confirmed; label added) | React, TypeScript, Tailwind, Supabase, PostgreSQL |
+| LOGIOS OS | In active development (to be commissioned) | **Auris Nexus product** (owner-confirmed; label added) | Documented on page |
 | Trade Command | Built & Tested | Not stated ("private console") | React, TypeScript, Vite, Supabase, PostgreSQL, PWA |
 | Pro Energy Solutions | Completed | Client website | — |
 | **Auris AI** | **No material in repository** | — | — |
@@ -249,11 +249,11 @@ Sources:
 
 ## 18. Outstanding business information (Outstanding)
 
-1. **"Ownership: 100%"**: still ambiguous; not published. Confirm the exact wording and evidence.
+1. **Ownership**: resolved 30 Oct 2026. 100% black-owned; now stated on About, the assessment page, Where we work and `llms.txt`.
 2. **About FAQ "and the region" claim**: resolved 30 Oct 2026. The owner confirmed clients are in South Africa; the FAQ now says "works with clients across South Africa" and links to Where we work.
-3. **International invoicing:** the new FAQ says currency is "confirmed in the written quote". Confirm you can quote and invoice non-SA clients, and in which currencies.
-4. **In-person meetings:** the new page says meetings at the Sandton office are by appointment, and that Johannesburg and Pretoria clients can meet in person. Confirm.
-5. **Engagement type** for each case study (product, client, demo, prototype), and whether "Auris AI" exists.
+3. **International invoicing**: resolved 30 Oct 2026. Quotes in rand, US dollars or the client's currency at the equivalent of rand pricing; stated on Where we work and `llms.txt`.
+4. **In-person meetings**: resolved 30 Oct 2026. At the Sandton office or any venue agreed with the client; stated on Where we work and `llms.txt`.
+5. **Engagement type**: resolved for Funda360, LOGIOS OS, Sebetsa, CIT and Pro Energy. Still open: Trade Command's engagement type, and whether "Auris AI" exists.
 6. **Cape Town / Durban delivery model**, before those pages are written.
 
 ## 19. Risks and unresolved issues

@@ -275,6 +275,8 @@ Search volumes aren't included: no keyword-volume source was used for this plan.
 
 ### 3.2 Templates
 
+> **Update 30 Oct 2026 (owner answers):** Funda360 and LOGIOS OS are Auris Nexus products; Sebetsa and the CIT Leave Management System are client projects, delivered and in use by those clients. **The Funda360 entity is implemented** in `tools/build_schema.py` (`SOFTWARE`). **Don't use the Sebetsa template below:** it is a client's system, not an Auris product. Add LOGIOS OS once it is commissioned.
+
 **Funda360** (deployed and in use; SaaS):
 
 ```json
@@ -308,7 +310,7 @@ Search volumes aren't included: no keyword-volume source was used for this plan.
 }
 ```
 
-**Sebetsa** (built and tested; not described as deployed):
+**Sebetsa** (superseded: Sebetsa is a client project, so don't publish this as an Auris product):
 
 ```json
 {
@@ -381,7 +383,7 @@ Run `python tools/build_schema.py`, then `--check`, then validate the two URLs i
 
 ### 3.4 E-E-A-T actions for the case studies
 
-1. **Engagement type** on each case study, with the visible label owner-confirmed: Funda360 = Auris Nexus product; Sebetsa = Auris Nexus product (built and tested); CIT = client project.
+1. **Engagement type** on each case study (**done 30 Oct 2026**, owner-confirmed): Funda360 and LOGIOS OS = Auris Nexus product; Sebetsa, CIT and Pro Energy Solutions = client project. Sebetsa's status changed from "Built & Tested" to "Delivered & In Use". Trade Command's engagement type is still unconfirmed.
 2. **Dates:** add "Delivered {month year}" or "Last updated {date}", and `dateModified` on the WebPage node.
 3. **Named roles:** "What Auris Nexus did" exists on Funda360 and CIT; add it to Sebetsa.
 4. **Proof assets:** a 60–90 second screen-recorded walkthrough per product (hosted on YouTube or Vimeo for a `VideoObject`), using demo tenants only and no client data.
