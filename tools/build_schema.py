@@ -72,7 +72,7 @@ ORGANIZATION = {
         "postalCode": "2196",
         "addressCountry": "ZA",
     },
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=140+Linden+Street%2C+Sandown%2C+Sandton+2196",
+    "hasMap": "https://maps.google.com/?cid=3306375028556583429",
     "areaServed": "ZA",
     "knowsAbout": [
         "Technology consulting",
@@ -93,7 +93,10 @@ ORGANIZATION = {
         "areaServed": "ZA",
         "availableLanguage": ["en"],
     },
-    "sameAs": ["https://za.linkedin.com/company/auris-nexus-technologies"],
+    "sameAs": [
+        "https://za.linkedin.com/company/auris-nexus-technologies",
+        "https://maps.google.com/?cid=3306375028556583429",
+    ],
     "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Core services",
