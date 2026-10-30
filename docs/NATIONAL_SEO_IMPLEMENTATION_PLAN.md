@@ -383,7 +383,7 @@ Run `python tools/build_schema.py`, then `--check`, then validate the two URLs i
 
 ### 3.4 E-E-A-T actions for the case studies
 
-1. **Engagement type** on each case study (**done 30 Oct 2026**, owner-confirmed): Funda360 and LOGIOS OS = Auris Nexus product; Sebetsa, CIT and Pro Energy Solutions = client project. Sebetsa's status changed from "Built & Tested" to "Delivered & In Use". Trade Command = client project (confirmed 30 Oct 2026). Auris AI exists; case study pending owner material.
+1. **Engagement type** on each case study (**done 30 Oct 2026**, owner-confirmed): Funda360 and LOGIOS OS = Auris Nexus product; Sebetsa, CIT and Pro Energy Solutions = client project. Sebetsa's status changed from "Built & Tested" to "Delivered & In Use". Trade Command = client project (confirmed 30 Oct 2026). Auris x AI is an internal Auris Nexus system, not yet launched; write its case study after launch.
 2. **Dates:** add "Delivered {month year}" or "Last updated {date}", and `dateModified` on the WebPage node.
 3. **Named roles:** "What Auris Nexus did" exists on Funda360 and CIT; add it to Sebetsa.
 4. **Proof assets:** a 60–90 second screen-recorded walkthrough per product (hosted on YouTube or Vimeo for a `VideoObject`), using demo tenants only and no client data.

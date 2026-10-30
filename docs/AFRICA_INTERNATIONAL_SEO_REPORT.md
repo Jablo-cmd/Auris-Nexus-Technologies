@@ -188,7 +188,7 @@ Earlier today (already live): five pillar pages, assessment page, CTAs, contact 
 | LOGIOS OS | In active development (to be commissioned) | **Auris Nexus product** (owner-confirmed; label added) | Documented on page |
 | Trade Command | Built & Tested | Not stated ("private console") | React, TypeScript, Vite, Supabase, PostgreSQL, PWA |
 | Pro Energy Solutions | Completed | Client website | — |
-| **Auris AI** | **No material in repository** | — | — |
+| **Auris x AI** | Not yet launched | **Auris Nexus internal system** (owner-confirmed) | No material in repository yet |
 
 No case study states a measured business outcome, and none should until outcomes are verified. Schema templates for Funda360 and Sebetsa are ready (plan §3).
 
@@ -253,7 +253,7 @@ Sources:
 2. **About FAQ "and the region" claim**: resolved 30 Oct 2026. The owner confirmed clients are in South Africa; the FAQ now says "works with clients across South Africa" and links to Where we work.
 3. **International invoicing**: resolved 30 Oct 2026. Quotes in rand, US dollars or the client's currency at the equivalent of rand pricing; stated on Where we work and `llms.txt`.
 4. **In-person meetings**: resolved 30 Oct 2026. At the Sandton office or any venue agreed with the client; stated on Where we work and `llms.txt`.
-5. **Engagement type**: resolved for every case study. Trade Command is a client project (labelled 30 Oct 2026). **Auris AI exists** (owner-confirmed) but has no material in the repository; a case study needs a description, status, engagement type and screenshots from the owner.
+5. **Engagement type**: resolved for every case study. Trade Command is a client project (labelled 30 Oct 2026). **Auris x AI** (the "Auris AI" in the brief) exists: an internal system designed and built for Auris Nexus's own use, **not yet launched** (owner, 30 Oct 2026). Write its case study after launch, labelled "Auris Nexus product (internal)"; it needs a short description and 2–3 screenshots.
 6. **Cape Town / Durban delivery model**, before those pages are written.
 
 ## 19. Risks and unresolved issues
