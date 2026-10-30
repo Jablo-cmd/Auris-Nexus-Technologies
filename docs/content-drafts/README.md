@@ -4,7 +4,7 @@ These drafts are **not live**. `docs/` is excluded from the published site by `_
 
 | Draft | Ready for review? | Needs before publishing |
 |---|---|---|
-| `custom-software-cost-south-africa.md` | Yes | Owner confirms price ranges still match `pricing.html`. |
+| `custom-software-cost-south-africa.md` | **Published 2026-10-30** | Live at `/insights/custom-software-development-cost-south-africa.html`. Keep its prices in step with `pricing.html`. |
 | `when-to-invest-in-custom-software.md` | Yes | Owner review. |
 | `practical-ai-integration-south-african-businesses.md` | Yes | Owner confirms the AI capabilities described are ones Auris Nexus delivers. |
 | `ai-assistants-business-operations.md` | Yes | As above. |

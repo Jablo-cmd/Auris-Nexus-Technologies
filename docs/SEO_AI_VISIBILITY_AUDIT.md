@@ -149,7 +149,7 @@ No regressions introduced: new pages reuse existing CSS and JS, existing respons
 
 | # | Topic | Status |
 |---|---|---|
-| 1 | How much does custom software development cost in South Africa? | **Draft** `docs/content-drafts/custom-software-cost-south-africa.md` |
+| 1 | How much does custom software development cost in South Africa? | **Published 2026-10-30** at `/insights/custom-software-development-cost-south-africa.html` |
 | 2 | Custom software vs off-the-shelf | Covered by `/insights/build-buy-or-configure-business-software.html` |
 | 3 | How business automation can improve operational efficiency | Covered by `/insights/business-automation.html` |
 | 4 | Practical AI integration for South African businesses | **Draft** `docs/content-drafts/practical-ai-integration-south-african-businesses.md` |
