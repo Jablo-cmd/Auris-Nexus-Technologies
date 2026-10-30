@@ -214,6 +214,7 @@ ${IC.wa}
 <li><a href="/about.html">About</a></li>
 <li><a href="/portfolio.html">Work</a></li>
 <li><a href="/industries.html">Industries</a></li>
+<li><a href="/where-we-work.html">Where we work</a></li>
 <li><a href="/pricing.html">Pricing</a></li>
 <li><a href="/insights/">Insights</a></li>
 <li><a href="/faq.html">FAQ</a></li>
@@ -285,6 +286,7 @@ const ACTIVE = {
   'about.html': 'about',
   'contact.html': 'contact',
   'digital-opportunity-assessment.html': '',
+  'where-we-work.html': 'about',
   'pricing.html': '',
   'faq.html': '',
   'privacy.html': '',

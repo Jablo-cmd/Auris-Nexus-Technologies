@@ -16,6 +16,14 @@ Tagline: Transforming Businesses Through Technology
 - B-BBEE: Level 1 EME
 - Primary market: South Africa
 
+## Locations and coverage
+
+- Headquarters and only office: Sandton, Johannesburg, South Africa. There are no offices, staff or registered entities outside South Africa.
+- South Africa: works with organisations nationally; outside Gauteng, engagements normally run by video call.
+- Outside South Africa: available remotely to organisations elsewhere in Africa and overseas.
+- Working hours: Monday to Friday, 08:00–17:00 SAST (UTC+2).
+- Details: [Where we work](https://aurisnexus.co.za/where-we-work.html)
+
 ## Core services
 
 - [Technology Consulting](https://aurisnexus.co.za/technology-consulting.html): technology strategy, systems assessment, solution architecture and phased technology roadmaps.
