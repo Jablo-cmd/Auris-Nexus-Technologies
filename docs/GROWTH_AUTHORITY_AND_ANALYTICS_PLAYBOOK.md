@@ -13,7 +13,7 @@ South Africa first. Expand content to another market only when there is somethin
 
 ### Stage 0 (now): South Africa
 - Pillar pages, industry pages and case studies are South-African focused. Keep it that way.
-- The About page already says the company works with clients across South Africa and the region. Keep that wording general.
+- The About page says the company works with clients across South Africa and links to the Where we work page, which covers remote work for clients elsewhere in Africa and overseas. Don't claim work in any other country until a real project exists there.
 
 ### Stage 1: SADC neighbours (Botswana, Namibia, Zimbabwe, Zambia, Mozambique)
 Trigger: the first real enquiry or project in a market.
@@ -88,22 +88,21 @@ Search the company name and the phone number on Google and Bing. List every list
 
 | Tool | Status | Evidence |
 |---|---|---|
-| Google Tag Manager | Installed | `GTM-DJ5BQVHL` on 53 pages (head script + noscript iframe) |
-| Google Analytics 4 | Installed (direct gtag) | `G-W1KZXGKB56` on 49 pages |
+| Google Tag Manager | Removed 30 Oct 2026 (see A1) | No `GTM-` snippet on any page; the container `GTM-DJ5BQVHL` still exists in the GTM account but is not loaded |
+| Google Analytics 4 | Installed (direct gtag, once per page) | `G-W1KZXGKB56` on all 60 content and error pages; not on the retired redirect stubs or the Search Console verification file |
 | Google Search Console | Verification file present | `/googlec37fb6e84eb9cbc6.html` |
 | IndexNow key (likely) | File present | `/149f49deca8e49fcb563a886709e3884.txt` |
 | Bing Webmaster Tools | Not found | No `msvalidate.01` tag or `BingSiteAuth.xml` |
 | Microsoft Clarity | Not installed | Not found |
 
-Nothing was changed. No tokens or IDs were invented.
+Updated 30 Oct 2026 after the GTM fix in A1. No tokens or IDs were invented.
 
 ### Step-by-step setup
 
-**A. Check for GA4 double counting (do first)**
-1. Open tagmanager.google.com → container `GTM-DJ5BQVHL` → Tags.
-2. If any tag is a "Google Tag" or "GA4 Configuration" using `G-W1KZXGKB56`, page views are being sent twice (once from GTM, once from the direct gtag snippet).
-3. Fix by keeping only one: the simplest is to keep GTM and remove the direct `gtag.js` block from the page templates. Ask for the change to be made in the repository; it touches every page.
-4. In GA4 → Admin → Data streams, confirm `https://aurisnexus.co.za` is the stream URL.
+**A. Check for GA4 double counting (done 30 Oct 2026, see A1)**
+1. ~~Open tagmanager.google.com → container `GTM-DJ5BQVHL` → Tags.~~ Done: it held a Google Tag for `G-W1KZXGKB56`.
+2. ~~Remove one of the two installations.~~ Done: GTM was removed from the site; the direct `gtag.js` snippet stays.
+3. Still to do: in GA4 → Admin → Data streams, confirm `https://aurisnexus.co.za` is the stream URL.
 
 **B. Google Search Console**
 1. Sign in at search.google.com/search-console. Confirm the property `https://aurisnexus.co.za/` (or a Domain property) is verified. Keep the verification file in the repository.
@@ -119,7 +118,7 @@ Nothing was changed. No tokens or IDs were invented.
 4. IndexNow: check whether `149f49deca8e49fcb563a886709e3884` is the key registered in Bing (Settings → IndexNow). If it is, new and changed URLs can be pushed after each deployment.
 
 **D. Microsoft Clarity (optional)**
-Only if heatmaps and session recordings are wanted. It must be covered in the privacy policy (POPIA) and, ideally, added through GTM rather than a new page snippet. Not installed.
+Only if heatmaps and session recordings are wanted. It must be covered in the privacy policy (POPIA). GTM is no longer on the site, so Clarity would be added as its own snippet on every page (or GTM re-introduced first, as described under A1). Not installed.
 
 **A1. Resolved 30 Oct 2026**
 The owner confirmed GTM container `GTM-DJ5BQVHL` held one tag, a Google Tag for `G-W1KZXGKB56` firing on all pages. That double-counted page views on the 56 pages that also loaded GA4 directly. The four industry pages had only GTM's `noscript` fallback, so they weren't tracked at all. **Fix:** GTM was removed from the website (both snippets, 60 pages), and the direct GA4 snippet was added to `corporate.html`, `education.html`, `healthcare.html` and `logistics.html`. Every content page now loads `G-W1KZXGKB56` exactly once, and the lead events are unaffected. The GTM container still exists but is no longer loaded; leave it or delete it.
@@ -140,7 +139,7 @@ Either way, the fix is a one-line decision for every page; send the answer from 
 | `generate_lead` | The contact form is accepted by Formspree | `form_type` (e.g. "Demo request", or "contact"), `service`, `sector`, `heard_about` (the form's "How did you find us?" answer), `project` |
 | `contact_click` | A WhatsApp, phone or email link is clicked | `method` (`whatsapp` / `phone` / `email`), `link_position` (`header`, `menu`, `tab_bar`, `content`, `footer`) |
 
-No personal information (name, email, phone, message) is sent. Events fire only on pages that load the direct GA4 snippet (see A2).
+No personal information (name, email, phone, message) is sent. Events fire on every content page, since all of them now load the direct GA4 snippet (see A1).
 
 To finish the setup in GA4 (owner, about 10 minutes):
 1. Admin → Events: after the first events arrive (up to 24 hours), mark `generate_lead` and `contact_click` as **key events**.
