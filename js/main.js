@@ -4,6 +4,37 @@
 
   var doc = document;
 
+  /* ---- Analytics events (GA4 via the page's gtag, if loaded) ----
+     Sent only through gtag, never as dataLayer events for GTM, so a GA4
+     tag in the GTM container cannot record them a second time.
+     Never pass personal information (name, email, phone, message). */
+  function track(name, params) {
+    if (typeof window.gtag === 'function') window.gtag('event', name, params || {});
+  }
+
+  function fieldValue(form, name) {
+    var el = form.querySelector('[name="' + name + '"]');
+    return el && el.value ? el.value : '';
+  }
+
+  // WhatsApp, phone and email links anywhere on the page.
+  doc.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    var method = /^https:\/\/wa\.me\//.test(href) ? 'whatsapp'
+      : /^tel:/i.test(href) ? 'phone'
+      : /^mailto:/i.test(href) ? 'email' : '';
+    if (!method) return;
+    var area = a.closest('.site-header, .drawer, .tabbar, .site-footer, main');
+    var position = !area ? 'other'
+      : area.classList.contains('site-header') ? 'header'
+      : area.classList.contains('drawer') ? 'menu'
+      : area.classList.contains('tabbar') ? 'tab_bar'
+      : area.classList.contains('site-footer') ? 'footer' : 'content';
+    track('contact_click', { method: method, link_position: position });
+  });
+
 
   /* ---- Site-wide premium web promotion ticker ---- */
   (function mountPromotionTicker() {
@@ -255,6 +286,11 @@
         })
         .then(function (res) {
           if (res && res.ok === true) {
+            track('generate_lead', {
+              form_type: fieldValue(form, 'enquiry_type') || 'contact',
+              service: fieldValue(form, 'service'),
+              project: fieldValue(form, 'project')
+            });
             if (status) { status.classList.add('is-ok'); status.textContent = 'Thank you. Your enquiry has been received. The Auris Nexus Technologies team will be in touch shortly.'; }
             form.reset();
           } else {
