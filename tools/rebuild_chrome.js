@@ -121,7 +121,7 @@ ${navLinks(active)}
 <a aria-label="Chat on WhatsApp" class="nav-wa" href="${WA}" rel="noopener" target="_blank">
 ${IC.wa}
 </a>
-<a class="btn btn-primary btn-sm nav-cta" href="/contact.html">Start a Project</a>
+<a class="btn btn-primary btn-sm nav-cta" href="/digital-opportunity-assessment.html">Free assessment</a>
 <button type="button" aria-controls="navDrawer" aria-expanded="false" aria-label="Open menu" class="nav-toggle" id="navToggle">
 <span></span><span></span><span></span>
 </button>
@@ -150,7 +150,7 @@ ${drawerSolutions()}
 </div>
 </div>
 <div class="drawer-foot">
-<a class="btn btn-primary btn-block" href="/contact.html">Start a Project</a>
+<a class="btn btn-primary btn-block" href="/digital-opportunity-assessment.html">Get a free assessment</a>
 <div class="drawer-contact">
 <a href="tel:+27631226552">Call 063 122 6552</a>
 <a href="mailto:info@aurisnexus.co.za">info@aurisnexus.co.za</a>
@@ -167,7 +167,7 @@ ${drawerSolutions()}
 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><rect height="7" rx="1.5" width="7" x="3" y="3"></rect><rect height="7" rx="1.5" width="7" x="14" y="3"></rect><rect height="7" rx="1.5" width="7" x="3" y="14"></rect><rect height="7" rx="1.5" width="7" x="14" y="14"></rect></svg>
 <span>Solutions</span>
 </a>
-<a aria-label="Start a project" class="tab tab-cta" href="/contact.html">
+<a aria-label="Get a free assessment" class="tab tab-cta" href="/digital-opportunity-assessment.html">
 <span class="tab-cta-ring"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span>
 </a>
 <a class="tab${active === 'work' ? ' is-active' : ''}" href="/portfolio.html">
@@ -193,7 +193,7 @@ function footer() {
 <p>We'll help work out what the right digital solution looks like — and what it would take to build it.</p>
 </div>
 <div class="footer-cta-actions">
-<a class="btn btn-primary" href="/contact.html">Start a Project</a>
+<a class="btn btn-primary" href="/digital-opportunity-assessment.html">Get a free assessment</a>
 <a class="btn btn-ghost" href="${WA}" rel="noopener" target="_blank">Chat on WhatsApp</a>
 </div>
 </div>
@@ -284,6 +284,7 @@ const ACTIVE = {
   'portfolio.html': 'work',
   'about.html': 'about',
   'contact.html': 'contact',
+  'digital-opportunity-assessment.html': '',
   'pricing.html': '',
   'faq.html': '',
   'privacy.html': '',
