@@ -1,0 +1,60 @@
+# Auris Nexus Technologies
+
+> Auris Nexus Technologies (Pty) Ltd is a technology consulting and digital solutions company based in Sandton, Johannesburg, South Africa. It specialises in custom software development, business automation, AI integration and digital transformation, helping organisations modernise operations, improve efficiency and implement practical technology solutions aligned with their business objectives.
+
+Tagline: Transforming Businesses Through Technology
+
+## Company facts
+
+- Registered name: Auris Nexus Technologies (Pty) Ltd
+- Company registration number (CIPC): 2026/606690/07
+- Address: 140 Linden Street, Sandown, Sandton, Gauteng 2196, South Africa
+- Telephone: 063 122 6552 (+27 63 122 6552)
+- Email: info@aurisnexus.co.za
+- Website: https://aurisnexus.co.za/
+- LinkedIn: https://za.linkedin.com/company/auris-nexus-technologies
+- B-BBEE: Level 1 EME
+- Primary market: South Africa
+
+## Core services
+
+- [Technology Consulting](https://aurisnexus.co.za/technology-consulting.html): technology strategy, systems assessment, solution architecture and phased technology roadmaps.
+- [Custom Software Development](https://aurisnexus.co.za/custom-software-development.html): bespoke business applications, enterprise and multi-tenant platforms, portals, workflow systems and API integrations.
+- [Business Automation](https://aurisnexus.co.za/business-automation.html): workflow automation, process digitisation and systems integration.
+- [AI Integration](https://aurisnexus.co.za/ai-integration.html): AI assistants, document intelligence and AI inside existing business workflows.
+- [Digital Transformation](https://aurisnexus.co.za/digital-transformation.html): business system modernisation, legacy system improvement and digital process transformation.
+
+## Supporting services
+
+- [Business Systems (CRM, HR, operations)](https://aurisnexus.co.za/crm-business-management-systems.html)
+- [Web Development](https://aurisnexus.co.za/web-development.html)
+- [Mobile App Development](https://aurisnexus.co.za/mobile-app-development.html)
+- [Data & Business Intelligence](https://aurisnexus.co.za/data-analytics-business-intelligence.html)
+- [Web Design](https://aurisnexus.co.za/web-design.html)
+- [Pricing](https://aurisnexus.co.za/pricing.html)
+
+## Industries
+
+- [Education](https://aurisnexus.co.za/education.html)
+- [Logistics and transport](https://aurisnexus.co.za/logistics.html)
+- [Healthcare administration](https://aurisnexus.co.za/healthcare.html)
+- [Professional and corporate services](https://aurisnexus.co.za/corporate.html)
+
+## Project case studies
+
+Each case study states the project's status.
+
+- [Funda360 school management platform](https://aurisnexus.co.za/case-studies/funda360-school-management-platform.html)
+- [CIT leave management system](https://aurisnexus.co.za/case-studies/cit-leave-management-system.html)
+- [LOGIOS OS logistics operations platform](https://aurisnexus.co.za/case-studies/logios-logistics-operations-platform.html)
+- [Sebetsa workforce and operations platform](https://aurisnexus.co.za/case-studies/sebetsa-workforce-operations-platform.html)
+- [Trade Command trading operations console](https://aurisnexus.co.za/case-studies/trade-command-trading-operations-console.html)
+- [Pro Energy Solutions corporate website](https://aurisnexus.co.za/case-studies/pro-energy-solutions-corporate-website.html)
+
+## Company and guidance
+
+- [About](https://aurisnexus.co.za/about.html)
+- [Contact](https://aurisnexus.co.za/contact.html)
+- [FAQ](https://aurisnexus.co.za/faq.html)
+- [Insights](https://aurisnexus.co.za/insights/)
+- [Editorial policy](https://aurisnexus.co.za/insights/editorial-policy.html)

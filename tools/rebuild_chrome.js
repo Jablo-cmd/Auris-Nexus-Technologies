@@ -22,20 +22,24 @@ const IC = {
   design: '<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 20h9"></path><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4z"></path></svg>',
   mobile: '<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2"></rect><path d="M11 18h2"></path></svg>',
   consulting: '<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M12 3v18M3 12h18"></path><circle cx="12" cy="12" r="8"></circle></svg>',
+  transform: '<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M21 12a9 9 0 01-15.5 6.2"></path><path d="M3 12A9 9 0 0118.5 5.8"></path><path d="M18 2v4h-4"></path><path d="M6 22v-4h4"></path></svg>',
   grid: '<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>',
   wa: '<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M17.5 14.4c-.3-.15-1.7-.84-2-.94-.26-.1-.45-.14-.64.15s-.74.94-.9 1.13-.33.22-.62.08a8.2 8.2 0 01-2.4-1.48 9 9 0 01-1.67-2.07c-.17-.3 0-.46.13-.6.13-.13.29-.34.44-.5a2 2 0 00.29-.5.55.55 0 000-.52c-.08-.15-.64-1.55-.88-2.12-.23-.55-.47-.48-.64-.49h-.55a1.05 1.05 0 00-.76.36 3.2 3.2 0 00-1 2.38 5.56 5.56 0 001.17 2.95 12.7 12.7 0 004.86 4.3c.68.29 1.2.46 1.62.59a3.9 3.9 0 001.79.11c.55-.08 1.7-.69 1.94-1.36s.24-1.24.17-1.36-.26-.2-.55-.34zM12 2a10 10 0 00-8.6 15.06L2 22l5.06-1.33A10 10 0 1012 2z"></path></svg>',
 };
 
 /* ---- Solutions taxonomy (drives mega-menu, drawer, footer) ---- */
 const SOLUTIONS = [
+  // The five core service pillars lead; supporting capabilities follow.
   { href: '/technology-consulting.html', title: 'Technology Consulting', blurb: 'Analyse the business problem, define the right solution and create a practical technology roadmap.', ic: IC.consulting },
-  { href: '/web-development.html', title: 'Web Development', blurb: 'Business websites, web applications, client portals and internal business platforms.', ic: IC.webdev },
-  { href: '/web-design.html', title: 'Web Design', blurb: 'Responsive, conversion-focused design — user experience, mobile-first and brand-aligned.', ic: IC.design },
-  { href: '/crm-business-management-systems.html', title: 'Business Systems', blurb: 'Custom business software for a real process — CRM, HR, school management, operations.', ic: IC.systems },
+  { href: '/custom-software-development.html', title: 'Custom Software Development', blurb: 'Bespoke business applications, portals, workflow systems and API integrations.', ic: IC.platforms },
   { href: '/business-automation.html', title: 'Business Automation', blurb: 'Remove repetitive manual work from approvals, admin and hand-offs.', ic: IC.automation },
-  { href: '/mobile-app-development.html', title: 'Mobile App Development', blurb: 'Native and cross-platform apps that connect customers and field teams.', ic: IC.mobile },
   { href: '/ai-integration.html', title: 'AI Integration', blurb: 'Practical AI inside real workflows — assistants, document intelligence, decision support.', ic: IC.ai },
+  { href: '/digital-transformation.html', title: 'Digital Transformation', blurb: 'Modernise systems and processes in practical, phased steps.', ic: IC.transform },
+  { href: '/crm-business-management-systems.html', title: 'Business Systems', blurb: 'Custom business software for a real process — CRM, HR, school management, operations.', ic: IC.systems },
+  { href: '/web-development.html', title: 'Web Development', blurb: 'Business websites, web applications, client portals and internal business platforms.', ic: IC.webdev },
+  { href: '/mobile-app-development.html', title: 'Mobile App Development', blurb: 'Native and cross-platform apps that connect customers and field teams.', ic: IC.mobile },
   { href: '/data-analytics-business-intelligence.html', title: 'Data & Business Intelligence', blurb: 'Dashboards and reporting that turn operational data into decisions.', ic: IC.data },
+  { href: '/web-design.html', title: 'Web Design', blurb: 'Responsive, conversion-focused design — user experience, mobile-first and brand-aligned.', ic: IC.design },
 ];
 
 const NAV = [
@@ -270,6 +274,8 @@ const ACTIVE = {
   'web-design.html': 'solutions',
   'mobile-app-development.html': 'solutions',
   'technology-consulting.html': 'solutions',
+  'custom-software-development.html': 'solutions',
+  'digital-transformation.html': 'solutions',
   'education.html': 'industries',
   'corporate.html': 'industries',
   'healthcare.html': 'industries',

@@ -34,6 +34,15 @@ PERSON_ID = AUTHOR_URL + "#person"
 SKIP_DIRS = {".git", "node_modules", "tools", "docs", "design-source"}
 NON_PAGES = {"googlec37fb6e84eb9cbc6.html", "403.html", "404.html", "500.html"}
 
+# The five core service pillars, each with its own page and Service node.
+PILLARS = [
+    ("Technology Consulting", "technology-consulting.html"),
+    ("Custom Software Development", "custom-software-development.html"),
+    ("Business Automation", "business-automation.html"),
+    ("AI Integration", "ai-integration.html"),
+    ("Digital Transformation", "digital-transformation.html"),
+]
+
 ORGANIZATION = {
     "@type": "ProfessionalService",
     "@id": ORG_ID,
@@ -49,6 +58,7 @@ ORGANIZATION = {
         "software, business automation, digital transformation, AI integration and "
         "business systems."
     ),
+    "slogan": "Transforming Businesses Through Technology",
     "foundingDate": "2026-07",
     "identifier": {"@type": "PropertyValue", "propertyID": "CIPC", "value": "2026/606690/07"},
     "founder": {"@id": PERSON_ID},
@@ -84,6 +94,15 @@ ORGANIZATION = {
         "availableLanguage": ["en"],
     },
     "sameAs": ["https://za.linkedin.com/company/auris-nexus-technologies"],
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Core services",
+        "itemListElement": [
+            {"@type": "Offer", "itemOffered": {
+                "@type": "Service", "@id": BASE + page + "#service", "name": name, "url": BASE + page}}
+            for name, page in PILLARS
+        ],
+    },
     "priceRange": "R12 500+",
     "currenciesAccepted": "ZAR",
     "openingHoursSpecification": [{
