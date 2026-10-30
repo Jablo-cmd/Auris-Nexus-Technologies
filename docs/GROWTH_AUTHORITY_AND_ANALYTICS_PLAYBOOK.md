@@ -121,5 +121,24 @@ Nothing was changed. No tokens or IDs were invented.
 **D. Microsoft Clarity (optional)**
 Only if heatmaps and session recordings are wanted. It must be covered in the privacy policy (POPIA) and, ideally, added through GTM rather than a new page snippet. Not installed.
 
-**E. Conversion tracking**
-Make sure GA4 key events exist for: contact form submission, WhatsApp click, phone click, email click. Use them to measure qualified enquiries, which is the real business objective.
+**A2. Finding to settle in the same check (30 Oct 2026)**
+`corporate.html`, `education.html`, `healthcare.html` and `logistics.html` load GTM but **not** the direct GA4 snippet; every other content page loads both. So:
+- If GTM *does* contain the GA4 tag, the other pages double-count page views. Fix: remove the direct `gtag.js` block from those pages and rely on GTM.
+- If GTM does *not* contain the GA4 tag, these four industry pages record no page views at all. Fix: add the same direct snippet the other pages use.
+Either way, the fix is a one-line decision for every page; send the answer from step A and the change can be made across the site.
+
+**E. Conversion tracking (implemented 30 Oct 2026)**
+`js/main.js` now sends two GA4 events through the page's direct `gtag` (not through GTM, so they cannot be counted twice):
+
+| Event | When | Parameters |
+|---|---|---|
+| `generate_lead` | The contact form is accepted by Formspree | `form_type` (e.g. "Demo request", or "contact"), `service`, `project` |
+| `contact_click` | A WhatsApp, phone or email link is clicked | `method` (`whatsapp` / `phone` / `email`), `link_position` (`header`, `menu`, `tab_bar`, `content`, `footer`) |
+
+No personal information (name, email, phone, message) is sent. Events fire only on pages that load the direct GA4 snippet (see A2).
+
+To finish the setup in GA4 (owner, about 10 minutes):
+1. Admin → Events: after the first events arrive (up to 24 hours), mark `generate_lead` and `contact_click` as **key events**.
+2. Admin → Custom definitions → create event-scoped custom dimensions for `form_type`, `service`, `project`, `method` and `link_position`, so they can be used in reports.
+3. Check it works: open the site with GA4 → Admin → DebugView open (or use the Tag Assistant browser extension), click the WhatsApp button and confirm `contact_click` appears.
+4. Report: Explore → Free form, rows = Landing page, values = Key events; filter by Session source/medium to compare organic search with other channels.
