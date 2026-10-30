@@ -1,5 +1,5 @@
 ---
-status: DRAFT - not published, requires owner review
+status: PUBLISHED 2026-10-30 at /insights/when-to-invest-in-custom-software.html (the live page is the source of truth; edit it, not this draft)
 proposed_url: /insights/when-to-invest-in-custom-software.html
 title: When Should a Business Invest in Custom Software? | Auris Nexus
 meta_description: Seven signs your business has outgrown spreadsheets and off-the-shelf tools, and three situations where custom software is the wrong answer.

@@ -155,7 +155,7 @@ No regressions introduced: new pages reuse existing CSS and JS, existing respons
 | 4 | Practical AI integration for South African businesses | **Draft** `docs/content-drafts/practical-ai-integration-south-african-businesses.md` |
 | 5 | How to choose a software development partner | Covered by `/insights/choosing-a-custom-software-development-company.html` |
 | 6 | Digital transformation challenges facing African SMEs | **Draft** `docs/content-drafts/digital-transformation-challenges-african-smes.md` (overlaps partly with `/insights/digital-transformation-roadmap.html`) |
-| 7 | When should a business invest in custom software? | **Draft** `docs/content-drafts/when-to-invest-in-custom-software.md` |
+| 7 | When should a business invest in custom software? | **Published 2026-10-30** at `/insights/when-to-invest-in-custom-software.html` |
 | 8 | How AI assistants can improve business operations | **Draft** `docs/content-drafts/ai-assistants-business-operations.md` |
 | 9 | Understanding business process automation | Covered by `/insights/business-automation.html`; consider expanding rather than a new article |
 | 10 | What to consider before implementing AI | Covered by `/insights/ai-business-outcomes.html` and `/insights/why-businesses-must-adopt-ai-in-daily-operations.html` |
