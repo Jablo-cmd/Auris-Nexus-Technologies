@@ -56,14 +56,13 @@ No result in this document is a guarantee of rankings or AI recommendations. The
 
 - Positioning drift: the Solutions menu led with Web Development and Web Design, and the site has four city web-design pages (Johannesburg, Pretoria, Cape Town, Durban). That pulls the entity towards "web design agency", against the intended positioning. The city pages are not duplicates of each other (pairwise text similarity 18–43%) but they are short (about 530–610 words).
 - AI answer engines rely heavily on third-party corroboration (directories, LinkedIn, press, reviews on platforms). The site cannot supply this alone; see section F and `docs/GROWTH_AUTHORITY_AND_ANALYTICS_PLAYBOOK.md`.
-- Case studies do not state whether each project was a commercial client engagement or an internal product, and none lists its technology stack.
+- Case studies do not state whether each project was a commercial client engagement or an internal product. *(Corrected 30 Oct 2026: an earlier version also said none lists its technology stack; each case study does, under "Technical approach".)*
 
 ### 5. Content gaps
 
 - No pillar pages for Custom Software Development and Digital Transformation (fixed, see B).
 - Of the 10 requested Insights topics, 5 already have close coverage; 5 were missing (drafts prepared, see C).
 - No "Auris AI" project exists anywhere in the repository. No case study was created for it.
-- The case studies have no technology-stack section.
 
 ### 6. Business identity inconsistencies and items to verify
 
@@ -165,7 +164,7 @@ No regressions introduced: new pages reuse existing CSS and JS, existing respons
 ### Case study improvements (need owner input)
 For each of Funda360, CIT LMS, LOGIOS OS, Sebetsa and Trade Command, add:
 1. **Engagement type**: commercial client project, internal product or demonstration. Not added, because this could not be verified from the repository.
-2. **Technology stack**: languages, frameworks, database, hosting.
+2. **Technology stack**: already present under "Technical approach"; add any confirmed technologies not yet listed.
 3. **Implementation approach / timeline** where shareable.
 
 "Auris AI" has no material in the repository. A case study should be written only once the owner supplies a genuine description and screenshots.
@@ -181,7 +180,7 @@ See `docs/GROWTH_AUTHORITY_AND_ANALYTICS_PLAYBOOK.md`, section 1.
 - [ ] Review and approve the copy on `/custom-software-development.html` and `/digital-transformation.html`.
 - [ ] Robots policy: keep or block training crawlers (GPTBot, Google-Extended, ClaudeBot, Applebot-Extended).
 - [ ] Ownership wording ("100% ownership") and B-BBEE evidence before anything is published.
-- [ ] Engagement type and technology stack for each case study.
+- [ ] Engagement type for each case study (the technology stack is already shown).
 - [ ] Testimonial placement and permission.
 - [ ] Unsourced figures in the `services.html` FAQ.
 - [ ] Whether the four city web-design pages remain a priority, given the technology-consulting positioning.
@@ -231,5 +230,5 @@ See `docs/GROWTH_AUTHORITY_AND_ANALYTICS_PLAYBOOK.md`, section 1.
 1. **Merge and submit.** Merge to `main`, then submit the sitemap in Google Search Console and Bing Webmaster Tools and request indexing of the two new pillar pages.
 2. **Fix possible GA4 double counting.** Check the GTM container before trusting traffic numbers.
 3. **Build external corroboration.** Claim one Google Business Profile and one Bing Places listing with identical NAP, and complete the LinkedIn company page with the same description and five services. AI engines rely heavily on third-party sources.
-4. **Strengthen case studies.** Add engagement type and technology stack to each case study, and make the testimonial context accurate.
+4. **Strengthen case studies.** Add engagement type to each case study, and make the testimonial context accurate.
 5. **Start monthly AI visibility measurement.** Use `docs/AI_VISIBILITY_MONITORING.md` to record a baseline now, before content and authority work changes the picture. Publish the reviewed Insights drafts, one or two per month.
