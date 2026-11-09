@@ -1,0 +1,45 @@
+name: One-time schema and SEO repair
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/refresh-schema-once.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Regenerate structured data
+        run: python tools/build_schema.py
+      - name: Validate structured data
+        run: python tools/build_schema.py --check
+      - name: Validate reading-time labels
+        run: python tools/reading_times.py --check
+      - name: Refresh and validate sitemap
+        run: |
+          python tools/build_sitemap.py
+          python tools/build_sitemap.py --check
+      - name: Run static SEO and production QA
+        run: python tools/qa_audit.py
+      - name: Commit generated metadata
+        run: |
+          if ! git diff --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -u
+            git commit -m "chore: refresh generated SEO metadata [skip ci]"
+            git push
+          fi
