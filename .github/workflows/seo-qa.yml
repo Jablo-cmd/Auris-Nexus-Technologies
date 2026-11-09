@@ -7,9 +7,6 @@ on:
     branches: [main]
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
   audit:
     runs-on: ubuntu-latest
@@ -26,17 +23,6 @@ jobs:
           node-version: "20"
       - name: Validate generator script syntax
         run: node --check tools/rebuild_chrome.js
-      - name: Refresh generated metadata for this validation run
-        run: |
-          python tools/build_schema.py
-          python tools/build_sitemap.py
-          if ! git diff --quiet; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add -u
-            git commit -m "chore: refresh generated SEO metadata [skip ci]"
-            git push
-          fi
       - name: Structured data is up to date
         run: python tools/build_schema.py --check
       - name: Reading-time labels are consistent
