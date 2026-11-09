@@ -50,7 +50,7 @@ ORGANIZATION = {
     "legalName": "Auris Nexus Technologies (Pty) Ltd",
     "alternateName": "Auris Nexus",
     "url": BASE,
-    "logo": BASE + "images/Auri%20logo.webp",
+    "logo": BASE + "images/auri-logo-96.webp",
     "image": BASE + "images/Web%20Development%20Hero.webp",
     "description": (
         "Technology consulting and digital solutions company helping South African "
