@@ -19,6 +19,8 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} (.+)/$
 RewriteRule ^ %1 [R=301,L]
 
+RewriteRule ^insights/pro-energy-solutions\.html$ /case-studies/pro-energy-solutions-corporate-website.html [R=301,L]
+
 # Retired standalone capability pages -> closest relevant surviving destination.
 # Cloud/hosting, application security and infrastructure are delivery concerns
 # handled inside projects, described on the Solutions page.
