@@ -649,6 +649,8 @@ h1, h2, h3, h4 {
 .folio-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease); }
 .folio-card:hover .folio-media img { transform: scale(1.05); }
 .folio-tag { position: absolute; top: 12px; left: 12px; padding: 5px 12px; border-radius: 999px; background: rgba(0,10,32,.72); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,.16); color: #fff; font-size: .72rem; font-weight: 700; letter-spacing: .04em; }
+.folio-flag { position: absolute; top: 12px; right: 12px; z-index: 1; display: inline-flex; align-items: center; gap: 7px; padding: 5px 12px; border-radius: 999px; background: rgba(0,10,32,.72); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); border: 1px solid rgba(34,230,160,.45); color: #fff; font-size: .72rem; font-weight: 700; letter-spacing: .04em; }
+.folio-flag::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #22E6A0; box-shadow: 0 0 0 3px rgba(34,230,160,.2); }
 .folio-tag--inline { position: static; display: inline-block; margin-bottom: 12px; -webkit-backdrop-filter: none; backdrop-filter: none; background: var(--bg-soft); color: var(--navy); border-color: var(--line); }
 .folio-body { padding: 20px 22px 24px; display: flex; flex-direction: column; flex: 1; }
 .folio-body h3 { font-size: 1.15rem; margin-bottom: 8px; }
@@ -853,6 +855,7 @@ h1, h2, h3, h4 {
 .cs-index .folio-card--featured .folio-media { aspect-ratio: 20 / 9; }
 @media (max-width: 620px) { .cs-index .folio-card--featured .folio-media { aspect-ratio: 16 / 10; } }
 .cs-index-cat { font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--cyan-text); margin: 0 0 6px; }
+@media (min-width: 761px) { .cs-index .folio-card:not(.folio-card--featured) .cs-index-cat { min-height: 2.8em; line-height: 1.4; } }
 .cs-index-name { font-family: var(--font-head); font-size: 1.15rem; margin: 0 0 8px; color: var(--navy); }
 .cs-index .folio-body > p { margin-bottom: 12px; }
 .cs-index .linkarrow { margin-top: auto; font-size: .88rem; }
