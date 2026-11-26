@@ -265,8 +265,8 @@
       },
       {
         words: ['crm', 'customers', 'clients', 'sales', 'leads', 'hr', 'leave', 'leave management'],
-        reply: 'We build CRM, HR and leave management, booking, inventory and membership systems. For example, we delivered the CIT Leave Management System, which replaced email and spreadsheet leave requests.',
-        links: [['Business systems', '/crm-business-management-systems.html'], ['CIT case study', '/case-studies/cit-leave-management-system.html']]
+        reply: 'We build CRM, HR and leave management, booking, inventory and membership systems. For example, we built Sebetsa, a workforce and operations platform with rostering, attendance and leave.',
+        links: [['Business systems', '/crm-business-management-systems.html'], ['Sebetsa case study', '/case-studies/sebetsa-workforce-operations-platform.html']]
       },
       {
         words: ['spreadsheet', 'spreadsheets', 'excel'],
@@ -315,7 +315,7 @@
       },
       {
         words: ['portfolio', 'case study', 'case studies', 'examples', 'previous work', 'projects', 'work you have done', 'references'],
-        reply: 'Recent work includes Funda360 (school management), the CIT Leave Management System, LOGIOS OS (logistics), Sebetsa (workforce operations) and the Pro Energy Solutions website.',
+        reply: 'Recent work includes Funda360 (school management), LOGIOS OS (logistics), Sebetsa (workforce operations), Trade Command (trading console) and the Pro Energy Solutions, Piano Nuggets and Fresh Wind Music websites.',
         links: [['See our work', '/portfolio.html']]
       },
       {
