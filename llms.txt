@@ -56,10 +56,11 @@ Tagline: Transforming Businesses Through Technology
 Each case study states the project's status and whether it is an Auris Nexus product or client work.
 
 - [Funda360 school management platform](https://aurisnexus.co.za/case-studies/funda360-school-management-platform.html): Auris Nexus product, in production
-- [CIT leave management system](https://aurisnexus.co.za/case-studies/cit-leave-management-system.html): client project, delivered and in use
 - [LOGIOS OS logistics operations platform](https://aurisnexus.co.za/case-studies/logios-logistics-operations-platform.html): Auris Nexus product, fully developed and currently in pilot
 - [Sebetsa workforce and operations platform](https://aurisnexus.co.za/case-studies/sebetsa-workforce-operations-platform.html): client project, delivered and in use
 - [Trade Command trading operations console](https://aurisnexus.co.za/case-studies/trade-command-trading-operations-console.html): client project, built and tested
+- [Piano Nuggets piano lessons website](https://aurisnexus.co.za/case-studies/piano-nuggets-music-lessons-website.html): client project, live at https://piano-nuggets.aurisnexus.co.za/
+- [Fresh Wind Music recording studio website](https://aurisnexus.co.za/case-studies/fresh-wind-music-recording-studio-website.html): client project, live at https://freshwindmusic.aurisnexus.co.za/
 - [Pro Energy Solutions corporate website](https://aurisnexus.co.za/case-studies/pro-energy-solutions-corporate-website.html): client project, completed
 
 ## Company and guidance
