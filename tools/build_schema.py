@@ -316,7 +316,7 @@ def build_graph(rel, page):
         if rel.startswith("insights/") and rel != "insights/index.html":
             crumbs.append(("Insights", BASE + "insights/"))
         elif rel.startswith("case-studies/"):
-            crumbs.append(("Work", BASE + "portfolio.html"))
+            crumbs.append(("Work", BASE + "work/"))
         if url != BASE:
             crumbs.append((CRUMB_LABELS.get(rel) or name, url))
     # Articles show their category as the last visible crumb; name the article itself.

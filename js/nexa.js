@@ -316,7 +316,7 @@
       {
         words: ['portfolio', 'case study', 'case studies', 'examples', 'previous work', 'projects', 'work you have done', 'references'],
         reply: 'Recent work includes Funda360 (school management), LOGIOS OS (logistics), Sebetsa (workforce operations), Trade Command (trading console) and the Pro Energy Solutions, Piano Nuggets and Fresh Wind Music websites.',
-        links: [['See our work', '/portfolio.html']]
+        links: [['See our work', '/work/']]
       },
       {
         words: ['process', 'how does it work', 'how do you work', 'steps', 'how long', 'timeline', 'timeframe', 'deadline'],
