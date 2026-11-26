@@ -46,7 +46,7 @@ const NAV = [
   { key: 'home', href: '/', label: 'Home' },
   { key: 'solutions', href: '/services.html', label: 'Solutions', mega: true },
   { key: 'industries', href: '/industries.html', label: 'Industries' },
-  { key: 'work', href: '/portfolio.html', label: 'Work' },
+  { key: 'work', href: '/work/', label: 'Work' },
   { key: 'about', href: '/about.html', label: 'About' },
   { key: 'insights', href: '/insights/', label: 'Insights' },
   { key: 'contact', href: '/contact.html', label: 'Contact' },
@@ -170,7 +170,7 @@ ${drawerSolutions()}
 <a aria-label="Get a free assessment" class="tab tab-cta" href="/digital-opportunity-assessment.html">
 <span class="tab-cta-ring"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span>
 </a>
-<a class="tab${active === 'work' ? ' is-active' : ''}" href="/portfolio.html">
+<a class="tab${active === 'work' ? ' is-active' : ''}" href="/work/">
 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24"><path d="M3 7h18v12H3zM8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"></path></svg>
 <span>Work</span>
 </a>
@@ -212,7 +212,7 @@ ${IC.wa}
 <h3>Company</h3>
 <ul>
 <li><a href="/about.html">About</a></li>
-<li><a href="/portfolio.html">Work</a></li>
+<li><a href="/work/">Work</a></li>
 <li><a href="/industries.html">Industries</a></li>
 <li><a href="/where-we-work.html">Where we work</a></li>
 <li><a href="/pricing.html">Pricing</a></li>
@@ -282,7 +282,6 @@ const ACTIVE = {
   'healthcare.html': 'industries',
   'logistics.html': 'industries',
   'industries.html': 'industries',
-  'portfolio.html': 'work',
   'about.html': 'about',
   'contact.html': 'contact',
   'digital-opportunity-assessment.html': '',
@@ -297,7 +296,7 @@ function processFile(file) {
   const base = path.basename(file);
   const dir = path.dirname(path.relative(ROOT, file));
   const inInsights = dir === 'insights' || dir.startsWith('insights' + path.sep);
-  const inCaseStudies = dir === 'case-studies';
+  const inCaseStudies = dir === 'case-studies' || dir === 'work' || dir.startsWith('work' + path.sep);
   const active = inInsights ? 'insights' : inCaseStudies ? 'work' : (ACTIVE[base] ?? null);
   if (active === null) return { file: base, skipped: true };
 
@@ -336,6 +335,15 @@ for (const sub of ['insights', 'insights/authors', 'case-studies']) {
     if (f.endsWith('.html')) targets.push(path.join(dir, f));
   }
 }
+
+(function walkWork(dir) {
+  if (!fs.existsSync(dir)) return;
+  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, e.name);
+    if (e.isDirectory()) walkWork(full);
+    else if (e.name.endsWith('.html')) targets.push(full);
+  }
+})(path.join(ROOT, 'work'));
 
 const results = targets.map(processFile);
 for (const r of results) {
