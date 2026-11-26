@@ -17,8 +17,8 @@ Every recommendation below was checked against the live site and this repository
 | Server-level 301 redirects | The site is served **directly by GitHub Pages** (`server: GitHub.com`, no CDN in front). GitHub Pages ignores `.htaccess` and cannot issue 301s. | A URL migration needs a hosting change first (section 1, option B). |
 | Hyper-local keyword focus | Partly true: the home page title targets "Johannesburg". But pillar pages, industry pages and FAQs already target "South Africa", and Cape Town, Durban and Pretoria pages already exist (for web design). | Section 2 builds on what exists instead of starting again. |
 | Sebetsa = workforce, **patrol tracking** and operations | The case study describes people, sites, shifts, attendance, tasks, incidents, compliance, assets, inventory, procurement and contracts. "Patrol" appears nowhere on the site. | Do not add "patrol tracking" to schema or copy until the owner confirms the feature exists. |
-| Stack: React, React Native, C#, Rust, TypeScript, Supabase, PostgreSQL | All three case studies document **React, TypeScript, Vite, Supabase/PostgreSQL** (Tailwind on Sebetsa and CIT). **React Native, C# and Rust appear nowhere.** | Schema and copy list only the documented stack. Add the others only per project, once confirmed. |
-| CIT LMS is a proprietary product | The case study says it was built "for a single organisation" with roles mirroring its reporting structure. | Treat CIT as a **client project**, not a product, unless the owner confirms Auris Nexus owns and offers it to other organisations. |
+| Stack: React, React Native, C#, Rust, TypeScript, Supabase, PostgreSQL | All three case studies document **React, TypeScript, Vite, Supabase/PostgreSQL** (Tailwind on Sebetsa and Fresh Wind Music). **React Native, C# and Rust appear nowhere.** | Schema and copy list only the documented stack. Add the others only per project, once confirmed. |
+| Fresh Wind Music is an Auris product | The case study presents it as a website built for a studio client. | Treat Fresh Wind Music as a **client project**. |
 | SoftwareApplication schema makes Google index pages "as software products" | Schema describes entities; it does not change how a page is indexed. Google's Software App **rich result** also needs `offers.price` **and** `aggregateRating` or `review`, none of which exist honestly today. | Section 3 adds the schema for entity understanding and AI answers, and does **not** fabricate prices or ratings to chase a rich result. |
 
 Correction to the earlier audit: `docs/SEO_AI_VISIBILITY_AUDIT.md` said no case study lists its technology stack. That was wrong; each has a "Technical approach" section. The audit has been corrected.
@@ -245,7 +245,7 @@ Keep "Sandton, Johannesburg" in the description and on-page copy so local releva
 ### 2.5 Vertical pages for law firms and engineering groups
 
 There are no legal or engineering case studies yet, so these pages must not imply experience in those sectors. Publish them only if the owner can describe real problems you solve for them. Framed honestly, as the same platform patterns applied to a new sector:
-- **Law firms:** matter intake, document workflows, deadline tracking and POPIA-compliant client portals. Patterns: CIT (approval workflows, audit log) and Funda360 (role-scoped records).
+- **Law firms:** matter intake, document workflows, deadline tracking and POPIA-compliant client portals. Patterns: Sebetsa (approval workflows, audit log) and Funda360 (role-scoped records).
 - **Engineering groups:** site and workforce deployment, attendance, incidents, compliance, assets and inventory. Pattern: Sebetsa's documented modules.
 
 Each page cites the pattern case study as "the same approach in another sector", never as a legal or engineering client.
@@ -258,7 +258,7 @@ Each page cites the pattern case study as "the same approach in another sector",
 | Custom software (city) | city spokes | custom software development Cape Town / Pretoria / Durban |
 | Automation | `/business-automation.html` | business process automation South Africa; workflow automation |
 | School software | `/education.html` + Funda360 | school management system South Africa |
-| HR / leave | `/corporate.html` + CIT | leave management system South Africa |
+| HR / leave | `/corporate.html` + Sebetsa | leave management system South Africa |
 | Workforce / operations | Sebetsa + `/corporate.html` | workforce management software South Africa |
 
 Search volumes aren't included: no keyword-volume source was used for this plan. Validate them in Search Console (impressions) or a keyword tool before committing writing time.
@@ -275,7 +275,7 @@ Search volumes aren't included: no keyword-volume source was used for this plan.
 
 ### 3.2 Templates
 
-> **Update 30 Oct 2026 (owner answers):** Funda360 and LOGIOS OS are Auris Nexus products; Sebetsa and the CIT Leave Management System are client projects, delivered and in use by those clients. **The Funda360 entity is implemented** in `tools/build_schema.py` (`SOFTWARE`). **Don't use the Sebetsa template below:** it is a client's system, not an Auris product. Add LOGIOS OS once it is commissioned.
+> **Update 30 Oct 2026 (owner answers):** Funda360 and LOGIOS OS are Auris Nexus products; Sebetsa and Fresh Wind Music are client projects, delivered and in use by those clients. **The Funda360 entity is implemented** in `tools/build_schema.py` (`SOFTWARE`). **Don't use the Sebetsa template below:** it is a client's system, not an Auris product. Add LOGIOS OS once it is commissioned.
 
 **Funda360** (deployed and in use; SaaS):
 
@@ -348,7 +348,7 @@ Search volumes aren't included: no keyword-volume source was used for this plan.
 }
 ```
 
-**CIT Leave Management System.** Keep it as a case study (client project). If the owner confirms Auris Nexus owns it and offers it to other organisations, add a third entry in the same shape with `"applicationSubCategory": "Leave and HR management"` and the features listed on its page.
+**Fresh Wind Music.** Keep it as a case study (client project, website).
 
 **Rules for these entries:**
 - Every `featureList` item must also appear on the visible page. Add "patrol tracking" or any new feature to the page first, then to the schema.
@@ -383,11 +383,11 @@ Run `python tools/build_schema.py`, then `--check`, then validate the two URLs i
 
 ### 3.4 E-E-A-T actions for the case studies
 
-1. **Engagement type** on each case study (**done 30 Oct 2026**, owner-confirmed): Funda360 and LOGIOS OS = Auris Nexus product; Sebetsa, CIT and Pro Energy Solutions = client project. Sebetsa's status changed from "Built & Tested" to "Delivered & In Use". Trade Command = client project (confirmed 30 Oct 2026). Auris x AI is an internal Auris Nexus system, not yet launched; write its case study after launch.
+1. **Engagement type** on each case study (**done 30 Oct 2026**, owner-confirmed): Funda360 and LOGIOS OS = Auris Nexus product; Sebetsa, Fresh Wind Music and Pro Energy Solutions = client project. Sebetsa's status changed from "Built & Tested" to "Delivered & In Use". Trade Command = client project (confirmed 30 Oct 2026). Auris x AI is an internal Auris Nexus system, not yet launched; write its case study after launch.
 2. **Dates:** add "Delivered {month year}" or "Last updated {date}", and `dateModified` on the WebPage node.
-3. **Named roles:** "What Auris Nexus did" exists on Funda360 and CIT; add it to Sebetsa.
+3. **Named roles:** "What Auris Nexus did" exists on Funda360 and Fresh Wind Music; add it to Sebetsa.
 4. **Proof assets:** a 60–90 second screen-recorded walkthrough per product (hosted on YouTube or Vimeo for a `VideoObject`), using demo tenants only and no client data.
-5. **Testimonial context:** the Jo Jackson quote (a website project) currently appears on every case study. Move it to web-related pages, and collect platform-specific quotes, with permission, for Funda360 and CIT.
+5. **Testimonial context:** the Jo Jackson quote (a website project) currently appears on every case study. Move it to web-related pages, and collect platform-specific quotes, with permission, for Funda360 and Fresh Wind Music.
 6. **Founder expertise:** expand `insights/authors/loyiso-ngcala.html` with verifiable background (qualifications, prior roles) and keep the LinkedIn `sameAs`.
 7. **Third-party corroboration:** product listings on software directories once real reviews exist, and the Google Business Profile (see `docs/GROWTH_AUTHORITY_AND_ANALYTICS_PLAYBOOK.md`).
 
@@ -418,7 +418,7 @@ Create `/digital-opportunity-assessment.html` as the single conversion target fo
 **Page structure**
 1. H1: "Find out where software would save your team time." Subhead with the offer above.
 2. **What you receive**: three bullets (process map, opportunities ranked by effort and impact, indicative rand budget range).
-3. **Who it's for**: three cards for **Schools** (admissions, learner records, fees, linking to Funda360), **Engineering and field-service groups** (site deployment, attendance, compliance, assets, linking to the Sebetsa patterns) and **Professional firms, including law firms** (intake, approvals, document workflows, POPIA, linking to CIT patterns). Describe problems, not past clients in those sectors.
+3. **Who it's for**: three cards for **Schools** (admissions, learner records, fees, linking to Funda360), **Engineering and field-service groups** (site deployment, attendance, compliance, assets, linking to the Sebetsa patterns) and **Professional firms, including law firms** (intake, approvals, document workflows, POPIA, linking to Sebetsa patterns). Describe problems, not past clients in those sectors.
 4. **How it works**: book, a 45-minute session (video call or Sandton office), written summary.
 5. **Short form** (5 fields): name, work email, organisation, sector, "Which process is causing the most friction?". Phone is optional.
 6. **Trust strip next to the form**: CIPC 2026/606690/07 · B-BBEE Level 1 EME · POPIA-aligned handling of your information · based in Sandton, working nationally.

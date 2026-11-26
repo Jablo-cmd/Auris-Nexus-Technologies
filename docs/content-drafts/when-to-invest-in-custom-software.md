@@ -40,6 +40,6 @@ Estimate the hours a process takes each week, multiply by the people involved an
 
 ## Example
 
-An organisation handling leave through forms, email approvals and spreadsheets moved to a structured workflow: employee request, manager review, HR administration, with balances and reports in one place. See the [CIT Leave Management System case study](/case-studies/cit-leave-management-system.html).
+An organisation running rostering, attendance, leave and stock through forms, email approvals and spreadsheets can move to one role-aware workspace. See the [Sebetsa case study](/case-studies/sebetsa-workforce-operations-platform.html).
 
 **Next step:** if you are unsure whether to build, buy or configure, start with [technology consulting](/technology-consulting.html), or read about [custom software development](/custom-software-development.html).

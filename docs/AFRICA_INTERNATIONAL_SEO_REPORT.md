@@ -184,7 +184,7 @@ Earlier today (already live): five pillar pages, assessment page, CTAs, contact 
 |---|---|---|---|
 | Funda360 | Deployed & In Use | **Auris Nexus product** (owner-confirmed; label added) | React, TypeScript, Vite, Supabase, PostgreSQL |
 | Sebetsa | **Delivered & In Use** (corrected from "Built & Tested") | **Client project** (owner-confirmed; label added) | React, TypeScript, Vite, Tailwind, Supabase, PostgreSQL |
-| CIT Leave Management System | Delivered & In Use | **Client project** (owner-confirmed; label added) | React, TypeScript, Tailwind, Supabase, PostgreSQL |
+| Fresh Wind Music website | Live | **Client project** | Next.js, React, TypeScript, Tailwind CSS, Framer Motion |
 | LOGIOS OS | In active development (to be commissioned) | **Auris Nexus product** (owner-confirmed; label added) | Documented on page |
 | Trade Command | Built & Tested | **Client project** (owner-confirmed; label added) | React, TypeScript, Vite, Supabase, PostgreSQL, PWA |
 | Pro Energy Solutions | Completed | Client website | — |

@@ -162,7 +162,7 @@ No regressions introduced: new pages reuse existing CSS and JS, existing respons
 **Readiness:** Drafts 1, 4, 7 and 8 are ready for owner review. Draft 6 needs the owner's own experience or examples from African markets before publication. None is published. To publish one, convert it into an HTML page using an existing article as the template, then run `python tools/build_schema.py`, `python tools/reading_times.py` and `python tools/build_sitemap.py`.
 
 ### Case study improvements (need owner input)
-For each of Funda360, CIT LMS, LOGIOS OS, Sebetsa and Trade Command, add:
+For each of Funda360, Fresh Wind Music, LOGIOS OS, Sebetsa and Trade Command, add:
 1. **Engagement type**: commercial client project, internal product or demonstration. Not added, because this could not be verified from the repository.
 2. **Technology stack**: already present under "Technical approach"; add any confirmed technologies not yet listed.
 3. **Implementation approach / timeline** where shareable.
